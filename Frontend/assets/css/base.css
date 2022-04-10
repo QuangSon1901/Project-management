@@ -2,7 +2,7 @@
     --white-color: #fff;
     --black-color: #000;
     --text-color: #333;
-    --primary-color: #2140ee;
+    --primary-color: #FF3366;
     --primary-blur-color: #2140ee0d;
     --border-color: #dbdbdb;
 
@@ -21,6 +21,20 @@ html {
     line-height: 1.6rem;
     font-family: system-ui;
     box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ccc;
 }
 
 /* Responsive */
@@ -119,6 +133,11 @@ html {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .btn--primary {
@@ -130,4 +149,69 @@ html {
     filter: brightness(104%);
 }
 
+/* Animation */
+.rotate {
+    transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+/* Label */
+label {
+    cursor: pointer;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
 /* Input */
+input {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+img {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+/* Check box */
+input[type=checkbox]{
+    display: none;
+}
+
+.icon-checkbox {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+    display: inline-block;
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+.icon-checkbox:hover {
+    border-color: var(--primary-color);
+}
+
+input[type=checkbox]:checked + i {
+    border-color: var(--primary-color);
+}
+
+input[type=checkbox]:checked + i::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    height: 12px;
+    width: 12px;
+    background-color: var(--primary-color);
+}

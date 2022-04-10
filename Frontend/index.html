@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
         integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 
 <body>
@@ -94,7 +96,8 @@
                                 placeholder="Điểm đi" readonly="readonly" />
                         </div>
                         <div class="grid__column-4 search-input">
-                            <img class="search__double-arrow" src="/Frontend/assets/img/double_arrow-v2.png" alt="">
+                            <img class="search__double-arrow" id="double-arrow"
+                                src="/Frontend/assets/img/double_arrow-v2.png" alt="">
                             <label class="search-input__label ">Điểm đến</label>
                             <input type="input" class="search-input__field search-input_arrflight"
                                 placeholder="Điểm đến" readonly="readonly" />
@@ -103,11 +106,11 @@
                             <div class="grid__row">
                                 <div class="grid__column-6 search-input">
                                     <label class="search-input__label ">Ngày đi</label>
-                                    <input type="date" class="search-date__field" />
+                                    <input type="datetime-local" class="search-date__field" placeholder="Ngày đi" />
                                 </div>
                                 <div class="grid__column-6 search-input">
                                     <label class="search-input__label ">Ngày về</label>
-                                    <input type="date" class="search-date__field" />
+                                    <input type="datetime-local" class="search-date__field" placeholder="Ngày về" />
                                 </div>
                             </div>
                         </div>
@@ -129,18 +132,19 @@
                                 </div>
                                 <div class="grid__column-4 search-input">
                                     <label class="search-input__label ">Em bé (< 2t)</label>
-                                    <input style="padding-left: 10px;" type="input"
-                                        class="search-input__field search-input_infant" placeholder="0"
-                                        readonly="readonly" />
+                                            <input style="padding-left: 10px;" type="input"
+                                                class="search-input__field search-input_infant" placeholder="0"
+                                                readonly="readonly" />
                                 </div>
                             </div>
                         </div>
                         <div class="grid__column-6 search-submit">
-                            <div>
-                                <input type="checkbox" class="option-checkbox">
+                            <label class="option-checkbox">
+                                <input type="checkbox" id="search_checkbox">
+                                <i class="icon-checkbox"></i>
                                 Tìm vé giá rẻ trong tháng
-                            </div>
-                            <button class="btn btn--primary">Tìm chuyến bay</button>
+                            </label>
+                            <button style="width: 190px;" class="btn btn--primary">Tìm chuyến bay</button>
                         </div>
                     </div>
                 </div>
@@ -148,40 +152,48 @@
         </div>
 
         <!-- Category bus -->
-        <!-- <div class="category-services">
-            <div class="grid">
-                <div class="services-list">
-                    <a href="" class="services-item">
-                        <h3 class="services-heading">Review</h3>
-                        <span class="services-description">Experience every journey</span>
-                        <img src="/assets/img/review-png.png" alt="Review PNG" class="services-img">
-                    </a>
-                    <a href="" class="services-item">
-                        <h3 class="services-heading">Car rental</h3>
-                        <span class="services-description">Prestige, quality and fast</span>
-                        <img src="/assets/img/car-rental.png" alt="Review PNG" class="services-img">
-                    </a>
-                    <a href="" class="services-item">
-                        <h3 class="services-heading">Seater car</h3>
-                        <span class="services-description">Smoothness, superiority, safety and convenience</span>
-                        <img src="/assets/img/electric_bus.png" alt="Review PNG" class="services-img">
-                    </a>
-                    <a href="" class="services-item">
-                        <h3 class="services-heading">Sleeper car</h3>
-                        <span class="services-description">Smoothness, superiority, safety and convenience</span>
-                        <img src="/assets/img/GiuongNam-png.jpg" alt="Review PNG" class="services-img">
-                    </a>
-                    <a href="" class="services-item">
-                        <h3 class="services-heading">Limousine car</h3>
-                        <span class="services-description">Luxury and eleganty</span>
-                        <img src="/assets/img/Xe-Limousine-3.png" alt="Review PNG" class="services-img">
-                    </a>
+        <div class="category-muibox">
+            <div class="grid" style="position: relative;">
+                <div class="muibox-list">
+                    <div class="muibox-item">
+                        <span class="muibox-img">
+                            <img src="https://storage.googleapis.com/tripi-assets/mytour/icons/icon_support_247.svg" alt="">
+                        </span>
+                        <span class="muibox-title">
+                            Hỗ trợ khách hàng 24/7
+                        </span>
+                        <span class="muibox-desc">
+                            Chat là có, gọi là nghe, không quản đêm hôm, ngày nghỉ và ngày lễ.
+                        </span>
+                    </div>
+                    <div class="muibox-item">
+                        <span class="muibox-img">
+                            <img src="https://storage.googleapis.com/tripi-assets/mytour/icons/icon_support_247.svg" alt="">
+                        </span>
+                        <span class="muibox-title">
+                            Thanh toán dễ dàng, đa dạng
+                        </span>
+                        <span class="muibox-desc">
+                            Bao gồm thêm chuyển khoản ngân hàng và tiền mặt tại cửa hàng.
+                        </span>
+                    </div>
+                    <div class="muibox-item">
+                        <span class="muibox-img">
+                            <img src="https://storage.googleapis.com/tripi-assets/mytour/icons/icon_support_247.svg" alt="">
+                        </span>
+                        <span class="muibox-title">
+                            Săn vé giá tốt nội địa, quốc tế
+                        </span>
+                        <span class="muibox-desc">
+                            So sánh giá tốt nhất từ các hãng hàng không nội địa và 50.000 đường bay quốc tế.
+                        </span>
+                    </div>
                 </div>
             </div>
-        </div> -->
+        </div>
 
         <!-- Category deal -->
-        <!-- <div class="category-deal">
+        <div class="category-deal">
             <div class="grid">
                 <h2 class="deal-heading">Best deals on bus booking</h2>
                 <div class="deal-list">
@@ -190,7 +202,8 @@
                         <div class="deal-item__header">
                             <h3 class="deal-item__heading">Save 15% on first bus booking</h3>
                             <ul class="deal-item__description">
-                                <li class="deal-item__description-item">Book your bus using coupon code: NEW15 and get flat 15%, upto ₹200 ixigo money on your booking.</li>
+                                <li class="deal-item__description-item">Book your bus using coupon code: NEW15 and get
+                                    flat 15%, upto ₹200 ixigo money on your booking.</li>
                                 <li class="deal-item__description-item">No minimum booking amount required.</li>
                             </ul>
                         </div>
@@ -200,7 +213,8 @@
                         <div class="deal-item__header">
                             <h3 class="deal-item__heading">Save 15% on first bus booking</h3>
                             <ul class="deal-item__description">
-                                <li class="deal-item__description-item">Book your bus using coupon code: NEW15 and get flat 15%, upto ₹200 ixigo money on your booking.</li>
+                                <li class="deal-item__description-item">Book your bus using coupon code: NEW15 and get
+                                    flat 15%, upto ₹200 ixigo money on your booking.</li>
                                 <li class="deal-item__description-item">No minimum booking amount required.</li>
                             </ul>
                         </div>
@@ -210,7 +224,8 @@
                         <div class="deal-item__header">
                             <h3 class="deal-item__heading">Save Upto ₹500 On Bus Bookings</h3>
                             <ul class="deal-item__description">
-                                <li class="deal-item__description-item">Book your bus using coupon code: BUS500 and get flat 6%, upto ₹500 ixigo money on your booking.</li>
+                                <li class="deal-item__description-item">Book your bus using coupon code: BUS500 and get
+                                    flat 6%, upto ₹500 ixigo money on your booking.</li>
                                 <li class="deal-item__description-item">No minimum booking amount required.</li>
                             </ul>
                         </div>
@@ -220,18 +235,23 @@
                         <div class="deal-item__header">
                             <h3 class="deal-item__heading">Get Flat 5% Off Upto ₹200 On Bus Bookings With CRED Pay</h3>
                             <ul class="deal-item__description">
-                                <li class="deal-item__description-item">Book your Bus & get flat 5% off upto ₹200 on your booking with payments via CRED Pay.</li>
-                                <li class="deal-item__description-item">There is no minimum booking amount for the same.</li>
+                                <li class="deal-item__description-item">Book your Bus & get flat 5% off upto ₹200 on
+                                    your booking with payments via CRED Pay.</li>
+                                <li class="deal-item__description-item">There is no minimum booking amount for the same.
+                                </li>
                             </ul>
                         </div>
                     </a>
                     <a href="" class="deal-item">
                         <img src="assets/img/deal-6.jpg" alt="" class="deal-item__img">
                         <div class="deal-item__header">
-                            <h3 class="deal-item__heading">Travel Insurance - Free Cancellation On Bus Bookings @ ₹15</h3>
+                            <h3 class="deal-item__heading">Travel Insurance - Free Cancellation On Bus Bookings @ ₹15
+                            </h3>
                             <ul class="deal-item__description">
-                                <li class="deal-item__description-item">QSC is offering free cancellations on all bus bookings at just ₹15.</li>
-                                <li class="deal-item__description-item">This will benefit travelers who are unsure of their future travel and seek the flexibility of canceling their travel plans.</li>
+                                <li class="deal-item__description-item">QSC is offering free cancellations on all bus
+                                    bookings at just ₹15.</li>
+                                <li class="deal-item__description-item">This will benefit travelers who are unsure of
+                                    their future travel and seek the flexibility of canceling their travel plans.</li>
                             </ul>
                         </div>
                     </a>
@@ -240,17 +260,18 @@
                         <div class="deal-item__header">
                             <h3 class="deal-item__heading">Get 5% Off Upto ₹100 On Bus Bookings</h3>
                             <ul class="deal-item__description">
-                                <li class="deal-item__description-item">Book your bus using coupon code: BUS5 and get flat 5% instant off upto ₹100 on your booking.</li>
+                                <li class="deal-item__description-item">Book your bus using coupon code: BUS5 and get
+                                    flat 5% instant off upto ₹100 on your booking.</li>
                                 <li class="deal-item__description-item">No minimum booking amount required.</li>
                             </ul>
                         </div>
                     </a>
                 </div>
             </div>
-        </div> -->
+        </div>
 
         <!-- Category statistic -->
-        <!-- <div class="category-statistic">
+        <div class="category-statistic">
             <div class="grid">
                 <h2 class="statistic-heading">Platform connects users and bus operators</h2>
                 <ul class="statistic-list">
@@ -259,7 +280,8 @@
                         <div class="statistic-item__header">
                             <h3 class="statistic-item__heading">Personalized search</h3>
                             <p class="statistic-item__description">
-                                5000+ routes, 2000+ Bus Operators, and 5000+ Agencies across the country. Helps you quickly choose a favorite bus according to your needs.
+                                5000+ routes, 2000+ Bus Operators, and 5000+ Agencies across the country. Helps you
+                                quickly choose a favorite bus according to your needs.
                             </p>
                         </div>
                     </li>
@@ -283,8 +305,28 @@
                     </li>
                 </ul>
             </div>
-        </div> -->
+        </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        config = {
+            dateFormat: "d.m.Y"
+        }
+        flatpickr("input[type=datetime-local]", config);
+
+        var double_arrow_click = document.querySelector("#double-arrow");
+
+
+        double_arrow_click.addEventListener("click", function () {
+            var get_rotate = document.querySelector(".rotate");
+            if (get_rotate) {
+                double_arrow_click.classList.remove("rotate");
+            } else {
+                double_arrow_click.classList.add("rotate");
+            }
+        });
+    </script>
 </body>
 
 </html>
