@@ -285,7 +285,7 @@ ul {
 }
 /* Modal */
 .modal {
-    display: none;
+    display: flex;
     position: fixed;
     top: 0;
     right: 0;
