@@ -1,0 +1,140 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color: #FF3366;
+    --primary-blur-color: #2140ee0d;
+    --border-color: #dbdbdb;
+
+    --header-height: 67px;
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Responsive */
+.grid {
+    position: relative;
+    width: 1300px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+  }
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-form));
+    }
+    to {
+        transform: scale(var(--growth-to));
+    }
+}
+
+@keyframes fadeInGrowth {
+    from {
+        opacity: 0;
+        transform: scale(var(--growth-form));
+    }
+    to {
+        opacity: 1;
+        transform: scale(var(--growth-to));
+    }
+}
+
+/* Modal */
+.modal {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* animation: fadeIn linear .1s; */
+}
+
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #FFB6C1;
+}
+
+.modal__body {
+    --growth-form: 0.7;
+    --growth-to: 1;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    animation: growth linear .1s;
+    text-align: center;
+}
+
+/* Button */
+.btn {
+    min-width: 150px;
+    height: 46px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    background-color: var(--white-color);
+    padding: 0 12px;
+    cursor: pointer;
+    color: var(--text-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn--primary {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.btn--primary:hover {
+    filter: brightness(104%);
+}
+/* Animation underline */
+.underline::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    right: 50%;
+    -webkit-transition: .4s ease all;
+    transition: .4s ease all;
+}
+
+.underline::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 50%;
+    -webkit-transition: .4s ease all;
+    transition: .4s ease all;
+}
