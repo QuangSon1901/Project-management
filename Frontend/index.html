@@ -68,7 +68,7 @@
                                     Liên hệ
                                 </a>
                             </li>
-                            <li class="navbar__category-item">
+                            <li class="navbar__category-item" id="btn_login">
                                 <a href="#" class="navbar__category-link">
                                     <i class="navbar__category-icon fas fa-user"></i>
                                     Đăng nhập / Đăng ký
@@ -783,27 +783,8 @@
             </div>
         </footer>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script>
-        config = {
-            dateFormat: "d.m.Y"
-        }
-        flatpickr("input[type=datetime-local]", config);
-
-        var double_arrow_click = document.querySelector("#double-arrow");
-
-
-        double_arrow_click.addEventListener("click", function () {
-            var get_rotate = document.querySelector(".rotate");
-            if (get_rotate) {
-                double_arrow_click.classList.remove("rotate");
-            } else {
-                double_arrow_click.classList.add("rotate");
-            }
-        });
-    </script>
-    <div class="modal">
+    
+    <div class="modal" id="modal_login">
         <div class="modal__overlay"></div>
         <div class="modal__body">
             <!-- Login -->
@@ -943,7 +924,53 @@
             </div> -->
         </div>
     </div>
-    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        config = {
+            dateFormat: "d.m.Y"
+        }
+        flatpickr("input[type=datetime-local]", config);
+
+        var double_arrow_click = document.querySelector("#double-arrow");
+
+
+        double_arrow_click.addEventListener("click", function () {
+            var get_rotate = document.querySelector(".rotate");
+            if (get_rotate) {
+                double_arrow_click.classList.remove("rotate");
+            } else {
+                double_arrow_click.classList.add("rotate");
+            }
+        });
+    </script>
+    <script>
+        // Get the modal
+        var modal_login = document.getElementById("modal_login");
+
+        // Get the button that opens the modal
+        var btn_login = document.getElementById("btn_login");
+
+        // Get the <span> element that closes the modal
+        // var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn_login.onclick = function () {
+            modal_login.style.display = "flex";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        // span.onclick = function () {
+        //     modal.style.display = "none";
+        // }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal_login) {
+                modal_login.style.display = "none";
+            }
+        }
+    </script>
 </body>
 
 </html>
