@@ -1,0 +1,94 @@
+*Trang chủ:
+	-Giới thiệu về các khu du lịch
+		+Thông tin
+		+Lịch trình khám phá
+		+Địa điểm
+		+Bộ sưu tập
+		+Đánh giá
+		+Đặt chuyến tham quan:
+			Tên
+			Email
+			SĐT
+			dd/mm/yy
+			Số người
+			Mã giảm giá
+	-Tìm kiếm:
+		+Địa điểm muốn đến
+		+Tháng muốn đi
+		+Loại hình du lịch
+	-Đối tác hàng không:
+		+Danh sách các hãng hàng không
+	-Chuyến bay giá tốt:
+		+Danh sách các chuyến bay giá tốt
+	-Các chặn bay & hãng bay hàng đầu:
+		+Danh sách vé máy bay:
+	-Hỗ trợ khách hàng:
+		+SĐT
+		+Email
+		+Văn phòng
+		+Showroom
+	-Liên hệ với chúng tôi:
+		+Họ và tên
+		+Email
+		+Tiêu đề
+		+Nội dung
+*Đăng ký/đăng nhập:
+	-Đăng ký/đăng nhập bằng facebook
+	-Đăng ký/đăng nhập bằng google
+	-Đăng ký/đăng nhập bằng số điện thoai.
+*Sidebar:
+	-Trang chủ
+	-Yêu thích
+	-Khách sạn
+	-Vé máy bay
+	-The memories
+	-Tour & sự kiện
+	-Cẩm nang du lịch
+	-Tuyển dụng
+	-Hỗ trợ
+	-Trở thành đối tác liên kết
+	-Hợp tác với chúng tôi
+	-Tải ứng dụng
+	-Giới thiệu bạn bè và nhận ưu đãi
+*Thông tin chuyến bay:
+	-Điểm đi, điểm đến
+	-Ngày đi, ngày về
+	-Số người, hạng ghế
+*Chuyến bay
+	-Thông tin khách sạn:
+		+Địa điểm
+		+Ngày đến, ngày về
+		+Số phòng, số khách
+	-Thông tin nhà hàng:
+		+Địa điểm
+		+Tên nhà hàng, món ăn, voucher...
+	-Thông tin khách hàng:
+		+Tên
+		+SĐT
+		+CMND/CCCD
+		+Email
+		+Hồ sơ bệnh án
+*Ưu đãi:
+	-Số lượng vé để có được voucher ưu đãi
+*Tour khám phá:
+	-Ngày tháng
+	-Giá thấp lên cao
+	-Giá cao xuống thấp
+	-Tên (A-Z)
+	-Danh sách & thông tin tour bán chạy
+	-Tìm kiếm điểm đến:
+		+Tìm kiếm tour
+		+Địa điểm
+		+Chọn tháng
+		+Mức tài chính
+		+Danh sách loại hình du lịch
+*Tour & Sự kiện:
+	-Thông tin sự kiện sắp diễn ra ở nơi du lịch
+	-Thông tin các khu du lịch 
+	-Thông tin về các chủ đề mà khách muốn du lịch
+	-Thông tin các tour đã và đang book lịch 
+*Combo: 
+	-Thông tin nhiều combo để khách hàng có thể lựa chọn thích hợp
+*Giới thiệu:
+*Hỏi & đáp:
+	-Tạo ra danh sách các câu hỏi và câu trả lời dành cho khách hàng muốn biết
