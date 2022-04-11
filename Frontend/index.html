@@ -17,295 +17,771 @@
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="grid">
-            <div class="navbar">
-                <div class="navbar__logo">
-                    <a href="#" class="navbar__logo-link">
-                        <img src="assets/img/logo-bus-qsc.png" class="navbar__logo-img" alt="Logo Bus">
-                    </a>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="grid">
+                <div class="navbar">
+                    <div class="navbar__logo">
+                        <a href="#" class="navbar__logo-link">
+                            <img src="assets/img/logo-bus-qsc.png" class="navbar__logo-img" alt="Logo Bus">
+                        </a>
+                    </div>
+                    <div class="navbar__select">
+                        <ul class="navbar__category">
+                            <li class="navbar__category-item navbar__category-item--active">
+                                <a href="#" class="navbar__category-link">
+                                    <i class="navbar__category-icon fas fa-plane-departure"></i>
+                                    Máy bay
+                                </a>
+                            </li>
+                            <li class="navbar__category-item">
+                                <a href="#" class="navbar__category-link">
+                                    <i class="navbar__category-icon fas fa-subway"></i>
+                                    Tàu hỏa
+                                </a>
+                            </li>
+                            <li class="navbar__category-item">
+                                <a href="#" class="navbar__category-link">
+                                    <i class="navbar__category-icon fas fa-bus-alt"></i>
+                                    Xe khách
+                                </a>
+                            </li>
+                            <li class="navbar__category-item ">
+                                <a href="#" class="navbar__category-link">
+                                    <i class="navbar__category-icon fas fa-hotel"></i>
+                                    Khách sạn
+                                </a>
+                            </li>
+                        </ul>
+
+                        <ul class="navbar__category">
+                            <li class="navbar__category-item">
+                                <a href="#" class="navbar__category-link">
+                                    <i class="navbar__category-icon fab fa-buffer"></i>
+                                    Dịch vụ
+                                </a>
+                            </li>
+                            <li class="navbar__category-item">
+                                <a href="#" class="navbar__category-link">
+                                    <i class="navbar__category-icon fas fa-headset"></i>
+                                    Liên hệ
+                                </a>
+                            </li>
+                            <li class="navbar__category-item">
+                                <a href="#" class="navbar__category-link">
+                                    <i class="navbar__category-icon fas fa-user"></i>
+                                    Đăng nhập / Đăng ký
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="navbar__select">
-                    <ul class="navbar__category">
-                        <li class="navbar__category-item navbar__category-item--active">
-                            <a href="#" class="navbar__category-link">
-                                <i class="navbar__category-icon fas fa-plane-departure"></i>
-                                Máy bay
-                            </a>
+            </div>
+        </header>
+
+        <div class="container">
+            <!-- With search -->
+            <div class="search">
+                <div class="grid">
+                    <div class="search__heading">
+                        <i class="search__heading-icon fas fa-route"></i>
+                        <h1 class="search__heading-title">Are you ready for a wonderful trip?</h1>
+                    </div>
+
+                    <div class="search__content">
+                        <div class="grid__row grid__row-search">
+                            <div class="grid__column-4 search-input">
+                                <h3 class="search-input__label ">Điểm đi</h3>
+                                <input type="input" id="input_from" class="search-input__field search-input_depflight"
+                                    placeholder="Điểm đi" readonly="readonly" value=""/>
+                                <div class="search-input__hint">
+                                    <div class="search-input__hint-airpost">
+                                        <h4>Sân bay nội địa</h4>
+                                        <div class="grid__row search-input__hint-list">
+                                            <div class="grid__column-2-4">
+                                                <h4 class="search-input__hint-area">Miền Bắc</h4>
+                                                <ul>
+                                                    <li class="search-input__hint-place">Hà Nội (HAN)</li>
+                                                    <li class="search-input__hint-place">Hải Phòng (HPH)</li>
+                                                    <li class="search-input__hint-place">Thanh Hóa (THD)</li>
+                                                </ul>
+                                            </div>
+                                            <div class="grid__column-2-4">
+                                                <h4 class="search-input__hint-area">Miền Trung</h4>
+                                                <ul>
+                                                    <li class="search-input__hint-place">Hà nội</li>
+                                                    <li class="search-input__hint-place">Hà nội</li>
+                                                    <li class="search-input__hint-place">Hà nội</li>
+                                                </ul>
+                                            </div>
+                                            <div class="grid__column-2-4">
+                                                <h4 class="search-input__hint-area">Miền Nam</h4>
+                                                <ul>
+                                                    <li class="search-input__hint-place">Hà nội</li>
+                                                    <li class="search-input__hint-place">Hà nội</li>
+                                                    <li class="search-input__hint-place">Hà nội</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="search-input__hint-airpost">
+                                        <h4>Sân bay quốc tế</h4>
+                                        <div class="grid__row search-input__hint-list">
+                                            <div class="grid__column-2-4">
+                                                <h4 class="search-input__hint-area">Châu Á</h4>
+                                                <ul>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                </ul>
+                                            </div>
+                                            <div class="grid__column-2-4">
+                                                <h4 class="search-input__hint-area">Châu Âu</h4>
+                                                <ul>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                </ul>
+                                            </div>
+                                            <div class="grid__column-2-4">
+                                                <h4 class="search-input__hint-area">Châu Phi</h4>
+                                                <ul>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                </ul>
+                                            </div>
+                                            <div class="grid__column-2-4">
+                                                <h4 class="search-input__hint-area">Châu Phi</h4>
+                                                <ul>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                </ul>
+                                            </div>
+                                            <div class="grid__column-2-4">
+                                                <h4 class="search-input__hint-area">Châu Phi</h4>
+                                                <ul>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid__column-4 search-input">
+                                <img class="search__double-arrow" id="double-arrow"
+                                    src="/Frontend/assets/img/double_arrow-v2.png" alt="">
+                                <h3 class="search-input__label ">Điểm đến</h3>
+                                <input type="input" id="input_to" class="search-input__field search-input_arrflight"
+                                    placeholder="Điểm đến" readonly="readonly" value=""/>
+                                <div class="search-input__hint">
+                                    <div class="search-input__hint-airpost">
+                                        <h4>Sân bay nội địa</h4>
+                                        <div class="grid__row search-input__hint-list">
+                                            <div class="grid__column-4">
+                                                <h4 class="search-input__hint-area">Miền Bắc</h4>
+                                                <ul>
+                                                    <li class="search-input__hint-place">Hà Nội (HAN)</li>
+                                                    <li class="search-input__hint-place">Hải Phòng (HPH)</li>
+                                                    <li class="search-input__hint-place">Thanh Hóa (THD)</li>
+                                                </ul>
+                                            </div>
+                                            <div class="grid__column-4">
+                                                <h4 class="search-input__hint-area">Miền Trung</h4>
+                                                <ul>
+                                                    <li class="search-input__hint-place">Hà nội</li>
+                                                    <li class="search-input__hint-place">Hà nội</li>
+                                                    <li class="search-input__hint-place">Hà nội</li>
+                                                </ul>
+                                            </div>
+                                            <div class="grid__column-4">
+                                                <h4 class="search-input__hint-area">Miền Nam</h4>
+                                                <ul>
+                                                    <li class="search-input__hint-place">Hà nội</li>
+                                                    <li class="search-input__hint-place">Hà nội</li>
+                                                    <li class="search-input__hint-place">Hà nội</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="search-input__hint-airpost">
+                                        <h4>Sân bay quốc tế</h4>
+                                        <div class="grid__row search-input__hint-list">
+                                            <div class="grid__column-2-4">
+                                                <h4 class="search-input__hint-area">Châu Á</h4>
+                                                <ul>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                </ul>
+                                            </div>
+                                            <div class="grid__column-2-4">
+                                                <h4 class="search-input__hint-area">Châu Âu</h4>
+                                                <ul>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                </ul>
+                                            </div>
+                                            <div class="grid__column-2-4">
+                                                <h4 class="search-input__hint-area">Châu Phi</h4>
+                                                <ul>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                </ul>
+                                            </div>
+                                            <div class="grid__column-2-4">
+                                                <h4 class="search-input__hint-area">Châu Phi</h4>
+                                                <ul>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                </ul>
+                                            </div>
+                                            <div class="grid__column-2-4">
+                                                <h4 class="search-input__hint-area">Châu Phi</h4>
+                                                <ul>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                    <li class="search-input__hint-place">Atlanta Hartsfield (ATL)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid__column-4">
+                                <div class="grid__row">
+                                    <div class="grid__column-6 search-input">
+                                        <h3 class="search-input__label ">Ngày đi</h3>
+                                        <input type="datetime-local" class="search-date__field"
+                                            placeholder="Ngày đi" />
+                                    </div>
+                                    <div class="grid__column-6 search-input">
+                                        <h3 class="search-input__label ">Ngày về</h3>
+                                        <input type="datetime-local" class="search-date__field"
+                                            placeholder="Ngày về" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__row grid__row-search">
+                            <div class="grid__column-6 ">
+                                <div class="grid__row">
+                                    <div class="grid__column-4 search-input">
+                                        <h3 class="search-input__label ">Người lớn (≥ 12t)</h3>
+                                        <select name="" id="" style="padding-left: 10px;"
+                                            class="search-input__field search-input_adult" readonly="readonly">
+                                            <option value="1" selected>1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                            <option value="32">32</option>
+                                            <option value="33">33</option>
+                                            <option value="34">34</option>
+                                            <option value="35">35</option>
+                                            <option value="36">36</option>
+                                            <option value="37">37</option>
+                                            <option value="38">38</option>
+                                            <option value="39">39</option>
+                                            <option value="40">40</option>
+                                            <option value="41">41</option>
+                                            <option value="42">42</option>
+                                            <option value="43">43</option>
+                                            <option value="44">44</option>
+                                            <option value="45">45</option>
+                                            <option value="46">46</option>
+                                            <option value="47">47</option>
+                                            <option value="48">48</option>
+                                            <option value="49">49</option>
+                                            <option value="50">50</option>
+                                        </select>
+                                        <i class="icon-selectbox fa-solid fa-angle-down"></i>
+                                    </div>
+                                    <div class="grid__column-4 search-input">
+                                        <h3 class="search-input__label ">Trẻ em (2-12t)</h3>
+                                        <select name="" id="" style="padding-left: 10px;"
+                                            class="search-input__field search-input_adult" readonly="readonly">
+                                            <option value="0" selected>0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                            <option value="32">32</option>
+                                            <option value="33">33</option>
+                                            <option value="34">34</option>
+                                            <option value="35">35</option>
+                                            <option value="36">36</option>
+                                            <option value="37">37</option>
+                                            <option value="38">38</option>
+                                            <option value="39">39</option>
+                                            <option value="40">40</option>
+                                            <option value="41">41</option>
+                                            <option value="42">42</option>
+                                            <option value="43">43</option>
+                                            <option value="44">44</option>
+                                            <option value="45">45</option>
+                                            <option value="46">46</option>
+                                            <option value="47">47</option>
+                                            <option value="48">48</option>
+                                            <option value="49">49</option>
+                                            <option value="50">50</option>
+                                        </select>
+                                        <i class="icon-selectbox fa-solid fa-angle-down"></i>
+                                    </div>
+                                    <div class="grid__column-4 search-input">
+                                        <h3 class="search-input__label ">Em bé (< 2t)</h3>
+                                                <select name="" id="" style="padding-left: 10px;"
+                                                    class="search-input__field search-input_infant" readonly="readonly">
+                                                    <option value="0">0</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                    <option value="19">19</option>
+                                                    <option value="20">20</option>
+                                                </select>
+                                                <i class="icon-selectbox fa-solid fa-angle-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid__column-6 search-submit">
+                                <label class="option-checkbox">
+                                    <input type="checkbox" id="search_checkbox">
+                                    <i class="icon-checkbox"></i>
+                                    Tìm vé giá rẻ trong tháng
+                                </label>
+                                <button style="width: 190px;" class="btn btn--primary">Tìm chuyến bay</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category bus -->
+            <div class="category-muibox">
+                <div class="grid" style="position: relative;">
+                    <div class="muibox-list">
+                        <a href="#" class="muibox-item">
+                            <span class="muibox-img">
+                                <img src="https://storage.googleapis.com/tripi-assets/mytour/icons/icon_support_247.svg"
+                                    alt="">
+                            </span>
+                            <span class="muibox-title">
+                                Hỗ trợ khách hàng 24/7
+                            </span>
+                            <span class="muibox-desc">
+                                Chat là có, gọi là nghe, không quản đêm hôm, ngày nghỉ và ngày lễ.
+                            </span>
+                        </a>
+                        <a href="#" class="muibox-item">
+                            <span class="muibox-img">
+                                <img src="https://storage.googleapis.com/tripi-assets/mytour/icons/icon_support_247.svg"
+                                    alt="">
+                            </span>
+                            <span class="muibox-title">
+                                Thanh toán dễ dàng, đa dạng
+                            </span>
+                            <span class="muibox-desc">
+                                Bao gồm thêm chuyển khoản ngân hàng và tiền mặt tại cửa hàng.
+                            </span>
+                        </a>
+                        <a href="#" class="muibox-item">
+                            <span class="muibox-img">
+                                <img src="https://storage.googleapis.com/tripi-assets/mytour/icons/icon_support_247.svg"
+                                    alt="">
+                            </span>
+                            <span class="muibox-title">
+                                Săn vé giá tốt nội địa, quốc tế
+                            </span>
+                            <span class="muibox-desc">
+                                So sánh giá tốt nhất từ các hãng hàng không nội địa và 50.000 đường bay quốc tế.
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category deal -->
+            <div class="category-deal">
+                <div class="grid">
+                    <h2 class="deal-heading">Chuyến bay giá tốt nhất hôm nay</h2>
+                    <div class="deal-list">
+                        <div class="grid__row">
+                            <div class="grid__column-3 deal-item">
+                                <a href="#" class="">
+                                    <div class="deal-item_brand">
+                                        <img src="https://storage.googleapis.com/tripi-flights/agenticons/vjc2021.png"
+                                            alt="" style="width: 24px; height: auto; margin-right: 8px;">
+                                        <h4>Vietjet Air</h4>
+                                    </div>
+                                    <div class="deal-item_info">
+                                        <div class="deal-item_title">
+                                            <h2>Nội Bài</h2>
+                                            <svg width="24" height="24" fill="none">
+                                                <path d="M17.5 10.5L20 13M4 13h16" stroke="#1A202C" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                            <h2>Tân Sơn Nhất</h2>
+                                        </div>
+                                        <div class="deal-item_date">
+                                            <svg width="20" height="20" fill="none" class="svgFillAll"
+                                                style="margin-right: 4px; fill: rgb(74, 85, 104);">
+                                                <path
+                                                    d="M11.648 5.269a.5.5 0 00.485-.129l2.152-2.152a1.667 1.667 0 012.357 2.357L14.49 7.497a.5.5 0 00-.129.485l1.615 5.922a.5.5 0 01-.128.485l-1.094 1.094a.5.5 0 01-.79-.11l-2.303-4.145a.5.5 0 00-.79-.11l-1.743 1.741a.5.5 0 00-.146.354v1.942a.5.5 0 01-.147.354l-1.049 1.05a.5.5 0 01-.828-.196l-.843-2.531a.5.5 0 00-.317-.316l-2.53-.844a.5.5 0 01-.196-.828l1.05-1.05a.5.5 0 01.353-.146h1.943a.5.5 0 00.353-.146L8.513 8.76a.5.5 0 00-.11-.79L4.257 5.667a.5.5 0 01-.11-.79L5.24 3.782a.5.5 0 01.485-.13l5.922 1.616z"
+                                                    fill="#4A5568"></path>
+                                            </svg>
+                                            <h3>Khởi hành: 16/04/2022</h3>
+                                        </div>
+                                    </div>
+                                    <div class="deal-item_price">
+                                        <del class="deal-item_cost">609.000<sup>đ</sup></del>
+                                        <h3 class="deal-item_sale">573.000<sup>đ</sup></h3>
+                                        <h3 class="deal-item_tax">Giá sau thuế: 1.046.000<sup>đ</sup></h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-3 deal-item">
+                                <a href="#" class="">
+                                    <div class="deal-item_brand">
+                                        <img src="https://storage.googleapis.com/tripi-flights/agenticons/vjc2021.png"
+                                            alt="" style="width: 24px; height: auto; margin-right: 8px;">
+                                        <h4>Vietjet Air</h4>
+                                    </div>
+                                    <div class="deal-item_info">
+                                        <div class="deal-item_title">
+                                            <h2>Nội Bài</h2>
+                                            <svg width="24" height="24" fill="none">
+                                                <path d="M17.5 10.5L20 13M4 13h16" stroke="#1A202C" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                            <h2>Tân Sơn Nhất</h2>
+                                        </div>
+                                        <div class="deal-item_date">
+                                            <svg width="20" height="20" fill="none" class="svgFillAll"
+                                                style="margin-right: 4px; fill: rgb(74, 85, 104);">
+                                                <path
+                                                    d="M11.648 5.269a.5.5 0 00.485-.129l2.152-2.152a1.667 1.667 0 012.357 2.357L14.49 7.497a.5.5 0 00-.129.485l1.615 5.922a.5.5 0 01-.128.485l-1.094 1.094a.5.5 0 01-.79-.11l-2.303-4.145a.5.5 0 00-.79-.11l-1.743 1.741a.5.5 0 00-.146.354v1.942a.5.5 0 01-.147.354l-1.049 1.05a.5.5 0 01-.828-.196l-.843-2.531a.5.5 0 00-.317-.316l-2.53-.844a.5.5 0 01-.196-.828l1.05-1.05a.5.5 0 01.353-.146h1.943a.5.5 0 00.353-.146L8.513 8.76a.5.5 0 00-.11-.79L4.257 5.667a.5.5 0 01-.11-.79L5.24 3.782a.5.5 0 01.485-.13l5.922 1.616z"
+                                                    fill="#4A5568"></path>
+                                            </svg>
+                                            <h3>Khởi hành: 16/04/2022</h3>
+                                        </div>
+                                    </div>
+                                    <div class="deal-item_price">
+                                        <del class="deal-item_cost">609.000<sup>đ</sup></del>
+                                        <h3 class="deal-item_sale">573.000<sup>đ</sup></h3>
+                                        <h3 class="deal-item_tax">Giá sau thuế: 1.046.000<sup>đ</sup></h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-3 deal-item">
+                                <a href="#" class="">
+                                    <div class="deal-item_brand">
+                                        <img src="https://storage.googleapis.com/tripi-flights/agenticons/vjc2021.png"
+                                            alt="" style="width: 24px; height: auto; margin-right: 8px;">
+                                        <h4>Vietjet Air</h4>
+                                    </div>
+                                    <div class="deal-item_info">
+                                        <div class="deal-item_title">
+                                            <h2>Nội Bài</h2>
+                                            <svg width="24" height="24" fill="none">
+                                                <path d="M17.5 10.5L20 13M4 13h16" stroke="#1A202C" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                            <h2>Tân Sơn Nhất</h2>
+                                        </div>
+                                        <div class="deal-item_date">
+                                            <svg width="20" height="20" fill="none" class="svgFillAll"
+                                                style="margin-right: 4px; fill: rgb(74, 85, 104);">
+                                                <path
+                                                    d="M11.648 5.269a.5.5 0 00.485-.129l2.152-2.152a1.667 1.667 0 012.357 2.357L14.49 7.497a.5.5 0 00-.129.485l1.615 5.922a.5.5 0 01-.128.485l-1.094 1.094a.5.5 0 01-.79-.11l-2.303-4.145a.5.5 0 00-.79-.11l-1.743 1.741a.5.5 0 00-.146.354v1.942a.5.5 0 01-.147.354l-1.049 1.05a.5.5 0 01-.828-.196l-.843-2.531a.5.5 0 00-.317-.316l-2.53-.844a.5.5 0 01-.196-.828l1.05-1.05a.5.5 0 01.353-.146h1.943a.5.5 0 00.353-.146L8.513 8.76a.5.5 0 00-.11-.79L4.257 5.667a.5.5 0 01-.11-.79L5.24 3.782a.5.5 0 01.485-.13l5.922 1.616z"
+                                                    fill="#4A5568"></path>
+                                            </svg>
+                                            <h3>Khởi hành: 16/04/2022</h3>
+                                        </div>
+                                    </div>
+                                    <div class="deal-item_price">
+                                        <del class="deal-item_cost">609.000<sup>đ</sup></del>
+                                        <h3 class="deal-item_sale">573.000<sup>đ</sup></h3>
+                                        <h3 class="deal-item_tax">Giá sau thuế: 1.046.000<sup>đ</sup></h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-3 deal-item">
+                                <a href="#" class="">
+                                    <div class="deal-item_brand">
+                                        <img src="https://storage.googleapis.com/tripi-flights/agenticons/vjc2021.png"
+                                            alt="" style="width: 24px; height: auto; margin-right: 8px;">
+                                        <h4>Vietjet Air</h4>
+                                    </div>
+                                    <div class="deal-item_info">
+                                        <div class="deal-item_title">
+                                            <h2>Nội Bài</h2>
+                                            <svg width="24" height="24" fill="none">
+                                                <path d="M17.5 10.5L20 13M4 13h16" stroke="#1A202C" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                            <h2>Tân Sơn Nhất</h2>
+                                        </div>
+                                        <div class="deal-item_date">
+                                            <svg width="20" height="20" fill="none" class="svgFillAll"
+                                                style="margin-right: 4px; fill: rgb(74, 85, 104);">
+                                                <path
+                                                    d="M11.648 5.269a.5.5 0 00.485-.129l2.152-2.152a1.667 1.667 0 012.357 2.357L14.49 7.497a.5.5 0 00-.129.485l1.615 5.922a.5.5 0 01-.128.485l-1.094 1.094a.5.5 0 01-.79-.11l-2.303-4.145a.5.5 0 00-.79-.11l-1.743 1.741a.5.5 0 00-.146.354v1.942a.5.5 0 01-.147.354l-1.049 1.05a.5.5 0 01-.828-.196l-.843-2.531a.5.5 0 00-.317-.316l-2.53-.844a.5.5 0 01-.196-.828l1.05-1.05a.5.5 0 01.353-.146h1.943a.5.5 0 00.353-.146L8.513 8.76a.5.5 0 00-.11-.79L4.257 5.667a.5.5 0 01-.11-.79L5.24 3.782a.5.5 0 01.485-.13l5.922 1.616z"
+                                                    fill="#4A5568"></path>
+                                            </svg>
+                                            <h3>Khởi hành: 16/04/2022</h3>
+                                        </div>
+                                    </div>
+                                    <div class="deal-item_price">
+                                        <del class="deal-item_cost">609.000<sup>đ</sup></del>
+                                        <h3 class="deal-item_sale">573.000<sup>đ</sup></h3>
+                                        <h3 class="deal-item_tax">Giá sau thuế: 1.046.000<sup>đ</sup></h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-3 deal-item">
+                                <a href="#" class="">
+                                    <div class="deal-item_brand">
+                                        <img src="https://storage.googleapis.com/tripi-flights/agenticons/vjc2021.png"
+                                            alt="" style="width: 24px; height: auto; margin-right: 8px;">
+                                        <h4>Vietjet Air</h4>
+                                    </div>
+                                    <div class="deal-item_info">
+                                        <div class="deal-item_title">
+                                            <h2>Nội Bài</h2>
+                                            <svg width="24" height="24" fill="none">
+                                                <path d="M17.5 10.5L20 13M4 13h16" stroke="#1A202C" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                            <h2>Tân Sơn Nhất</h2>
+                                        </div>
+                                        <div class="deal-item_date">
+                                            <svg width="20" height="20" fill="none" class="svgFillAll"
+                                                style="margin-right: 4px; fill: rgb(74, 85, 104);">
+                                                <path
+                                                    d="M11.648 5.269a.5.5 0 00.485-.129l2.152-2.152a1.667 1.667 0 012.357 2.357L14.49 7.497a.5.5 0 00-.129.485l1.615 5.922a.5.5 0 01-.128.485l-1.094 1.094a.5.5 0 01-.79-.11l-2.303-4.145a.5.5 0 00-.79-.11l-1.743 1.741a.5.5 0 00-.146.354v1.942a.5.5 0 01-.147.354l-1.049 1.05a.5.5 0 01-.828-.196l-.843-2.531a.5.5 0 00-.317-.316l-2.53-.844a.5.5 0 01-.196-.828l1.05-1.05a.5.5 0 01.353-.146h1.943a.5.5 0 00.353-.146L8.513 8.76a.5.5 0 00-.11-.79L4.257 5.667a.5.5 0 01-.11-.79L5.24 3.782a.5.5 0 01.485-.13l5.922 1.616z"
+                                                    fill="#4A5568"></path>
+                                            </svg>
+                                            <h3>Khởi hành: 16/04/2022</h3>
+                                        </div>
+                                    </div>
+                                    <div class="deal-item_price">
+                                        <del class="deal-item_cost">609.000<sup>đ</sup></del>
+                                        <h3 class="deal-item_sale">573.000<sup>đ</sup></h3>
+                                        <h3 class="deal-item_tax">Giá sau thuế: 1.046.000<sup>đ</sup></h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="grid__column-3 deal-item">
+                                <a href="#" class="">
+                                    <div class="deal-item_brand">
+                                        <img src="https://storage.googleapis.com/tripi-flights/agenticons/vjc2021.png"
+                                            alt="" style="width: 24px; height: auto; margin-right: 8px;">
+                                        <h4>Vietjet Air</h4>
+                                    </div>
+                                    <div class="deal-item_info">
+                                        <div class="deal-item_title">
+                                            <h2>Nội Bài</h2>
+                                            <svg width="24" height="24" fill="none">
+                                                <path d="M17.5 10.5L20 13M4 13h16" stroke="#1A202C" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                            <h2>Tân Sơn Nhất</h2>
+                                        </div>
+                                        <div class="deal-item_date">
+                                            <svg width="20" height="20" fill="none" class="svgFillAll"
+                                                style="margin-right: 4px; fill: rgb(74, 85, 104);">
+                                                <path
+                                                    d="M11.648 5.269a.5.5 0 00.485-.129l2.152-2.152a1.667 1.667 0 012.357 2.357L14.49 7.497a.5.5 0 00-.129.485l1.615 5.922a.5.5 0 01-.128.485l-1.094 1.094a.5.5 0 01-.79-.11l-2.303-4.145a.5.5 0 00-.79-.11l-1.743 1.741a.5.5 0 00-.146.354v1.942a.5.5 0 01-.147.354l-1.049 1.05a.5.5 0 01-.828-.196l-.843-2.531a.5.5 0 00-.317-.316l-2.53-.844a.5.5 0 01-.196-.828l1.05-1.05a.5.5 0 01.353-.146h1.943a.5.5 0 00.353-.146L8.513 8.76a.5.5 0 00-.11-.79L4.257 5.667a.5.5 0 01-.11-.79L5.24 3.782a.5.5 0 01.485-.13l5.922 1.616z"
+                                                    fill="#4A5568"></path>
+                                            </svg>
+                                            <h3>Khởi hành: 16/04/2022</h3>
+                                        </div>
+                                    </div>
+                                    <div class="deal-item_price">
+                                        <del class="deal-item_cost">609.000<sup>đ</sup></del>
+                                        <h3 class="deal-item_sale">573.000<sup>đ</sup></h3>
+                                        <h3 class="deal-item_tax">Giá sau thuế: 1.046.000<sup>đ</sup></h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category statistic -->
+            <div class="category-statistic">
+                <div class="grid">
+                    <h2 class="statistic-heading">Nền tảng kết nối người dùng và hãng bay</h2>
+                    <ul class="statistic-list">
+                        <li class="statistic-item">
+                            <i class="statistic-item__icon fas fa-user-check"></i>
+                            <div class="statistic-item__header">
+                                <h3 class="statistic-item__heading">Tìm kiếm được cá nhân hóa</h3>
+                                <p class="statistic-item__description">
+                                    100 tuyến đường bay trên toàn quốc, chủ động và đa dạng lựa chọn.
+                                </p>
+                            </div>
                         </li>
-                        <li class="navbar__category-item">
-                            <a href="#" class="navbar__category-link">
-                                <i class="navbar__category-icon fas fa-subway"></i>
-                                Tàu hỏa
-                            </a>
+                        <li class="statistic-item">
+                            <i class="statistic-item__icon far fa-hand-point-up"></i>
+                            <div class="statistic-item__header">
+                                <h3 class="statistic-item__heading">Đặt vé dễ dàng</h3>
+                                <p class="statistic-item__description">
+                                    Đặt vé chỉ với 60s. Chọn chuyến bay yêu thích cực nhanh và thuận tiện.
+                                </p>
+                            </div>
                         </li>
-                        <li class="navbar__category-item">
-                            <a href="#" class="navbar__category-link">
-                                <i class="navbar__category-icon fas fa-bus-alt"></i>
-                                Xe khách
-                            </a>
-                        </li>
-                        <li class="navbar__category-item ">
-                            <a href="#" class="navbar__category-link">
-                                <i class="navbar__category-icon fas fa-hotel"></i>
-                                Khách sạn
-                            </a>
+                        <li class="statistic-item">
+                            <i class="statistic-item__icon far fa-calendar-check"></i>
+                            <div class="statistic-item__header">
+                                <h3 class="statistic-item__heading">Đảm bảo có vé</h3>
+                                <p class="statistic-item__description">
+                                    Hoàn ngay 150% nếu không có vé, mang đến hành trình trọn vẹn.
+                                </p>
+                            </div>
                         </li>
                     </ul>
+                </div>
+            </div>
+        </div>
 
-                    <ul class="navbar__category">
-                        <li class="navbar__category-item">
-                            <a href="#" class="navbar__category-link">
-                                <i class="navbar__category-icon fab fa-buffer"></i>
-                                Dịch vụ
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="grid">
+                <div class="footer-nav">
+                    <div class="footer-menu">
+                        <div class="footer-menu__list">
+                            <a href="#" class="footer-menu__item">
+                                Giới thiệu
+                                <span class="underline footer-menu__item--underline"></span>
                             </a>
-                        </li>
-                        <li class="navbar__category-item">
-                            <a href="#" class="navbar__category-link">
-                                <i class="navbar__category-icon fas fa-headset"></i>
+                            <a href="#" class="footer-menu__item">
                                 Liên hệ
+                                <span class="underline footer-menu__item--underline"></span>
                             </a>
-                        </li>
-                        <li class="navbar__category-item">
-                            <a href="#" class="navbar__category-link">
-                                <i class="navbar__category-icon fas fa-user"></i>
-                                Đăng nhập / Đăng ký
+                            <a href="#" class="footer-menu__item">
+                                Video
+                                <span class="underline footer-menu__item--underline"></span>
                             </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div class="container">
-        <!-- With search -->
-        <div class="search">
-            <div class="grid">
-                <div class="search__heading">
-                    <i class="search__heading-icon fas fa-route"></i>
-                    <h1 class="search__heading-title">Are you ready for a wonderful trip?</h1>
-                </div>
-
-                <div class="search__content">
-                    <div class="grid__row grid__row-search">
-                        <div class="grid__column-4 search-input">
-                            <label class="search-input__label ">Điểm đi</label>
-                            <input type="input" class="search-input__field search-input_depflight"
-                                placeholder="Điểm đi" readonly="readonly" />
+                            <a href="#" class="footer-menu__item">
+                                Tải về
+                                <span class="underline footer-menu__item--underline"></span>
+                            </a>
+                            <a href="#" class="footer-menu__item">
+                                Tuyển dụng
+                                <span class="underline footer-menu__item--underline"></span>
+                            </a>
+                            <a href="#" class="footer-menu__item">
+                                Hình ảnh
+                                <span class="underline footer-menu__item--underline"></span>
+                            </a>
+                            <a href="#" class="footer-menu__item">
+                                Đến trang công ty
+                                <span class="underline footer-menu__item--underline"></span>
+                            </a>
                         </div>
-                        <div class="grid__column-4 search-input">
-                            <img class="search__double-arrow" id="double-arrow"
-                                src="/Frontend/assets/img/double_arrow-v2.png" alt="">
-                            <label class="search-input__label ">Điểm đến</label>
-                            <input type="input" class="search-input__field search-input_arrflight"
-                                placeholder="Điểm đến" readonly="readonly" />
-                        </div>
-                        <div class="grid__column-4">
-                            <div class="grid__row">
-                                <div class="grid__column-6 search-input">
-                                    <label class="search-input__label ">Ngày đi</label>
-                                    <input type="datetime-local" class="search-date__field" placeholder="Ngày đi" />
-                                </div>
-                                <div class="grid__column-6 search-input">
-                                    <label class="search-input__label ">Ngày về</label>
-                                    <input type="datetime-local" class="search-date__field" placeholder="Ngày về" />
-                                </div>
-                            </div>
-                        </div>
+                        <h5 class="footer-menu__copy-right">
+                            © 2022 QSC CITY - Developed by TAB
+                        </h5>
                     </div>
-                    <div class="grid__row grid__row-search">
-                        <div class="grid__column-6 ">
-                            <div class="grid__row">
-                                <div class="grid__column-4 search-input">
-                                    <label class="search-input__label ">Người lớn (≥ 12t)</label>
-                                    <input style="padding-left: 10px;" type="input"
-                                        class="search-input__field search-input_adult" placeholder="0"
-                                        readonly="readonly" />
-                                </div>
-                                <div class="grid__column-4 search-input">
-                                    <label class="search-input__label ">Trẻ em (2-12t)</label>
-                                    <input style="padding-left: 10px;" type="input"
-                                        class="search-input__field search-input_adult" placeholder="0"
-                                        readonly="readonly" />
-                                </div>
-                                <div class="grid__column-4 search-input">
-                                    <label class="search-input__label ">Em bé (< 2t)</label>
-                                            <input style="padding-left: 10px;" type="input"
-                                                class="search-input__field search-input_infant" placeholder="0"
-                                                readonly="readonly" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid__column-6 search-submit">
-                            <label class="option-checkbox">
-                                <input type="checkbox" id="search_checkbox">
-                                <i class="icon-checkbox"></i>
-                                Tìm vé giá rẻ trong tháng
-                            </label>
-                            <button style="width: 190px;" class="btn btn--primary">Tìm chuyến bay</button>
+                    <div class="footer-social">
+                        <div class="footer-social__list">
+                            <a href="" class="footer-social__item">
+                                <i class="footer-social__icon fab fa-youtube"></i>
+                            </a>
+                            <a href="" class="footer-social__item">
+                                <i class="footer-social__icon fab fa-facebook-f"></i>
+                            </a>
+                            <a href="" class="footer-social__item">
+                                <i class="footer-social__icon fab fa-google-plus-g"></i>
+                            </a>
+                            <a href="" class="footer-social__item">
+                                <i class="footer-social__icon fab fa-twitter"></i>
+                            </a>
+                            <a href="" class="footer-social__item">
+                                <i class="footer-social__icon fab fa-instagram"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Category bus -->
-        <div class="category-muibox">
-            <div class="grid" style="position: relative;">
-                <div class="muibox-list">
-                    <div class="muibox-item">
-                        <span class="muibox-img">
-                            <img src="https://storage.googleapis.com/tripi-assets/mytour/icons/icon_support_247.svg" alt="">
-                        </span>
-                        <span class="muibox-title">
-                            Hỗ trợ khách hàng 24/7
-                        </span>
-                        <span class="muibox-desc">
-                            Chat là có, gọi là nghe, không quản đêm hôm, ngày nghỉ và ngày lễ.
-                        </span>
-                    </div>
-                    <div class="muibox-item">
-                        <span class="muibox-img">
-                            <img src="https://storage.googleapis.com/tripi-assets/mytour/icons/icon_support_247.svg" alt="">
-                        </span>
-                        <span class="muibox-title">
-                            Thanh toán dễ dàng, đa dạng
-                        </span>
-                        <span class="muibox-desc">
-                            Bao gồm thêm chuyển khoản ngân hàng và tiền mặt tại cửa hàng.
-                        </span>
-                    </div>
-                    <div class="muibox-item">
-                        <span class="muibox-img">
-                            <img src="https://storage.googleapis.com/tripi-assets/mytour/icons/icon_support_247.svg" alt="">
-                        </span>
-                        <span class="muibox-title">
-                            Săn vé giá tốt nội địa, quốc tế
-                        </span>
-                        <span class="muibox-desc">
-                            So sánh giá tốt nhất từ các hãng hàng không nội địa và 50.000 đường bay quốc tế.
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Category deal -->
-        <div class="category-deal">
-            <div class="grid">
-                <h2 class="deal-heading">Best deals on bus booking</h2>
-                <div class="deal-list">
-                    <a href="" class="deal-item">
-                        <img src="assets/img/deal-2.jpg" alt="" class="deal-item__img">
-                        <div class="deal-item__header">
-                            <h3 class="deal-item__heading">Save 15% on first bus booking</h3>
-                            <ul class="deal-item__description">
-                                <li class="deal-item__description-item">Book your bus using coupon code: NEW15 and get
-                                    flat 15%, upto ₹200 ixigo money on your booking.</li>
-                                <li class="deal-item__description-item">No minimum booking amount required.</li>
-                            </ul>
-                        </div>
-                    </a>
-                    <a href="" class="deal-item">
-                        <img src="assets/img/deal-3.jpg" alt="" class="deal-item__img">
-                        <div class="deal-item__header">
-                            <h3 class="deal-item__heading">Save 15% on first bus booking</h3>
-                            <ul class="deal-item__description">
-                                <li class="deal-item__description-item">Book your bus using coupon code: NEW15 and get
-                                    flat 15%, upto ₹200 ixigo money on your booking.</li>
-                                <li class="deal-item__description-item">No minimum booking amount required.</li>
-                            </ul>
-                        </div>
-                    </a>
-                    <a href="" class="deal-item">
-                        <img src="assets/img/deal-4.jpg" alt="" class="deal-item__img">
-                        <div class="deal-item__header">
-                            <h3 class="deal-item__heading">Save Upto ₹500 On Bus Bookings</h3>
-                            <ul class="deal-item__description">
-                                <li class="deal-item__description-item">Book your bus using coupon code: BUS500 and get
-                                    flat 6%, upto ₹500 ixigo money on your booking.</li>
-                                <li class="deal-item__description-item">No minimum booking amount required.</li>
-                            </ul>
-                        </div>
-                    </a>
-                    <a href="" class="deal-item">
-                        <img src="assets/img/deal-5.jpg" alt="" class="deal-item__img">
-                        <div class="deal-item__header">
-                            <h3 class="deal-item__heading">Get Flat 5% Off Upto ₹200 On Bus Bookings With CRED Pay</h3>
-                            <ul class="deal-item__description">
-                                <li class="deal-item__description-item">Book your Bus & get flat 5% off upto ₹200 on
-                                    your booking with payments via CRED Pay.</li>
-                                <li class="deal-item__description-item">There is no minimum booking amount for the same.
-                                </li>
-                            </ul>
-                        </div>
-                    </a>
-                    <a href="" class="deal-item">
-                        <img src="assets/img/deal-6.jpg" alt="" class="deal-item__img">
-                        <div class="deal-item__header">
-                            <h3 class="deal-item__heading">Travel Insurance - Free Cancellation On Bus Bookings @ ₹15
-                            </h3>
-                            <ul class="deal-item__description">
-                                <li class="deal-item__description-item">QSC is offering free cancellations on all bus
-                                    bookings at just ₹15.</li>
-                                <li class="deal-item__description-item">This will benefit travelers who are unsure of
-                                    their future travel and seek the flexibility of canceling their travel plans.</li>
-                            </ul>
-                        </div>
-                    </a>
-                    <a href="" class="deal-item">
-                        <img src="assets/img/deal-7.jpg" alt="" class="deal-item__img">
-                        <div class="deal-item__header">
-                            <h3 class="deal-item__heading">Get 5% Off Upto ₹100 On Bus Bookings</h3>
-                            <ul class="deal-item__description">
-                                <li class="deal-item__description-item">Book your bus using coupon code: BUS5 and get
-                                    flat 5% instant off upto ₹100 on your booking.</li>
-                                <li class="deal-item__description-item">No minimum booking amount required.</li>
-                            </ul>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Category statistic -->
-        <div class="category-statistic">
-            <div class="grid">
-                <h2 class="statistic-heading">Platform connects users and bus operators</h2>
-                <ul class="statistic-list">
-                    <li class="statistic-item">
-                        <i class="statistic-item__icon fas fa-user-check"></i>
-                        <div class="statistic-item__header">
-                            <h3 class="statistic-item__heading">Personalized search</h3>
-                            <p class="statistic-item__description">
-                                5000+ routes, 2000+ Bus Operators, and 5000+ Agencies across the country. Helps you
-                                quickly choose a favorite bus according to your needs.
-                            </p>
-                        </div>
-                    </li>
-                    <li class="statistic-item">
-                        <i class="statistic-item__icon far fa-hand-point-up"></i>
-                        <div class="statistic-item__header">
-                            <h3 class="statistic-item__heading">Easy book</h3>
-                            <p class="statistic-item__description">
-                                Only taking over 60s to book. VeXeRe accepts a variety of payment options
-                            </p>
-                        </div>
-                    </li>
-                    <li class="statistic-item">
-                        <i class="statistic-item__icon far fa-calendar-check"></i>
-                        <div class="statistic-item__header">
-                            <h3 class="statistic-item__heading">Guaranteed ticket</h3>
-                            <p class="statistic-item__description">
-                                We commit a 150% refund if not keeping your tickets. Keep your mind on a happy journey.
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        </footer>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>

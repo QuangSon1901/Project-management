@@ -1,7 +1,7 @@
 :root {
     --white-color: #fff;
     --black-color: #000;
-    --text-color: #333;
+    --text-color: #555;
     --primary-color: #FF3366;
     --primary-blur-color: #2140ee0d;
     --border-color: #dbdbdb;
@@ -58,9 +58,15 @@ html {
     width: 16.667%;
 }
 
+.grid__column-2-4 {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 20%;
+}
+
 .grid__column-3 {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     width: 25%;
 }
 
@@ -146,7 +152,7 @@ html {
 }
 
 .btn--primary:hover {
-    filter: brightness(104%);
+    filter: brightness(110%);
 }
 
 /* Animation */
@@ -156,6 +162,25 @@ html {
     -moz-transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
 }
+
+.underline::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    right: 50%;
+    -webkit-transition: .4s ease all;
+    transition: .4s ease all;
+}
+
+.underline::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 50%;
+    -webkit-transition: .4s ease all;
+    transition: .4s ease all;
+}
+
 
 /* Label */
 label {
@@ -174,6 +199,7 @@ input {
     -khtml-user-select: none;
     -webkit-user-select: none;
     -webkit-touch-callout: none;
+    border-radius: 2px;
 }
 
 img {
@@ -185,7 +211,7 @@ img {
 }
 
 /* Check box */
-input[type=checkbox]{
+input[type=checkbox] {
     display: none;
 }
 
@@ -194,7 +220,8 @@ input[type=checkbox]{
     width: 20px;
     margin-right: 5px;
     display: inline-block;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
+    border-radius: 2px;
     position: relative;
 }
 
@@ -202,11 +229,11 @@ input[type=checkbox]{
     border-color: var(--primary-color);
 }
 
-input[type=checkbox]:checked + i {
+input[type=checkbox]:checked+i {
     border-color: var(--primary-color);
 }
 
-input[type=checkbox]:checked + i::after {
+input[type=checkbox]:checked+i::after {
     content: "";
     position: absolute;
     top: 3px;
@@ -214,4 +241,45 @@ input[type=checkbox]:checked + i::after {
     height: 12px;
     width: 12px;
     background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+/* a */
+a {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+
+/* Select option */
+select {
+    /*for firefox*/
+    -moz-appearance: none;
+    /*for chrome*/
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+}
+
+/*for IE10+*/
+select::-ms-expand {
+    display: none;
+}
+
+section * {
+    height: 100px;
+}
+
+.icon-selectbox {
+    font-size: 1.6rem;
+    color: #333;
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    top: 32px;
+}
+
+/* ul */
+ul {
+    list-style: none;
 }
