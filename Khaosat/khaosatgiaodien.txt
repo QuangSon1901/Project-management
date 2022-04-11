@@ -1,17 +1,4 @@
 *Trang chủ:
-	-Giới thiệu về các khu du lịch
-		+Thông tin
-		+Lịch trình khám phá
-		+Địa điểm
-		+Bộ sưu tập
-		+Đánh giá
-		+Đặt chuyến tham quan:
-			Tên
-			Email
-			SĐT
-			dd/mm/yy
-			Số người
-			Mã giảm giá
 	-Tìm kiếm:
 		+Địa điểm muốn đến
 		+Tháng muốn đi
