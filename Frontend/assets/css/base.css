@@ -312,6 +312,6 @@ ul {
     animation: growth linear .1s;
 }
 
-body {
+.lock-overlay {
     overflow-y: hidden;
 }
