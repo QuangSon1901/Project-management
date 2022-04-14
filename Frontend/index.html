@@ -8,7 +8,8 @@
     <title>Air Booking</title>
     <link rel="stylesheet" href="/Frontend/assets/css/style.css">
     <link rel="stylesheet" href="/Frontend/assets/css/base.css">
-
+    
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
         integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -57,6 +58,7 @@
 
                         <ul class="navbar__category">
                             <li class="navbar__category-item">
+
                                 <a href="#" class="navbar__category-link">
                                     <i class="navbar__category-icon fab fa-buffer"></i>
                                     Dịch vụ
@@ -68,11 +70,28 @@
                                     Liên hệ
                                 </a>
                             </li>
-                            <li class="navbar__category-item" id="btn_login">
+                            <!-- <li class="navbar__category-item" id="btn_login">
                                 <a href="#" class="navbar__category-link">
                                     <i class="navbar__category-icon fas fa-user"></i>
                                     Đăng nhập / Đăng ký
                                 </a>
+                            </li> -->
+                            <li class="navbar__category-item">
+                                <div class="action">
+                                    <div class="profile" onclick="menuToggle();">
+                                        <img src="assets/img/2.png" alt="">
+                                    </div>
+                                    <div class="menu_dropdown">
+                                        <span>Nguyen Quang</span>
+                                        <ul>
+                                            <li><a href="#"><i class="fa-solid fa-user"></i>Thông tin cá nhân</a></li>
+                                            <li><a href="#"><i class="fa fa-cog"></i>Cài đặt</a></li>
+                                            <li><a href="#"><i class="fa fa-key"></i>Đăng xuất</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+
                             </li>
                         </ul>
                     </div>
@@ -1058,6 +1077,12 @@
         signInButton.addEventListener('click', () => {
             container.classList.remove("right-panel-active");
         });
+    </script>
+    <script>
+        function menuToggle(){
+            const toggleMenu = document.querySelector('.menu_dropdown');
+            toggleMenu.classList.toggle('active')
+        }
     </script>
 </body>
 
