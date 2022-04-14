@@ -763,7 +763,6 @@ form .txt_field{
 .action{
     position: relative;
     top: 10px;
-    
 }
 .action .profile{
     width: 60px;
@@ -774,21 +773,21 @@ form .txt_field{
 }
 .action .profile img{
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 8px;
+    left: 10px;
     width: 50%;
     height: 50%;
     object-fit: cover;
 }
 .action .menu_dropdown{
     position: absolute;
-    top: 120px;
+    top: 10 0px;
     right: -10px;
     padding: 10px 20px;
     background: #fff;
     width: 200px;
     box-sizing: 0 5px 25px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
+    border-radius: 4px;
     transition: 0.5s;
     visibility: hidden;
     opacity: 0;
@@ -812,8 +811,8 @@ form .txt_field{
     width: 100%;
     text-align: center;
     font-size: 18px;
-    /* padding: 50px 0; */
-    margin-top: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     font-weight: 500;
     color: #555;
     line-height: 1.2em;
@@ -821,17 +820,17 @@ form .txt_field{
 .action .menu_dropdown ul li{
     list-style: none;
     padding: 10px 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
     direction: flex;
     align-items: center;
 }
-.action .menu_dropdown ul li a{
+.profile_info{
     display: inline-block;
     text-decoration: none;
     color: rgba(0,0,0,.6);
     font-weight: 500;
     transition: 0.5s;
 }
-.action .menu_dropdown ul li a:hover a{
+.profile_info:hover {
     color:var(--primary-color) ;
-}
+} 

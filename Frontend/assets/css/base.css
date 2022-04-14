@@ -303,9 +303,6 @@ ul {
 }
 
 .modal__body {
-    /* font-family: 'Montserrat',sans-serif; */
-    /* display: flex;
-    flex-direction: column; */
     margin: auto;
     z-index: 1;
     background: #fff;
