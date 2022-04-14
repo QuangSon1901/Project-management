@@ -733,6 +733,7 @@
     color: var(--primary-color);
     filter: brightness(120%);
 }
+
 /* LoginVSRegister Form */
 .container-login_register.h1{
     font-weight: bold;
