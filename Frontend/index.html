@@ -8,8 +8,8 @@
     <title>Air Booking</title>
     <link rel="stylesheet" href="/Frontend/assets/css/style.css">
     <link rel="stylesheet" href="/Frontend/assets/css/base.css">
-    
-   
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
         integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -804,8 +804,7 @@
     <div class="modal" id="modal_login">
         <div class="modal__overlay" id="modal_overlay"></div>
         <div class="modal__body">
-            <!-- Login -->
-            <h2>Weekly Coding Challenge #1: Sign in/up Form</h2>
+            <!-- Login / Register-->
             <div class="container-login_register" id="container">
                 <div class="form-container sign-up-container">
                     <form action="#">
@@ -816,26 +815,26 @@
                             <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                         <span class="close-modal close">&#10005;</span>
-                        <span>hoặc dùng tài khoản email để đăng ký</span>
+                        <span>hoặc dùng tài khoản TravelTime để đăng ký</span>
                         <div class="txt_field">
-                            <input type="text" required>
+                            <input type="text">
                             <span></span>
-                            <label>Name</label>
+                            <label>Họ tên</label>
                         </div>
                         <div class="txt_field">
-                            <input type="text" required>
+                            <input type="text">
                             <span></span>
                             <label>Email</label>
                         </div>
                         <div class="txt_field">
-                            <input type="password" required>
+                            <input type="password">
                             <span></span>
-                            <label>Password</label>
+                            <label>Mật khẩu</label>
                         </div>
-                        <a href="#" class="form-container__signin">Đã có tài khoản!</a>
                         <button>Đăng ký</button>
                     </form>
                 </div>
+
                 <div class="form-container sign-in-container">
                     <form action="#">
                         <h1>Đăng nhập</h1>
@@ -845,18 +844,18 @@
                             <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                         <span class="close-modal close">&#10005;</span>
-                        <span>hoặc dùng tài khoản email để đăng nhập</span>
+                        <span>hoặc dùng tài khoản TravelTime để đăng nhập</span>
                         <div class="txt_field">
-                            <input type="text" required>
+                            <input type="text">
                             <span></span>
                             <label>Email</label>
                         </div>
                         <div class="txt_field">
-                            <input type="password" required>
+                            <input type="password">
                             <span></span>
-                            <label>Password</label>
+                            <label>Mật khẩu</label>
                         </div>
-                        <a href="#" class="form-container__signin">Quên mật khẩu</a>
+                        <a href="#" class="form-container__signin">Quên mật khẩu?</a>
                         <button>Đăng nhập</button>
                     </form>
                 </div>
@@ -1042,7 +1041,7 @@
         var btn_login = document.getElementById("btn_login");
 
         // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
+        var btn_close = document.querySelectorAll(".close");
 
         // When the user clicks the button, open the modal 
         btn_login.onclick = function () {
@@ -1050,24 +1049,9 @@
             body.classList.add("lock-overlay");
         }
 
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-            modal_login.style.display = "none";
-            body.classList.remove("lock-overlay");
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal_login || event.target == modal_overlay) {
-                modal_login.style.display = "none";
-                body.classList.remove("lock-overlay");
-            }
-        }
-    </script>
-    <script>
-        const signUpButton = document.getElementById('signUp');
-        const signInButton = document.getElementById('signIn');
-        const container = document.getElementById('container');
+        var signUpButton = document.getElementById('signUp');
+        var signInButton = document.getElementById('signIn');
+        var container = document.getElementById('container');
 
         signUpButton.addEventListener('click', () => {
             container.classList.add("right-panel-active");
@@ -1076,9 +1060,27 @@
         signInButton.addEventListener('click', () => {
             container.classList.remove("right-panel-active");
         });
+
+        // When the user clicks on <btn_close> (x), close the modal
+        btn_close.forEach(function (element, index) {
+            element.addEventListener('click', function() {
+                modal_login.style.display = "none";
+                body.classList.remove("lock-overlay");
+                container.classList.remove("right-panel-active");
+            })
+        });
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal_login || event.target == modal_overlay) {
+                modal_login.style.display = "none";
+                body.classList.remove("lock-overlay");
+                container.classList.remove("right-panel-active");
+            }
+        }
     </script>
     <script>
-        function menuToggle(){
+        function menuToggle() {
             const toggleMenu = document.querySelector('.menu_dropdown');
             toggleMenu.classList.toggle('active')
         }
