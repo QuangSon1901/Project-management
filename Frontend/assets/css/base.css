@@ -305,6 +305,9 @@ ul {
 .modal__body {
     --growth-form: 0.7;
     --growth-to: 1;
+    font-family: 'Montserrat',sans-serif;
+    display: flex;
+    flex-direction: column;
     margin: auto;
     position: relative;
     z-index: 1;

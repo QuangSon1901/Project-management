@@ -783,12 +783,79 @@
             </div>
         </footer>
     </div>
-    
+
     <div class="modal" id="modal_login">
         <div class="modal__overlay" id="modal_overlay"></div>
         <div class="modal__body">
             <!-- Login -->
-            <div class="auth-form">
+            <h2>Weekly Coding Challenge #1: Sign in/up Form</h2>
+            <div class="container-login_register" id="container">
+                <div class="form-container sign-up-container">
+                    <form action="#">
+                        <h1>Tạo tài khoản</h1>
+                        <div class="social-container">
+                            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <span>hoặc dùng tài khoản email để đăng ký</span>
+                        <div class="txt_field">
+                            <input type="text" required>
+                            <span></span>
+                            <label>Name</label>
+                        </div>
+                        <div class="txt_field">
+                            <input type="text" required>
+                            <span></span>
+                            <label>Email</label>
+                        </div>
+                        <div class="txt_field">
+                            <input type="password" required>
+                            <span></span>
+                            <label>Password</label>
+                        </div>
+                        <button>Đăng ký</button>
+                    </form>
+                </div>
+                <div class="form-container sign-in-container">
+                    <form action="#">
+                        <h1>Đăng nhập</h1>
+                        <div class="social-container">
+                            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <span>hoặc dùng tài khoản email để đăng nhập</span>
+                        <div class="txt_field">
+                            <input type="text" required>
+                            <span></span>
+                            <label>Email</label>
+                        </div>
+                        <div class="txt_field">
+                            <input type="password" required>
+                            <span></span>
+                            <label>Password</label>
+                        </div>
+                        <a href="#">Quên mật khẩu</a>
+                        <button>Đăng nhập</button>
+                    </form>
+                </div>
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <div class="overlay-panel overlay-left">
+                            <h1>Chào Mừng Trở lại!!!</h1>
+                            <p>Để kết nối với chúng bạn cần đăng nhập với thông tin cá nhân</p>
+                            <button class="ghost" id="signIn">Đăng nhập</button>
+                        </div>
+                        <div class="overlay-panel overlay-right">
+                            <h1>TravelTime xin kính chào!!</h1>
+                            <p>Điền thông tin cá nhân và bắt đầu cuộc hành trình với TravelTime</p>
+                            <button class="ghost" id="signUp">Đăng ký</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="auth-form">
                 <div class="auth-form__sidebar">
                     <ul class="auth-form__sidebar-list">
                         <li class="auth-form__sidebar-item">
@@ -858,7 +925,7 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- Register form -->
             <!-- <div class="auth-form">
                 <div class="auth-form__sidebar">
@@ -976,6 +1043,19 @@
                 body.classList.remove("lock-overlay");
             }
         }
+    </script>
+    <script>
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+        const container = document.getElementById('container');
+
+        signUpButton.addEventListener('click', () => {
+            container.classList.add("right-panel-active");
+        });
+
+        signInButton.addEventListener('click', () => {
+            container.classList.remove("right-panel-active");
+        });
     </script>
 </body>
 
