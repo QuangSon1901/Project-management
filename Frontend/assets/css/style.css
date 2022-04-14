@@ -548,34 +548,6 @@
 }
 
 /* LoginVSRegister Form */
-/* .container-login_register.h1{
-    font-weight: bold;
-    margin: 0;
-}
-.container-login_register.p{
-    font-size: 14px;
-    font-weight: 100;
-    line-height: 20px;
-    letter-spacing: 0.5px;
-    margin: 20px 0 30px;
-}
-
-.container-login_register.a{
-    color: #333;
-    font-size: 14px;
-    text-decoration: none;
-    margin: 15px 0;
-} */
-/* .container-login_register{
-    background: #fff;
-    border-radius: 10px;
-    box-shadow:0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22) ;
-    position: relative;
-    overflow: hidden;
-    width: 768px;
-    max-width: 100%;
-    min-height: 480px;
-} */
 .form-container form{
     background: #fff;
     display: flex;
@@ -714,9 +686,9 @@ form .txt_field{
 	transform: translateX(-100%);
 }
 .overlay {
-	background: #FF416C;
-	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	background: var(--primary-color);
+	background: -webkit-linear-gradient(to right, var(--primary-color), #FF416C);
+	background: linear-gradient(to right, var(--primary-color), #FF416C);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -775,7 +747,18 @@ form .txt_field{
 	height: 40px;
 	width: 40px;
 }
-
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.overlay_text{
+    margin: 10px 0;
+    font-size: 12px;
+}
 /* Drodown_list user */
 .action{
     position: relative;
