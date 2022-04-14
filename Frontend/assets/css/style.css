@@ -821,8 +821,12 @@ form .txt_field{
     list-style: none;
     padding: 10px 0;
     border-top: 2px solid rgba(0, 0, 0, 0.1);
-    direction: flex;
+    display: flex;
     align-items: center;
+}
+.action .menu_dropdown ul li img{
+    max-width: 20px;
+    margin-right: 10px;
 }
 .profile_info{
     display: inline-block;
