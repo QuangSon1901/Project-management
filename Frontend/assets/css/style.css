@@ -808,15 +808,14 @@ form {
 	height: 100%;
 	transition: all 0.6s ease-in-out;
 }
-form.txt_field{
-    position: relative;
-    border-bottom: 2px solid #adadad;
-    margin: 30px 0;
+.form-container__signin{
+    padding-bottom: 10px;
+    font-size: 12px;
 }
 form .txt_field{
     position: relative;
     border-bottom: 2px solid #adadad;
-    margin: 30px 0;
+    margin:15px 0;
   }
 .txt_field input{
     width: 100%;
