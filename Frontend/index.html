@@ -82,9 +82,9 @@
                                         <img src="assets/img/2.png" alt="">
                                     </div>
                                     <div class="menu_dropdown">
-                                        <span>Nguyen Quang</span>
+                                        <h2 class="profile_name">Nguyen Quang</h2>
                                         <ul>
-                                            <li><a href="#"><i class="fa-solid fa-user"></i>Thông tin cá nhân</a></li>
+                                            <li><i class="fa-solid fa-user"></i>Thông tin cá nhân</li>
                                             <li><a href="#"><i class="fa fa-cog"></i>Cài đặt</a></li>
                                             <li><a href="#"><i class="fa fa-key"></i>Đăng xuất</a></li>
                                         </ul>
@@ -803,9 +803,9 @@
 
     <div class="modal" id="modal_login">
         <div class="modal__overlay" id="modal_overlay"></div>
-        <div class="modal__body">
+        <div class="modal__body" id="container">
             <!-- Login / Register-->
-            <div class="container-login_register" id="container">
+            <!-- <div class="container-login_register" > -->
                 <div class="form-container sign-up-container">
                     <form action="#">
                         <h1>Tạo tài khoản</h1>
@@ -873,142 +873,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- <div class="auth-form">
-                <div class="auth-form__sidebar">
-                    <ul class="auth-form__sidebar-list">
-                        <li class="auth-form__sidebar-item">
-                            <i class="auth-form__sidebar-icon fas fa-shield-alt"></i>
-                            <span class="auth-form__sidebar-label">Được tin cậy bởi hơn 100 triệu người</span>
-                        </li>
-                        <li class="auth-form__sidebar-item">
-                            <i class="auth-form__sidebar-icon fas fa-money-bill-wave-alt"></i>
-                            <span class="auth-form__sidebar-label">Thanh toán nhanh chóng và an toàn</span>
-                        </li>
-                        <li class="auth-form__sidebar-item">
-                            <i class="auth-form__sidebar-icon fas fa-funnel-dollar"></i>
-                            <span class="auth-form__sidebar-label">Tiết kiệm hơn khi đặt trực tuyến</span>
-                        </li>
-                    </ul>
-                </div>
+            <!-- </div> -->
 
-                <div class="auth-form__container">
-                    <div class="auth-form__header">
-                        <h2 class="auth-form__heading">Đăng nhập</h2>
-                        <span class="auth-form__switch-btn">Đăng ký</span>
-                        <span class="close-modal close">&#10005;</span>
-                    </div>
-
-                    <div class="auth-form__form">
-                        <div class="auth-form__group-input">
-                            <input type="text" class="auth-form__input" placeholder="Mobile No. / Email LOGIN">
-                            <span class="auth-form__label">Mobile No. / Email</span>
-                            <span class="underline"></span>
-                        </div>
-                        <div class="auth-form__group-input">
-                            <input type="text" class="auth-form__input" placeholder="Password">
-                            <span class="auth-form__label">Password</span>
-                            <span class="underline"></span>
-                        </div>
-                        <div class="auth-form__controls">
-                            <button class="btn btn--primary auth-form__controls--btn">LOGIN</button>
-                        </div>
-                    </div>
-
-                    <h2 id="label_or">OR</h2>
-
-                    <div class="auth-form__socials">
-                        <button class="btn auth-form__social-facebook">
-                            <i class="auth-form__socials-icon fab fa-facebook-square"></i>
-                            <span class="auth-form__socials-label">
-                                Facebook
-                            </span>
-                        </button>
-                        <button class="btn auth-form__social-google">
-                            <i class="auth-form__socials-icon fab fa-google"></i>
-                            <span class="auth-form__socials-label">
-                                Google
-                            </span>
-                        </button>
-                    </div>
-
-                    <div class="auth-form__aside">
-                        <p class="auth-form__policy-text">
-                            By logging in, I understand & agree to QSC
-                            <a href="" class="auth-form__text-link">
-                                terms of use
-                            </a> and
-                            <a href="" class="auth-form__text-link">
-                                privacy policy
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div> -->
-            <!-- Register form -->
-            <!-- <div class="auth-form">
-                <div class="auth-form__sidebar">
-                    <ul class="auth-form__sidebar-list">
-                        <li class="auth-form__sidebar-item">
-                            <i class="auth-form__sidebar-icon fas fa-shield-alt"></i>
-                            <span class="auth-form__sidebar-label">Trusted by over 100 milion Indians</span>
-                        </li>
-                        <li class="auth-form__sidebar-item">
-                            <i class="auth-form__sidebar-icon fas fa-money-bill-wave-alt"></i>
-                            <span class="auth-form__sidebar-label">Fast & secure payments</span>
-                        </li>
-                        <li class="auth-form__sidebar-item">
-                            <i class="auth-form__sidebar-icon fas fa-funnel-dollar"></i>
-                            <span class="auth-form__sidebar-label">Save on every booking with QSC money</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="auth-form__container">
-                    <div class="auth-form__header">
-                        <h2 class="auth-form__heading">Create your account</h2>
-                        <span class="auth-form__switch-btn">Login</span>
-                    </div>
-
-                    <div class="auth-form__form">
-                        <div class="auth-form__group-input">
-                            <input type="text" class="auth-form__input" placeholder="Full Name">
-                            <span class="auth-form__label">Full name</span>
-                            <span class="underline auth-form__sidebar-underline"></span>
-                        </div>
-                        <div class="auth-form__group-input">
-                            <input type="text" class="auth-form__input" placeholder="Enter your email ID">
-                            <span class="auth-form__label">Email</span>
-                            <span class="underline auth-form__sidebar-underline"></span>
-                        </div>
-                        <div class="auth-form__group-input">
-                            <input type="text" class="auth-form__input" placeholder="Enter your phone">
-                            <span class="auth-form__label">Mobile Number</span>
-                            <span class="underline auth-form__sidebar-underline"></span>
-                        </div>
-                        <div class="auth-form__group-input">
-                            <input type="text" class="auth-form__input" placeholder="Enter your password">
-                            <span class="auth-form__label">Password</span>
-                            <span class="underline auth-form__sidebar-underline"></span>
-                        </div>
-                        <div class="auth-form__controls">
-                            <button class="btn btn--primary auth-form__controls--btn">REGISTER</button>
-                        </div>
-                    </div>
-
-                    <div class="auth-form__aside">
-                        <p class="auth-form__policy-text">
-                            By clicking on register, I understand & agree to QSC
-                            <a href="" class="auth-form__text-link">
-                                terms of use
-                            </a> and
-                            <a href="" class="auth-form__text-link">
-                                privacy policy
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
 
@@ -1063,7 +929,7 @@
 
         // When the user clicks on <btn_close> (x), close the modal
         btn_close.forEach(function (element, index) {
-            element.addEventListener('click', function() {
+            element.addEventListener('click', function () {
                 modal_login.style.display = "none";
                 body.classList.remove("lock-overlay");
                 container.classList.remove("right-panel-active");
