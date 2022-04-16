@@ -264,6 +264,7 @@
 .option-checkbox {
     display: flex;
     align-items: center;
+    margin: 8px 0;
 }
 
 .option-checkbox:hover .icon-checkbox{
