@@ -772,3 +772,146 @@ form .txt_field{
 .profile_info:hover {
     color:var(--primary-color) ;
 } 
+
+/* InfoUserPage */
+.info_cart{
+    border: 1px solid var(--border-color) ;
+    border-radius: 4px ;
+    background-color: var(--white-color);
+    box-shadow: 0 1px 2px #ccc;
+    margin-bottom: 30px;
+ 
+    
+}
+.body_cart {
+    display: flex;
+    padding: 20px 10px;
+    align-items: center;
+    border-bottom:1px solid rgb(113, 109, 109);
+}
+.body_cart > img{
+    margin-right: 10px;
+    height: 80px;
+}
+.body_cart .detailInfo_cart > h3 {
+    font-size: 18px ;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.body_cart .detailInfo_cart > span {
+    font-size: 14px ;
+    color: #858585;
+}
+.infouser_main{
+    margin-top: 90px;
+    width: 100%;
+}
+.option_changeinfo{
+    margin-bottom: 30px;
+}
+.option_changeinfo > a{
+    color: var(--primary-color);
+    font-size: 16px;
+    text-align: center;
+    margin: 0 8px;
+}
+.changeinfo_cart {
+    padding-left: 40px !important;
+}
+.info_cart_logout {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin: 10px 10px;
+    cursor: pointer;
+}
+
+.info_cart_logout > img {
+    height: 20px;
+    width: 20px;
+    color: rgba(0,0,0,.6);
+    font-weight: 500;
+    margin-right: 5px;
+}
+.info_cart_logout:hover{
+    color:var(--primary-color) ;
+}
+.body_changeinfo > h2{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.changeDetailInfo{
+    padding: 20px 10px;
+    border: 1px solid var(--border-color) ;
+    border-radius: 4px ;
+    background-color: var(--white-color);
+    box-shadow: 0 1px 2px #ccc;
+    margin-bottom: 30px;
+    padding-bottom: 50px;
+}
+.detailinfo{
+    position: relative;
+    margin: 10px 10px;
+}
+.detailinfo_gender_birthday{
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+}
+.detailinfo_gender{
+    
+    width: 50%;
+}
+.detailinfo_birthday_input {
+    
+    margin: 0;
+    height: 34px;
+    border: 1px solid var(--border-color);
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    background: url(/Frontend/assets/img/calendar.png) no-repeat right center;
+    background-position-x: 94%;
+    width: 100%;
+}
+.detailinfo_address{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.detailinfo_address_input{
+    width: 100%;
+    margin: 0;
+    height: 34px;
+    border: 1px solid var(--border-color);
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+.detailinfo-name{
+    width: 100%;
+    margin: 0;
+    height: 34px;
+    border: 1px solid var(--border-color);
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+.detailinfo_name > h3{
+    margin-bottom: 5px;
+}
+.detailinfo_btn{
+   
+    float: right;
+}
+.btn_huy{
+    line-height: 1.2rem;
+    background: white;
+    color: var(--primary-color);
+}
