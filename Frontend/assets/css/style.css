@@ -808,12 +808,18 @@ form .txt_field{
 }
 .option_changeinfo{
     margin-bottom: 30px;
+    
 }
 .option_changeinfo > a{
-    color: var(--primary-color);
+    color: #858585;
     font-size: 16px;
     text-align: center;
     margin: 0 8px;
+    border-bottom: 1px solid #858585;
+}
+
+.option_changeinfo > a:hover{
+    color: var(--primary-color);
 }
 .changeinfo_cart {
     padding-left: 40px !important;
@@ -842,6 +848,7 @@ form .txt_field{
     margin-bottom: 20px;
 }
 .changeDetailInfo{
+    display: none;
     padding: 20px 10px;
     border: 1px solid var(--border-color) ;
     border-radius: 4px ;
@@ -862,6 +869,10 @@ form .txt_field{
 .detailinfo_gender{
     
     width: 50%;
+}
+.detailinfo_birthday{
+    width: 50%;
+    margin-left: 10px;
 }
 .detailinfo_birthday_input {
     
@@ -894,7 +905,7 @@ form .txt_field{
 }
 .detailinfo-name{
     width: 100%;
-    margin: 0;
+    margin: 10px 0;
     height: 34px;
     border: 1px solid var(--border-color);
     outline: none;
@@ -909,9 +920,21 @@ form .txt_field{
 .detailinfo_btn{
    
     float: right;
+    padding: 10px 0;
 }
 .btn_huy{
     line-height: 1.2rem;
     background: white;
     color: var(--primary-color);
+}
+
+.changePassword{
+    display: block;
+    padding: 20px 10px;
+    border: 1px solid var(--border-color) ;
+    border-radius: 4px ;
+    background-color: var(--white-color);
+    box-shadow: 0 1px 2px #ccc;
+    margin-bottom: 30px;
+    padding-bottom: 50px;
 }

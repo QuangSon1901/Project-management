@@ -118,12 +118,12 @@
                             <div class="body_changeinfo">
                                 <h2>Cài đặt</h2>
                                 <div class="option_changeinfo">
-                                    <a href="#">Thông tin tài khoản</a>
-                                    <a href="#">Mật khẩu & Bảo mật</a>
+                                    <a href="#" id="change_click1">Thông tin tài khoản</a>
+                                    <a href="#" id="change_click2">Mật khẩu & Bảo mật</a>
                                     <a href="#">Vé máy bay</a>
                                     <span></span>
                                 </div>
-                                <div class="changeDetailInfo">
+                                <div class="changeDetailInfo" id="DetailInfo">
                                     <h1>Thông tin cá nhân</h1>
                                     <div class="detailinfo">
                                         <div class="detailinfo_name">
@@ -131,7 +131,7 @@
                                             <input type="text" class="detailinfo-name" placeholder="Nhập họ tên">
                                         </div>
                                         <div class=" detailinfo_gender_birthday">
-                                            <div class="grid__column-6 detailinfo_gender">
+                                            <div class="detailinfo_gender">
                                                 <h3 class="search-input__label ">Giới tánh</h3>
                                                 <select name="" id="" style="padding-left: 10px; width: 100%;"
                                                     class="search-input__field " readonly>
@@ -140,7 +140,7 @@
                                                 </select>
                                                
                                             </div>
-                                            <div class="grid__column-6 detailinfo_birthday">
+                                            <div class="detailinfo_birthday">
                                                 <h3 class="search-input__label ">Ngày Sanh</h3>
                                                 <input type="datetime-local" class="detailinfo_birthday_input"
                                                     placeholder="Ngày Sanh" />
@@ -150,6 +150,23 @@
                                             <h3 class="search-input__label ">Địa chỉ</h3>
                                             <input type="text"  class="detailinfo_address_input"
                                             placeholder="Nhập Địa chỉ" />
+                                        </div>
+                                        <div class="detailinfo_btn">
+                                            <button class="btn_huy">Huỷ</button>
+                                            <button>Lưu</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="changePassword" id="PasswordChange">
+                                    <h1>Đổi mật khẩu</h1>
+                                    <div class="detailinfo">
+                                        <div class="detailinfo_name">
+                                            <h3>Mật khẩu cũ</h3>
+                                            <input type="password" class="detailinfo-name" >
+                                            <h3>Mật khẩu mới</h3>
+                                            <input type="password" class="detailinfo-name" >
+                                            <h3>Xác nhận mật khẩu</h3>
+                                            <input type="password" class="detailinfo-name" >
                                         </div>
                                         <div class="detailinfo_btn">
                                             <button class="btn_huy">Huỷ</button>
@@ -235,6 +252,19 @@
         flatpickr("input[type=datetime-local]", config);
 
         var double_arrow_click = document.querySelector("#double-arrow");
+        var change_click1 = document.getElementById("change_click1");
+        var change_click2 = document.getElementById("change_click2");
+        var PasswordChange = document.getElementById("PasswordChange");
+        var DetailInfo = document.getElementById("DetailInfo");
+
+        change_click2.onclick = function () {
+            PasswordChange.style.display = "block";
+            DetailInfo.style.display = "none";
+        }
+        change_click1.onclick = function () {
+            PasswordChange.style.display = "none";
+            DetailInfo.style.display = "block";
+        }
     </script>
 </body>
 
