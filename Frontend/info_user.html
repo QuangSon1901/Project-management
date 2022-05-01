@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Infomation New</title>
+    <link rel="stylesheet" href="/Frontend/assets/css/style.css">
+    <link rel="stylesheet" href="/Frontend/assets/css/base.css">
+    <link rel="shortcut icon" href="/Frontend/assets/img/logo-icon.png">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="grid">
+                <div class="navbar">
+                    <div class="navbar__logo">
+                        <a href="#" class="navbar__logo-link">
+                            <img src="assets/img/logo-bus-qsc.png" class="navbar__logo-img" alt="Logo Bus">
+                        </a>
+                    </div>
+                    <div class="navbar__select">
+                        <ul class="navbar__category">
+                            <li class="navbar__category-item navbar__category-item--active">
+                                <a href="#" class="navbar__category-link">
+                                    <i class="navbar__category-icon fas fa-plane-departure"></i>
+                                    Máy bay
+                                </a>
+                            </li>
+                            <li class="navbar__category-item">
+                                <a href="#" class="navbar__category-link">
+                                    <i class="navbar__category-icon fas fa-subway"></i>
+                                    Tàu hỏa
+                                </a>
+                            </li>
+                            <li class="navbar__category-item">
+                                <a href="#" class="navbar__category-link">
+                                    <i class="navbar__category-icon fas fa-bus-alt"></i>
+                                    Xe khách
+                                </a>
+                            </li>
+                            <li class="navbar__category-item ">
+                                <a href="#" class="navbar__category-link">
+                                    <i class="navbar__category-icon fas fa-hotel"></i>
+                                    Khách sạn
+                                </a>
+                            </li>
+                        </ul>
+
+                        <ul class="navbar__category">
+                            <li class="navbar__category-item">
+
+                                <a href="#" class="navbar__category-link">
+                                    <i class="navbar__category-icon fab fa-buffer"></i>
+                                    Dịch vụ
+                                </a>
+                            </li>
+                            <li class="navbar__category-item">
+                                <a href="#" class="navbar__category-link">
+                                    <i class="navbar__category-icon fas fa-headset"></i>
+                                    Liên hệ
+                                </a>
+                            </li>
+                            <li class="navbar__category-item" id="btn_login">
+                                <a href="#" class="navbar__category-link">
+                                    <i class="navbar__category-icon fas fa-user"></i>
+                                    Đăng nhập / Đăng ký
+                                </a>
+                            </li>
+                            <!-- <li class="navbar__category-item">
+                                <div class="action">
+                                    <div class="profile" onclick="menuToggle();">
+                                        <img src="assets/img/2.png" alt="">
+                                    </div>
+                                    <div class="menu_dropdown">
+                                        <h2 class="profile_name">Nguyen Quang</h2>
+                                        <ul>
+                                            <li><img src="assets/img/user.png"><a href="#" class="profile_info">Thông tin cá nhân</a></li>
+                                            <li><img src="assets/img/settings.png"><a href="#" class="profile_info">Cài đặt</a></li>
+                                            <li><img src="assets/img/log-out.png"><a href="#" class="profile_info">Đăng xuất</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Container -->
+        <div class="container">
+            <div class="slider"></div>
+
+            <div class="content">
+                <div class="grid">
+                    <div class="grid__row">
+                        <div class="grid__column-2 navbar_info">
+                            <div class="navbar_info-group navbar_info-header ">
+                                <img src="assets/img/2.png" class="navbar_info-avatar" alt="">
+                                <div>
+                                    <h3 class="navbar_info-name">Vũ Quang Sơn</h3>
+                                    <span class="navbar_info-phone">0394062185</span>
+                                </div>
+                            </div>
+                            <div class="navbar_info-group navbar_info-body">
+                                <div class="navbar_info-option">
+                                    <h3><i class="fa-solid fa-user"></i>Tài khoản của tôi</h3>
+                                    <ul>
+                                        <li class="navbar_info-option--active">Hồ sơ</li>
+                                        <li>Đổi mật khẩu</li>
+                                    </ul>
+                                </div>
+                                <div class="navbar_info-option">
+                                    <h3><i class="fas fa-plane-departure"></i>Vé máy bay</h3>
+                                </div>
+                                <div class="navbar_info-option">
+                                    <h3><i class="fa-solid fa-arrow-right-from-bracket"></i>Đăng xuất</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-10">
+                            <div class="content_info">
+                                <!-- <form id="infoForm">
+                                    <div class="content_info-header ">
+                                        <h3 class="content_info-title">Hồ Sơ Của Tôi</h3>
+                                        <span class="content_info-desc">Quản lý thông tin hồ sơ để bảo mật tài
+                                            khoản</span>
+                                    </div>
+                                    <div class="content_info-body">
+                                        <div class="grid__row">
+                                            <div class="grid__column-8">
+                                                <div class="content_info-profile">
+                                                    <div class="group_input">
+                                                        <span>Họ và tên:</span>
+                                                        <input type="text" class="input_form">
+                                                    </div>
+                                                    <div class="group_input">
+                                                        <span>Địa chỉ:</span>
+                                                        <input type="text" class="input_form">
+                                                    </div>
+                                                    <div class="group_input">
+                                                        <span>Giới tính:</span>
+                                                        <div class="radio_select_form">
+                                                            <label style="vertical-align: middle;">
+                                                                <input type="radio" name="user_gender">
+                                                                <i class="icon-radio"
+                                                                    style="transform: translateY(28%);"></i>
+                                                                <span>Nam</span>
+                                                            </label>
+                                                            <label style="vertical-align: middle;">
+                                                                <input type="radio" name="user_gender">
+                                                                <i class="icon-radio"
+                                                                    style="transform: translateY(28%);"></i>
+                                                                <span>Nữ</span>
+                                                            </label>
+                                                            <label style="vertical-align: middle;">
+                                                                <input type="radio" name="user_gender">
+                                                                <i class="icon-radio"
+                                                                    style="transform: translateY(28%);"></i>
+                                                                <span>Khác</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="group_input">
+                                                        <span>Ngày sinh:</span>
+                                                        <input type="datetime-local" class="input_form-date">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="grid__column-4">
+                                                <div class="content_info-avt">
+                                                    <img src="assets/img/lanlan.jpg" class="content_info-avatar" alt="">
+                                                    <button id="btnfile" class="btn btn--hollow">Chọn ảnh</button>
+                                                    <div class="content_info-desc">
+                                                        <span>Dụng lượng file tối đa 1 MB</span>
+                                                        <span>Định dạng: .JPEG, .PNG</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_info-footer">
+                                        <button type="submit" class="btn btn--primary">Cập nhật</button>
+                                    </div>
+                                </form> -->
+                                <!-- <form id="passwordForm">
+                                    <div class="content_info-header ">
+                                        <h3 class="content_info-title">Đổi mật khẩu</h3>
+                                        <span class="content_info-desc">Thường xuyên thay đổi mật khẩu để bảo mật
+                                            được tốt hơn</span>
+                                    </div>
+                                    <div class="content_info-body">
+                                        <div class="grid__row">
+                                            <div class="grid__column-12">
+                                                <div class="content_info-profile">
+                                                    <div class="group_input">
+                                                        <span style="width:250px">Mật khẩu hiện tại:</span>
+                                                        <input type="text" class="input_form">
+                                                    </div>
+                                                    <div class="group_input">
+                                                        <span style="width:250px">Mật khẩu mới:</span>
+                                                        <input type="text" class="input_form">
+                                                    </div>
+                                                    <div class="group_input">
+                                                        <span style="width:250px">Xác nhận mật khẩu:</span>
+                                                        <input type="text" class="input_form">
+                                                    </div>
+                                                    <span class="pass_forget ml-220">Quên mật khẩu?</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_info-footer">
+                                        <button type="submit" class="btn btn--primary">Xác nhận</button>
+                                    </div>
+                                </form> -->
+                                <form id="tichketForm">
+                                    <div class="content_info-header ">
+                                        <h3 class="content_info-title">Vé máy bay</h3>
+                                        <span class="content_info-desc">Vé máy bay của bạn sẽ hiện ở đây</span>
+                                    </div>
+                                    <div class="content_info-body">
+                                        <div class="grid__row">
+                                            <div class="grid__column-12">
+                                                <div class="content_info-hollow content_hollow">
+                                                    <img src="assets/img/empty-box.jpg" class="content_hollow-img" alt="">
+                                                    <span>Bạn chưa có vé máy bay nào</span>
+                                                    <button id="btnfile" class="btn btn--primary">Tìm chuyến bay</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="grid">
+                <div class="footer-nav">
+                    <div class="footer-menu">
+                        <div class="footer-menu__list">
+                            <a href="#" class="footer-menu__item">
+                                Giới thiệu
+                                <span class="underline footer-menu__item--underline"></span>
+                            </a>
+                            <a href="#" class="footer-menu__item">
+                                Liên hệ
+                                <span class="underline footer-menu__item--underline"></span>
+                            </a>
+                            <a href="#" class="footer-menu__item">
+                                Video
+                                <span class="underline footer-menu__item--underline"></span>
+                            </a>
+                            <a href="#" class="footer-menu__item">
+                                Tải về
+                                <span class="underline footer-menu__item--underline"></span>
+                            </a>
+                            <a href="#" class="footer-menu__item">
+                                Tuyển dụng
+                                <span class="underline footer-menu__item--underline"></span>
+                            </a>
+                            <a href="#" class="footer-menu__item">
+                                Hình ảnh
+                                <span class="underline footer-menu__item--underline"></span>
+                            </a>
+                            <a href="#" class="footer-menu__item">
+                                Đến trang công ty
+                                <span class="underline footer-menu__item--underline"></span>
+                            </a>
+                        </div>
+                        <h5 class="footer-menu__copy-right">
+                            © 2022 QSC CITY - Developed by TAB
+                        </h5>
+                    </div>
+                    <div class="footer-social">
+                        <div class="footer-social__list">
+                            <a href="" class="footer-social__item">
+                                <i class="footer-social__icon fab fa-youtube"></i>
+                            </a>
+                            <a href="" class="footer-social__item">
+                                <i class="footer-social__icon fab fa-facebook-f"></i>
+                            </a>
+                            <a href="" class="footer-social__item">
+                                <i class="footer-social__icon fab fa-google-plus-g"></i>
+                            </a>
+                            <a href="" class="footer-social__item">
+                                <i class="footer-social__icon fab fa-twitter"></i>
+                            </a>
+                            <a href="" class="footer-social__item">
+                                <i class="footer-social__icon fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        config = {
+            dateFormat: "d.m.Y"
+        }
+        flatpickr("input[type=datetime-local]", config);
+
+        // var double_arrow_click = document.querySelector("#double-arrow");
+        // var change_click1 = document.getElementById("change_click1");
+        // var change_click2 = document.getElementById("change_click2");
+        // var PasswordChange = document.getElementById("PasswordChange");
+        // var DetailInfo = document.getElementById("DetailInfo");
+
+        // change_click2.onclick = function () {
+        //     PasswordChange.style.display = "block";
+        //     DetailInfo.style.display = "none";
+        // }
+        // change_click1.onclick = function () {
+        //     PasswordChange.style.display = "none";
+        //     DetailInfo.style.display = "block";
+        // }
+    </script>
+</body>
+
+</html>

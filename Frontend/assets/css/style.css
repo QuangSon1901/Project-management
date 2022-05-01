@@ -509,7 +509,7 @@ button.ghost {
 }
 
 
-form {
+.form-css {
 	background-color: #FFFFFF;
 	display: flex;
 	align-items: center;
@@ -933,4 +933,194 @@ form .txt_field{
     box-shadow: 0 1px 2px #ccc;
     margin-bottom: 30px;
     padding-bottom: 50px;
+}
+
+/* Infomation */
+.content {
+    margin-bottom: 62px;
+}
+
+.slider {
+    width: 100%;
+    height: 100px;
+    margin-top: 68px;
+    background: url("/Frontend/assets/img/banner_flight.jpg") top center / cover no-repeat;
+}
+
+.content {
+    padding-top: 20px;
+}
+
+.navbar_info {
+    /* border: 1px solid var(--black-color); */
+}
+
+.navbar_info-group {
+    padding: 10px;
+}
+
+.navbar_info-header {
+    height: 69px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar_info-avatar {
+    width: 48px;
+    margin-right: 20px;
+}
+
+.navbar_info-name {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.navbar_info-phone {
+    font-size: 1.2rem;
+}
+
+.navbar_info-body {
+    margin-top: 10px;
+}
+
+.navbar_info-option {
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.navbar_info-option:last-child {
+    margin-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.navbar_info-option > h3 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    align-items: center;
+}
+
+.navbar_info-option i {
+    width: 16px;
+    margin-right: 12px;
+}
+.navbar_info-option ul {
+    margin-top: 2px;
+}
+.navbar_info-option li {
+    margin-left: 30px;
+    padding: 10px 0 5px;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+.navbar_info-option--active {
+    color: var(--primary-color);
+}
+
+.content_info {
+    width: 100%;
+    height: 100%;
+    box-shadow: 1px 0 0 #e6e6e6, -1px 0 0 #e6e6e6, 0 1px 0 #e6e6e6, 0 -1px 0 #e6e6e6, 0 3px 13px rgb(0 0 0 / 8%);
+}
+
+.content_info-header {
+    height: 69px;
+    margin: 0 8px;
+    padding: 14px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.content_info-title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.content_info-desc {
+    font-size: 1.6rem;
+}
+
+.content_info-profile {
+    margin: 0 8px;
+    padding: 20px 14px;
+}
+
+.group_input {
+    padding: 10px;
+    display: flex;
+}
+
+.group_input > span {
+    display: inline-block;
+    width: 120px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    align-items: center;
+    padding: 12px;
+}
+
+.radio_select_form {
+    width: 100%;
+    padding: 6px 0;
+}
+
+.radio_select_form label:hover .icon-radio {
+    border-color: var(--primary-color);
+}
+
+.radio_select_form span {
+    font-size: 1.2rem;
+    margin-right: 30px;
+}
+
+.content_info-avt {
+    margin: 0 8px;
+    padding: 20px 14px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-left: 1px solid var(--border-color);
+}
+
+.content_info-avatar {
+    width: 100px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+}
+
+.content_info-avt button {
+    width: 100px;
+    margin: 0 auto 20px;
+}
+
+.content_info-desc {
+    display: flex;
+    flex-direction: column;
+}
+
+.content_info-desc span {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+
+.content_info-footer {
+    margin: 0 8px;
+    padding: 14px;
+}
+
+.content_info-footer button {
+    width: 100%;
+}
+
+.pass_forget {
+    float: left;
+    font-size: 1.6rem;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.content_info-hollow {
+    margin: 0 8px;
+    padding: 20px 14px;
 }
