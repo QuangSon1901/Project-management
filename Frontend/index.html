@@ -59,7 +59,6 @@
 
                         <ul class="navbar__category">
                             <li class="navbar__category-item">
-
                                 <a href="#" class="navbar__category-link">
                                     <i class="navbar__category-icon fab fa-buffer"></i>
                                     Dịch vụ
@@ -77,19 +76,26 @@
                                     Đăng nhập / Đăng ký
                                 </a>
                             </li>
-                            <!-- <li class="navbar__category-item">
-                                <div class="action">
-                                    <div class="profile" onclick="menuToggle();">
-                                        <img src="assets/img/2.png" alt="">
-                                    </div>
-                                    <div class="menu_dropdown">
-                                        <h2 class="profile_name">Nguyen Quang</h2>
-                                        <ul>
-                                            <li><img src="assets/img/user.png"><a href="#" class="profile_info">Thông tin cá nhân</a></li>
-                                            <li><img src="assets/img/settings.png"><a href="#" class="profile_info">Cài đặt</a></li>
-                                            <li><img src="assets/img/log-out.png"><a href="#" class="profile_info">Đăng xuất</a></li>
-                                        </ul>
-                                    </div>
+                            <!-- <li class="navbar__category-item navbar__category-info">
+                                <div class="navbar__category-link navbar__category-info-link">
+                                    <img src="assets/img/2.png" class="navbar__category-info-img" alt="">
+                                    Vũ Quang Sơn
+                                </div>
+                                <div class="navbar__category-info-dropdown">
+                                    <ul>
+                                        <li>
+                                            <i class="fa-solid fa-user"></i>
+                                            Hồ sơ
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-plane-departure"></i>
+                                            Vé máy bay
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                            Đăng xuất
+                                        </li>
+                                    </ul>
                                 </div>
                             </li> -->
                         </ul>
@@ -807,78 +813,78 @@
         <div class="modal__body" id="container">
             <!-- Login / Register-->
             <!-- <div class="container-login_register" > -->
-                <div class="form-container sign-up-container">
-                    <form action="#">
-                        <h1>Tạo tài khoản</h1>
-                        <div class="social-container">
-                            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                        <span class="close-modal close">&#10005;</span>
-                        <span>hoặc dùng tài khoản TravelTime để đăng ký</span>
-                        <div class="txt_field">
-                            <input type="text" required>
-                            <span></span>
-                            <label>Họ tên</label>
-                        </div>
-                        <div class="txt_field">
-                            <input type="text" required>
-                            <span></span>
-                            <label>Email</label>
-                        </div>
-                        <div class="txt_field">
-                            <input type="password" required>
-                            <span></span>
-                            <label>Mật khẩu</label>
-                        </div>
-                        <label class="option-checkbox">
-                            <input type="checkbox" id="search_checkbox">
-                            <i class="icon-checkbox"></i>
-                            Bạn có đồng ý với các điều khoản của TravelTime?
-                        </label>
-                        <button>Đăng ký</button>
-                    </form>
-                </div>
+            <div class="form-container sign-up-container">
+                <form action="#" id="registerForm">
+                    <h1>Tạo tài khoản</h1>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="txt_field">
+                        <input type="text" placeholder=" ">
+                        <span></span>
+                        <label>Họ tên</label>
+                    </div>
+                    <div class="txt_field">
+                        <input type="text" placeholder=" ">
+                        <span></span>
+                        <label>Email</label>
+                    </div>
+                    <div class="txt_field">
+                        <input type="password" placeholder=" ">
+                        <span></span>
+                        <label>Mật khẩu</label>
+                    </div>
+                    <div style="margin: 6px 0; font-size: 12px;">
+                        By signin up, you agree to our
+                        <br>
+                        <a style="color: var(--primary-color);font-size: 12px;" href="">Terms and Conditions</a>
+                        &amp;
+                        <a style="color: var(--primary-color);font-size: 12px;" href="">Privacy Policy</a>
+                    </div>
+                    <button>Đăng ký</button>
+                </form>
+            </div>
 
-                <div class="form-container sign-in-container">
-                    <form action="#">
-                        <h1>Đăng nhập</h1>
-                        <div class="social-container">
-                            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                        <span class="close-modal close">&#10005;</span>
-                        <span>hoặc dùng tài khoản TravelTime để đăng nhập</span>
-                        <div class="txt_field">
-                            <input type="text" required>
-                            <span></span>
-                            <label>Email</label>
-                        </div>
-                        <div class="txt_field">
-                            <input type="password" required>
-                            <span></span>
-                            <label>Mật khẩu</label>
-                        </div>
-                        <a href="#" class="form-container__signin">Quên mật khẩu?</a>
-                        <button>Đăng nhập</button>
-                    </form>
-                </div>
-                <div class="overlay-container">
-                    <div class="overlay">
-                        <div class="overlay-panel overlay-left">
-                            <h1>Bắt đầu cuộc hành trình mới với TravelTime</h1>
-                            <p class="overlay_text">Điền đầy đủ thông tin cá để khám khá cùng TravelTime</p>
-                            <button class="ghost" id="signIn">Đăng nhập</button>
-                        </div>
-                        <div class="overlay-panel overlay-right">
-                            <h1>TravelTime xin kính chào!!</h1>
-                            <p class="overlay_text">Hãy đăng nhập và tận hưởng cuộc hành trình với TravelTime</p>
-                            <button class="ghost" id="signUp">Đăng ký</button>
-                        </div>
+            <div class="form-container sign-in-container">
+                <form action="#" id="loginForm">
+                    <h1>Đăng nhập</h1>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span class="close-modal close">&#10005;</span>
+                    <span>hoặc dùng tài khoản TravelTime để đăng nhập</span>
+                    <div class="txt_field">
+                        <input type="text" placeholder=" ">
+                        <span></span>
+                        <label>Email</label>
+                    </div>
+                    <div class="txt_field">
+                        <input type="password" placeholder=" ">
+                        <span></span>
+                        <label>Mật khẩu</label>
+                    </div>
+                    <a href="#" class="form-container__signin">Quên mật khẩu?</a>
+                    <button>Đăng nhập</button>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>Bắt đầu cuộc hành trình mới với TravelTime</h1>
+                        <p class="overlay_text">Điền đầy đủ thông tin cá để khám khá cùng TravelTime</p>
+                        <button class="ghost" id="signIn">Đăng nhập</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>TravelTime xin kính chào!!</h1>
+                        <p class="overlay_text">Hãy đăng nhập và tận hưởng cuộc hành trình với TravelTime</p>
+                        <button class="ghost" id="signUp">Đăng ký</button>
                     </div>
                 </div>
+            </div>
             <!-- </div> -->
 
         </div>
@@ -939,6 +945,15 @@
                 modal_login.style.display = "none";
                 body.classList.remove("lock-overlay");
                 container.classList.remove("right-panel-active");
+
+                var loginInput = document.querySelectorAll('#loginForm input');
+                var registerInput = document.querySelectorAll('#registerForm input');
+                loginInput.forEach(function (element, index) {
+                    element.value = '';
+                })
+                registerInput.forEach(function (element, index) {
+                    element.value = '';
+                })
             })
         });
 
@@ -948,15 +963,24 @@
                 modal_login.style.display = "none";
                 body.classList.remove("lock-overlay");
                 container.classList.remove("right-panel-active");
+
+                var loginInput = document.querySelectorAll('#loginForm input');
+                var registerInput = document.querySelectorAll('#registerForm input');
+                loginInput.forEach(function (element, index) {
+                    element.value = '';
+                })
+                registerInput.forEach(function (element, index) {
+                    element.value = '';
+                })
             }
         }
     </script>
-    <script>
+    <!-- <script>
         function menuToggle() {
             const toggleMenu = document.querySelector('.menu_dropdown');
             toggleMenu.classList.toggle('active')
         }
-    </script>
+    </script> -->
 </body>
 
 </html>
