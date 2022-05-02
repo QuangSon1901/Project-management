@@ -116,6 +116,7 @@
     transform: translateY(50%);
 }
 
+/* Search */
 /* -- */
 .search__content {
     width: 100%;
@@ -123,6 +124,7 @@
     padding: 20px 10px;
     border-radius: 4px;
     background-color: var(--white-color);
+    box-shadow: rgb(0 0 0 / 20%) 0px 15px 15px;
 }
 
 .search-input {
@@ -149,8 +151,12 @@
     border-radius: 2px;
 }
 
-.search-input__field:focus~.search-input__hint {
+/* .search-input__field:focus ~ .search-input__hint {
     display: block;
+} */
+
+.search-input__hint--hidden {
+    display: none;
 }
 
 .search-input__hint {
@@ -162,12 +168,12 @@
     box-shadow: 1px 0 0 #e6e6e6, -1px 0 0 #e6e6e6, 0 1px 0 #e6e6e6, 0 -1px 0 #e6e6e6, 0 3px 13px rgb(0 0 0 / 8%);
     border-radius: 6px;
     overflow: hidden;
-    -webkit-animation: fpFadeInDown 300ms cubic-bezier(.23, 1, .32, 1);
-    animation: fpFadeInDown 300ms cubic-bezier(.23, 1, .32, 1);
-    display: none;
+    -webkit-animation: fpFadeInDown 300ms cubic-bezier(.23,1,.32,1);
+    animation: fpFadeInDown 300ms cubic-bezier(.23,1,.32,1);
+    /* display: none; */
 }
 
-.search-input__hint-airpost>h4 {
+.search-input__hint-airpost > h4{
     background-color: var(--primary-color);
     padding: 10px;
     font-size: 1.4rem;
@@ -182,7 +188,7 @@
 
 .search-input__hint-place {
     font-size: 1.2rem;
-    padding: 4px 0;
+    padding: 4px 10px;
     cursor: pointer;
 }
 
@@ -191,8 +197,13 @@
     color: var(--white-color);
 }
 
+.search-input__hint-place--active {
+    font-weight: bold;
+}
+
 .search-input__hint-area {
     font-size: 1.2rem;
+    margin-bottom: 6px;
 }
 
 .search__double-arrow {
@@ -229,8 +240,6 @@
     background-position-x: 94%;
 }
 
-
-
 .grid__row-search {
     margin-bottom: 10px;
 }
@@ -254,22 +263,21 @@
     padding-right: 20px !important;
 }
 
-.search-submit>div {
+.search-submit > div {
     display: flex;
     align-items: center;
     font-size: 1.4rem;
     line-height: 1.4rem;
     cursor: pointer;
 }
-
 .option-checkbox {
     display: flex;
     align-items: center;
-    margin: 8px 0;
 }
 
-.option-checkbox:hover .icon-checkbox {
+.option-checkbox:hover .icon-checkbox{
     border-color: var(--primary-color);
+
 }
 
 /* Category plain */

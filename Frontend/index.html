@@ -118,10 +118,10 @@
                     <div class="search__content">
                         <div class="grid__row grid__row-search">
                             <div class="grid__column-4 search-input">
-                                <h3 class="search-input__label ">Điểm đi</h3>
-                                <input type="input" id="input_from" class="search-input__field search-input_depflight"
+                                <h3 class="search-input__label">Điểm đi</h3>
+                                <input type="input" id="inputFrom" class="search-input__field search-input_depflight"
                                     placeholder="Điểm đi" readonly="readonly" value="" />
-                                <div class="search-input__hint">
+                                <div class="search-input__hint search-input__hint--hidden" id="hintDepflight">
                                     <div class="search-input__hint-airpost">
                                         <h4>Sân bay nội địa</h4>
                                         <div class="grid__row search-input__hint-list">
@@ -202,9 +202,9 @@
                                 <img class="search__double-arrow" id="double-arrow"
                                     src="/Frontend/assets/img/double_arrow-v2.png" alt="">
                                 <h3 class="search-input__label ">Điểm đến</h3>
-                                <input type="input" id="input_to" class="search-input__field search-input_arrflight"
+                                <input type="input" id="inputTo" class="search-input__field search-input_arrflight"
                                     placeholder="Điểm đến" readonly="readonly" value="" />
-                                <div class="search-input__hint">
+                                <div class="search-input__hint search-input__hint--hidden" id="hintArrflight">
                                     <div class="search-input__hint-airpost">
                                         <h4>Sân bay nội địa</h4>
                                         <div class="grid__row search-input__hint-list">
@@ -450,7 +450,8 @@
                                     <i class="icon-checkbox"></i>
                                     Tìm vé giá rẻ trong tháng
                                 </label>
-                                <button style="width: 190px;" class="btn btn--primary">Tìm chuyến bay</button>
+                                <button type="submit" style="width: 190px;" class="btn btn--primary">Tìm chuyến
+                                    bay</button>
                             </div>
                         </div>
                     </div>
@@ -906,8 +907,16 @@
         double_arrow_click.addEventListener("click", function () {
             var get_rotate = document.querySelector(".rotate");
             if (get_rotate) {
+                var from = $('#inputFrom').val();
+                var to = $('#inputTo').val();
+                $('#inputFrom').val(to);
+                $('#inputTo').val(from);
                 double_arrow_click.classList.remove("rotate");
             } else {
+                var from = $('#inputFrom').val();
+                var to = $('#inputTo').val();
+                $('#inputFrom').val(to);
+                $('#inputTo').val(from);
                 double_arrow_click.classList.add("rotate");
             }
         });
@@ -984,6 +993,52 @@
             toggleMenu.classList.toggle('active')
         }
     </script> -->
+    <script>
+        $(document).ready(function () {
+            $('#inputFrom').click(function (e) {
+                e.stopPropagation();
+                $('#hintArrflight').addClass('search-input__hint--hidden')
+                $('#hintDepflight').removeClass('search-input__hint--hidden')
+                $('#hintDepflight').not($('#hintDepflight')).addClass('search-input__hint--hidden')
+                $('#hintDepflight .search-input__hint-place').click(function () {
+                    var option = $(this).text();
+                    $('#inputFrom').val(option);
+                    $(this).addClass('search-input__hint-place--active');
+                    $('.search-input__hint-place').not($(this)).removeClass('search-input__hint-place--active');
+                    // Backend them value
+                    $('#hintDepflight').addClass('search-input__hint--hidden')
+                })
+            })
+
+            $('#inputTo').click(function (e) {
+                e.stopPropagation();
+                $('#hintDepflight').addClass('search-input__hint--hidden')
+                $('#hintArrflight').removeClass('search-input__hint--hidden')
+                $('#hintArrflight').not($('#hintArrflight')).addClass('search-input__hint--hidden')
+                $('#hintArrflight .search-input__hint-place').click(function () {
+                    var option = $(this).text();
+                    $('#inputTo').val(option);
+                    $(this).addClass('search-input__hint-place--active');
+                    $('.search-input__hint-place').not($(this)).removeClass('search-input__hint-place--active');
+                    // Backend them value
+                    $('#hintArrflight').addClass('search-input__hint--hidden')
+                })
+            })
+
+            $('#hintDepflight').click(function (e) {
+                e.stopPropagation()
+            })
+
+            $('#hintArrflight').click(function (e) {
+                e.stopPropagation()
+            })
+
+            $('html').click(function () {
+                $('#hintDepflight').addClass('search-input__hint--hidden')
+                $('#hintArrflight').addClass('search-input__hint--hidden')
+            })
+        })
+    </script>
 </body>
 
 </html>
