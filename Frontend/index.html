@@ -14,6 +14,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -92,10 +96,10 @@
                     <div class="search__content">
                         <div class="grid__row grid__row-search">
                             <div class="grid__column-4 search-input">
-                                <h3 class="search-input__label ">Điểm đi</h3>
-                                <input type="input" id="input_from" class="search-input__field search-input_depflight"
-                                    placeholder="Điểm đi" readonly="readonly" value=""/>
-                                <div class="search-input__hint">
+                                <h3 class="search-input__label">Điểm đi</h3>
+                                <input type="input" id="inputFrom" class="search-input__field search-input_depflight"
+                                    placeholder="Điểm đi" readonly="readonly" value="" />
+                                <div class="search-input__hint search-input__hint--hidden" id="hintDepflight">
                                     <div class="search-input__hint-airpost">
                                         <h4>Sân bay nội địa</h4>
                                         <div class="grid__row search-input__hint-list">
@@ -176,9 +180,9 @@
                                 <img class="search__double-arrow" id="double-arrow"
                                     src="/Frontend/assets/img/double_arrow-v2.png" alt="">
                                 <h3 class="search-input__label ">Điểm đến</h3>
-                                <input type="input" id="input_to" class="search-input__field search-input_arrflight"
-                                    placeholder="Điểm đến" readonly="readonly" value=""/>
-                                <div class="search-input__hint">
+                                <input type="input" id="inputTo" class="search-input__field search-input_arrflight"
+                                    placeholder="Điểm đến" readonly="readonly" value="" />
+                                <div class="search-input__hint search-input__hint--hidden" id="hintArrflight">
                                     <div class="search-input__hint-airpost">
                                         <h4>Sân bay nội địa</h4>
                                         <div class="grid__row search-input__hint-list">
@@ -390,31 +394,31 @@
                                     </div>
                                     <div class="grid__column-4 search-input">
                                         <h3 class="search-input__label ">Em bé (< 2t)</h3>
-                                        <select name="" id="" style="padding-left: 10px;"
-                                            class="search-input__field search-input_infant" readonly="readonly">
-                                            <option value="0">0</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                            <option value="10">10</option>
-                                            <option value="11">11</option>
-                                            <option value="12">12</option>
-                                            <option value="13">13</option>
-                                            <option value="14">14</option>
-                                            <option value="15">15</option>
-                                            <option value="16">16</option>
-                                            <option value="17">17</option>
-                                            <option value="18">18</option>
-                                            <option value="19">19</option>
-                                            <option value="20">20</option>
-                                        </select>
-                                        <i class="icon-selectbox fa-solid fa-angle-down"></i>
+                                                <select name="" id="" style="padding-left: 10px;"
+                                                    class="search-input__field search-input_infant" readonly="readonly">
+                                                    <option value="0">0</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                    <option value="19">19</option>
+                                                    <option value="20">20</option>
+                                                </select>
+                                                <i class="icon-selectbox fa-solid fa-angle-down"></i>
                                     </div>
                                 </div>
                             </div>
@@ -424,7 +428,8 @@
                                     <i class="icon-checkbox"></i>
                                     Tìm vé giá rẻ trong tháng
                                 </label>
-                                <button style="width: 190px;" class="btn btn--primary">Tìm chuyến bay</button>
+                                <button type="submit" style="width: 190px;" class="btn btn--primary">Tìm chuyến
+                                    bay</button>
                             </div>
                         </div>
                     </div>
@@ -797,11 +802,65 @@
         double_arrow_click.addEventListener("click", function () {
             var get_rotate = document.querySelector(".rotate");
             if (get_rotate) {
+                var from = $('#inputFrom').val();
+                var to = $('#inputTo').val();
+                $('#inputFrom').val(to);
+                $('#inputTo').val(from);
                 double_arrow_click.classList.remove("rotate");
             } else {
+                var from = $('#inputFrom').val();
+                var to = $('#inputTo').val();
+                $('#inputFrom').val(to);
+                $('#inputTo').val(from);
                 double_arrow_click.classList.add("rotate");
             }
         });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#inputFrom').click(function (e) {
+                e.stopPropagation();
+                $('#hintArrflight').addClass('search-input__hint--hidden')
+                $('#hintDepflight').removeClass('search-input__hint--hidden')
+                $('#hintDepflight').not($('#hintDepflight')).addClass('search-input__hint--hidden')
+                $('#hintDepflight .search-input__hint-place').click(function () {
+                    var option = $(this).text();
+                    $('#inputFrom').val(option);
+                    $(this).addClass('search-input__hint-place--active');
+                    $('.search-input__hint-place').not($(this)).removeClass('search-input__hint-place--active');
+                    // Backend them value
+                    $('#hintDepflight').addClass('search-input__hint--hidden')
+                })
+            })
+
+            $('#inputTo').click(function (e) {
+                e.stopPropagation();
+                $('#hintDepflight').addClass('search-input__hint--hidden')
+                $('#hintArrflight').removeClass('search-input__hint--hidden')
+                $('#hintArrflight').not($('#hintArrflight')).addClass('search-input__hint--hidden')
+                $('#hintArrflight .search-input__hint-place').click(function () {
+                    var option = $(this).text();
+                    $('#inputTo').val(option);
+                    $(this).addClass('search-input__hint-place--active');
+                    $('.search-input__hint-place').not($(this)).removeClass('search-input__hint-place--active');
+                    // Backend them value
+                    $('#hintArrflight').addClass('search-input__hint--hidden')
+                })
+            })
+
+            $('#hintDepflight').click(function (e) {
+                e.stopPropagation()
+            })
+
+            $('#hintArrflight').click(function (e) {
+                e.stopPropagation()
+            })
+
+            $('html').click(function () {
+                $('#hintDepflight').addClass('search-input__hint--hidden')
+                $('#hintArrflight').addClass('search-input__hint--hidden')
+            })
+        })
     </script>
 </body>
 
