@@ -651,7 +651,8 @@ form .txt_field {
     color: var(--primary-color);
 }
 
-.txt_field input:not(:placeholder-shown)~span::before .txt_field input:focus~span::before {
+.txt_field input:not(:placeholder-shown)~span::before,
+.txt_field input:focus~span::before {
     width: 100%;
 }
 
@@ -1060,6 +1061,7 @@ form .txt_field {
 }
 
 .navbar__category-info-img {
+    border-radius: 50%;
     width: 30px;
     margin-right: 12px;
 }
@@ -1131,6 +1133,7 @@ form .txt_field {
 .navbar_info-avatar {
     width: 48px;
     margin-right: 20px;
+    border-radius: 50%;
 }
 
 .navbar_info-name {
@@ -1215,7 +1218,7 @@ form .txt_field {
 
 .group_input > span {
     display: inline-block;
-    width: 120px;
+    width: 200px;
     font-size: 1.6rem;
     font-weight: 500;
     align-items: center;
@@ -1247,6 +1250,7 @@ form .txt_field {
 
 .content_info-avatar {
     width: 100px;
+    height: 100px;
     margin: 0 auto 20px;
     border-radius: 50%;
 }

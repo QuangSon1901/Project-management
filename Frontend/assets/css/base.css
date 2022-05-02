@@ -248,6 +248,11 @@ html {
     background-position-x: 98%;
 }
 
+/* Input file */
+input[type=file] {
+    display: none;
+}
+
 
 /* Label */
 label {
