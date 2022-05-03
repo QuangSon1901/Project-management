@@ -6,7 +6,6 @@
     left: 0;
     background-color: white;
     z-index: 9999;
-    border-bottom: 1px solid var(--text-color);
 }
 
 .navbar {
@@ -125,6 +124,7 @@
     border-radius: 4px;
     background-color: var(--white-color);
     box-shadow: rgb(0 0 0 / 20%) 0px 15px 15px;
+    z-index: 999999999;
 }
 
 .search-input {
@@ -1297,4 +1297,151 @@ form .txt_field {
 .content_info-hollow {
     margin: 0 8px;
     padding: 20px 14px;
+}
+
+/* Search Page */
+.search_body {
+    margin: 30px 0;
+}
+
+.breadcrumb_list {
+    display: flex;
+}
+
+.breadcrumb_list li {
+    font-size: 1.2rem;
+    padding-right: 10px;
+    color: var(--text-color);
+}
+
+.breadcrumd_item {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.breadcrumd_item:hover {
+    text-decoration: underline;
+}
+
+.search_body-place {
+    margin: 20px 0;
+}
+
+.search_place-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.search_place-heading span {
+    font-weight: 400;
+}
+
+.search_place-desc {
+    display: flex;
+}
+
+.search_place-desc li {
+    margin-right: 6px;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.content_filter {
+    width: 100%;
+    margin-top: 0;
+    padding: 0;
+    border-radius: 4px;
+    background-color: var(--white-color);
+    box-shadow: rgb(0 0 0 / 20%) 0px 15px 15px;
+}
+
+.content_filter>div {
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Filter Search Page */
+
+.filter_header {
+    display: flex;
+    justify-content: space-between;
+    height: 55px;
+    align-items: center;
+}
+
+.filter_header h3 {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.filter_header .filter_clear {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.filter_title {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.filter_price-about {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.filter_brand-item {
+    margin: 16px 0;
+}
+
+.filter_brand-item label {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.filter_brand-item img {
+    width: 24px;
+    margin: 0 10px;
+}
+
+.filter_time-list {
+    width: 100%;
+}
+
+.filter_time-item {
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+.filter_time-item:hover {
+    border: 1px solid var(--primary-color);
+}
+
+.filter_time-item h4 {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.filter_time-focus:checked ~ .filter_time-item{
+    border: 1px solid var(--primary-color);
+    background-color: var(--background-color);
+}
+
+.filter_rank-item {
+    margin: 16px 0;
+}
+
+.filter_rank-item label {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.filter_rank-item img {
+    margin: 0 5px;
 }

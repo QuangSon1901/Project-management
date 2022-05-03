@@ -21,9 +21,9 @@
 </head>
 
 <body>
-    <div class="app">
+    <div class="app" style="background-color: var(--background-color); height: 2000px;">
         <!-- Header -->
-        <header class="header" style="border: 1px solid var(--border-color);">
+        <header class="header">
             <div class="grid">
                 <div class="navbar">
                     <div class="navbar__logo">
@@ -108,13 +108,8 @@
 
         <div class="container">
             <!-- With search -->
-            <div class="search">
+            <div class="search_fixed">
                 <div class="grid">
-                    <div class="search__heading">
-                        <i class="search__heading-icon fas fa-route"></i>
-                        <h1 class="search__heading-title">Bạn đã sẵn sàng cho chuyến đi chưa?</h1>
-                    </div>
-
                     <div class="search__content">
                         <div class="grid__row grid__row-search">
                             <div class="grid__column-4 search-input">
@@ -458,298 +453,302 @@
                 </div>
             </div>
 
-            <!-- Category bus -->
-            <div class="category-muibox">
-                <div class="grid" style="position: relative;">
-                    <div class="muibox-list">
-                        <a href="#" class="muibox-item">
-                            <span class="muibox-img">
-                                <img src="https://storage.googleapis.com/tripi-assets/mytour/icons/icon_support_247.svg"
-                                    alt="">
-                            </span>
-                            <span class="muibox-title">
-                                Hỗ trợ khách hàng 24/7
-                            </span>
-                            <span class="muibox-desc">
-                                Chat là có, gọi là nghe, không quản đêm hôm, ngày nghỉ và ngày lễ.
-                            </span>
-                        </a>
-                        <a href="#" class="muibox-item">
-                            <span class="muibox-img">
-                                <img src="https://storage.googleapis.com/tripi-assets/mytour/icons/icon_support_247.svg"
-                                    alt="">
-                            </span>
-                            <span class="muibox-title">
-                                Thanh toán dễ dàng, đa dạng
-                            </span>
-                            <span class="muibox-desc">
-                                Bao gồm thêm chuyển khoản ngân hàng và tiền mặt tại cửa hàng.
-                            </span>
-                        </a>
-                        <a href="#" class="muibox-item">
-                            <span class="muibox-img">
-                                <img src="https://storage.googleapis.com/tripi-assets/mytour/icons/icon_support_247.svg"
-                                    alt="">
-                            </span>
-                            <span class="muibox-title">
-                                Săn vé giá tốt nội địa, quốc tế
-                            </span>
-                            <span class="muibox-desc">
-                                So sánh giá tốt nhất từ các hãng hàng không nội địa và 50.000 đường bay quốc tế.
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Category deal -->
-            <div class="category-deal">
+            <div class="search_body">
                 <div class="grid">
-                    <h2 class="deal-heading">Chuyến bay giá tốt nhất hôm nay</h2>
-                    <div class="deal-list">
+                    <div class="breadcrumb">
+                        <ol class="breadcrumb_list">
+                            <li class="breadcrumd_item">Trang chủ</li>
+                            <li class="breadcrumd_icon"><i class="fa-solid fa-angle-right"></i></li>
+                            <li class="breadcrumd_item">Chuyến bay từ Hà Nội đến Sài Gòn</li>
+                        </ol>
+                    </div>
+                    <div class="search_body-place">
+                        <div class="search_place-heading">Hà Nội (HN) - Sài Gòn (SG): <span>15 chuyến bay</span>
+                        </div>
+                        <ol class="search_place-desc">
+                            <li>Thứ 4, 11 tháng 05</li>
+                            <li>-</li>
+                            <li>1 khách</li>
+                            <li>-</li>
+                            <li>Phổ thông</li>
+                        </ol>
+                    </div>
+                    <div class="search_body-content">
                         <div class="grid__row">
-                            <div class="grid__column-3 deal-item">
-                                <a href="#" class="">
-                                    <div class="deal-item_brand">
-                                        <img src="https://storage.googleapis.com/tripi-flights/agenticons/vjc2021.png"
-                                            alt="" style="width: 24px; height: auto; margin-right: 8px;">
-                                        <h4>Vietjet Air</h4>
+                            <div class="grid__column-3-default" style="padding-right:20px">
+                                <div class="content_filter">
+                                    <div class="filter_header">
+                                        <h3>Bộ lọc</h3>
+                                        <h3 class="filter_clear" id="filterClear">Xóa lọc</h3>
                                     </div>
-                                    <div class="deal-item_info">
-                                        <div class="deal-item_title">
-                                            <h2>Nội Bài</h2>
-                                            <svg width="24" height="24" fill="none">
-                                                <path d="M17.5 10.5L20 13M4 13h16" stroke="#1A202C" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                            <h2>Tân Sơn Nhất</h2>
-                                        </div>
-                                        <div class="deal-item_date">
-                                            <svg width="20" height="20" fill="none" class="svgFillAll"
-                                                style="margin-right: 4px; fill: rgb(74, 85, 104);">
-                                                <path
-                                                    d="M11.648 5.269a.5.5 0 00.485-.129l2.152-2.152a1.667 1.667 0 012.357 2.357L14.49 7.497a.5.5 0 00-.129.485l1.615 5.922a.5.5 0 01-.128.485l-1.094 1.094a.5.5 0 01-.79-.11l-2.303-4.145a.5.5 0 00-.79-.11l-1.743 1.741a.5.5 0 00-.146.354v1.942a.5.5 0 01-.147.354l-1.049 1.05a.5.5 0 01-.828-.196l-.843-2.531a.5.5 0 00-.317-.316l-2.53-.844a.5.5 0 01-.196-.828l1.05-1.05a.5.5 0 01.353-.146h1.943a.5.5 0 00.353-.146L8.513 8.76a.5.5 0 00-.11-.79L4.257 5.667a.5.5 0 01-.11-.79L5.24 3.782a.5.5 0 01.485-.13l5.922 1.616z"
-                                                    fill="#4A5568"></path>
-                                            </svg>
-                                            <h3>Khởi hành: 16/04/2022</h3>
-                                        </div>
+                                    <div class="filter_price">
+                                        <h4 class="filter_title">Khoảng giá</h4>
+                                        <h4 class="filter_price-about">0đ - <span id="filterPriceSpan">0</span>đ</h4>
+                                        <input id="filterPriceInput" class="rs-range" type="range" value="0" min="0"
+                                            max="5000000">
                                     </div>
-                                    <div class="deal-item_price">
-                                        <del class="deal-item_cost">609.000<sup>đ</sup></del>
-                                        <h3 class="deal-item_sale">573.000<sup>đ</sup></h3>
-                                        <h3 class="deal-item_tax">Giá sau thuế: 1.046.000<sup>đ</sup></h3>
+                                    <div class="filter_brand-airline">
+                                        <h4 class="filter_title">Hãng bay</h4>
+                                        <ul class="filter_brand-list">
+                                            <li class="filter_brand-item">
+                                                <label class="option-checkbox">
+                                                    <input type="checkbox" id="search_checkbox">
+                                                    <i class="icon-checkbox"></i>
+                                                    <img src="https://storage.googleapis.com/tripi-flights/agenticons/VNA_logo_notext.png"
+                                                        alt="">
+                                                    Vietnam Airline
+                                                </label>
+                                            </li>
+                                            <li class="filter_brand-item">
+                                                <label class="option-checkbox">
+                                                    <input type="checkbox" id="search_checkbox">
+                                                    <i class="icon-checkbox"></i>
+                                                    <img src="https://storage.googleapis.com/tripi-flights/agenticons/bamboo_airway.png"
+                                                        alt="">
+                                                    Bamboo Airways
+                                                </label>
+                                            </li>
+                                            <li class="filter_brand-item">
+                                                <label class="option-checkbox">
+                                                    <input type="checkbox" id="search_checkbox">
+                                                    <i class="icon-checkbox"></i>
+                                                    <img src="https://storage.googleapis.com/tripi-flights/agenticons/Vietjet_Air_logo_transparent.png"
+                                                        alt="">
+                                                    Vietjet Air
+                                                </label>
+                                            </li>
+                                        </ul>
                                     </div>
-                                </a>
+                                    <div class="filter_time-dep">
+                                        <h4 class="filter_title">Thời gian cất cánh</h4>
+                                        <ul class="filter_time-list grid__row">
+                                            <li class=" grid__column-6">
+                                                <label for="EarlyMorningCheckbox">
+                                                    <input type="checkbox" class="filter_time-focus"
+                                                        id="EarlyMorningCheckbox">
+                                                    <div class="filter_time-item">
+                                                        <svg width="24" height="24" fill="none">
+                                                            <path
+                                                                d="M2 13h.91M4.91 5.91l.636.635M12 3v.91M19.091 5.91l-.636.635M22 13h-.909M6.546 13C6.546 10 9 7.546 12 7.546c3 0 5.455 2.454 5.455 5.454M2 16.636h20M4.727 20.273h14.546"
+                                                                stroke="#1A202C" stroke-width="1.2"
+                                                                stroke-miterlimit="10" stroke-linecap="round"></path>
+                                                        </svg>
+                                                        <h4>Buổi sáng</h4>
+                                                        <h4 class="filter_time-item-time">00:00 - 06:00</h4>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                            <li class=" grid__column-6">
+                                                <label for="MorningCheckbox">
+                                                    <input type="checkbox" class="filter_time-focus"
+                                                        id="MorningCheckbox">
+                                                    <div class="filter_time-item">
+                                                        <svg width="24" height="24" fill="none">
+                                                            <path
+                                                                d="M6.664 13.29c-.328-.654-.573-1.472-.573-2.29C6.09 8.3 8.3 6.09 11 6.09c2.7 0 4.909 2.21 4.909 4.91 0 1.145-.41 2.209-1.064 3.027M2 11h.818M4.618 4.618l.573.573M11 2v.818M17.382 4.618l-.573.573M20 11h-.818"
+                                                                stroke="#1A202C" stroke-width="1.2"
+                                                                stroke-miterlimit="10" stroke-linecap="round"></path>
+                                                            <path
+                                                                d="M5.273 20A3.282 3.282 0 012 16.727c0-1.8 1.473-3.273 3.273-3.273.409 0 .818.082 1.227.246.736-1.554 2.29-2.7 4.09-2.7 1.965 0 3.683 1.31 4.255 3.027.573-.409 1.146-.572 1.882-.572 1.8 0 3.273 1.472 3.273 3.272 0 1.8-1.473 3.273-3.273 3.273H5.273z"
+                                                                stroke="#1A202C" stroke-width="1.2"
+                                                                stroke-miterlimit="10" stroke-linecap="round"></path>
+                                                        </svg>
+                                                        <h4>Buổi sáng</h4>
+                                                        <h4 class="filter_time-item-time">06:00 - 12:00</h4>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                            <li class=" grid__column-6">
+                                                <label for="EveningCheckbox">
+                                                    <input type="checkbox" class="filter_time-focus"
+                                                        id="EveningCheckbox">
+                                                    <div class="filter_time-item">
+                                                        <svg width="24" height="24" fill="none">
+                                                            <path
+                                                                d="M3 14.455h18M5.455 17.727h13.09M7.91 21h8.181M3.818 11.182C3.818 6.682 7.5 3 12 3s8.182 3.682 8.182 8.182"
+                                                                stroke="#1A202C" stroke-width="1.2"
+                                                                stroke-miterlimit="10" stroke-linecap="round"></path>
+                                                        </svg>
+                                                        <h4>Buổi chiều</h4>
+                                                        <h4 class="filter_time-item-time">12:00 - 18:00</h4>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                            <li class=" grid__column-6">
+                                                <label for="NightCheckbox">
+                                                    <input type="checkbox" class="filter_time-focus" id="NightCheckbox">
+                                                    <div class="filter_time-item">
+                                                        <svg width="24" height="24" fill="none">
+                                                            <path
+                                                                d="M16.91 15.273c-4.5 0-8.183-3.682-8.183-8.182v0c0-.912-.88-1.77-1.671-1.316A8.099 8.099 0 003 12.818C3 17.318 6.682 21 11.182 21a8.099 8.099 0 007.043-4.055c.454-.792-.404-1.672-1.316-1.672v0zM14.455 3v3.273M12.818 4.636h3.273M19.364 7.91v3.272M17.727 9.545H21"
+                                                                stroke="#1A202C" stroke-width="1.2"
+                                                                stroke-miterlimit="10" stroke-linecap="round"></path>
+                                                        </svg>
+                                                        <h4>Buổi tối</h4>
+                                                        <h4 class="filter_time-item-time">18:00 - 24:00</h4>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="filter_rank-ticket">
+                                        <h4 class="filter_title">Hạng vé</h4>
+                                        <ul class="filter_rank-list">
+                                            <li class="filter_rank-item">
+                                                <label class="option-checkbox">
+                                                    <input type="checkbox" id="search_checkbox">
+                                                    <i class="icon-checkbox"></i>
+                                                    <img src="" alt="">
+                                                    Phổ thông
+                                                </label>
+                                            </li>
+                                            <li class="filter_rank-item">
+                                                <label class="option-checkbox">
+                                                    <input type="checkbox" id="search_checkbox">
+                                                    <i class="icon-checkbox"></i>
+                                                    <img src="" alt="">
+                                                    Thương gia
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="grid__column-3 deal-item">
-                                <a href="#" class="">
-                                    <div class="deal-item_brand">
-                                        <img src="https://storage.googleapis.com/tripi-flights/agenticons/vjc2021.png"
-                                            alt="" style="width: 24px; height: auto; margin-right: 8px;">
-                                        <h4>Vietjet Air</h4>
-                                    </div>
-                                    <div class="deal-item_info">
-                                        <div class="deal-item_title">
-                                            <h2>Nội Bài</h2>
-                                            <svg width="24" height="24" fill="none">
-                                                <path d="M17.5 10.5L20 13M4 13h16" stroke="#1A202C" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                            <h2>Tân Sơn Nhất</h2>
+                            <div class="grid__column-9">
+                                <div class="content_ticket">
+                                    <div class="ticket_date">
+                                        <div class="arrow ticket_date-arrow-left">
+                                            <i class="fa-solid fa-angle-left"></i>
                                         </div>
-                                        <div class="deal-item_date">
-                                            <svg width="20" height="20" fill="none" class="svgFillAll"
-                                                style="margin-right: 4px; fill: rgb(74, 85, 104);">
-                                                <path
-                                                    d="M11.648 5.269a.5.5 0 00.485-.129l2.152-2.152a1.667 1.667 0 012.357 2.357L14.49 7.497a.5.5 0 00-.129.485l1.615 5.922a.5.5 0 01-.128.485l-1.094 1.094a.5.5 0 01-.79-.11l-2.303-4.145a.5.5 0 00-.79-.11l-1.743 1.741a.5.5 0 00-.146.354v1.942a.5.5 0 01-.147.354l-1.049 1.05a.5.5 0 01-.828-.196l-.843-2.531a.5.5 0 00-.317-.316l-2.53-.844a.5.5 0 01-.196-.828l1.05-1.05a.5.5 0 01.353-.146h1.943a.5.5 0 00.353-.146L8.513 8.76a.5.5 0 00-.11-.79L4.257 5.667a.5.5 0 01-.11-.79L5.24 3.782a.5.5 0 01.485-.13l5.922 1.616z"
-                                                    fill="#4A5568"></path>
-                                            </svg>
-                                            <h3>Khởi hành: 16/04/2022</h3>
+                                        <div class="arrow ticket_date-arrow-right">
+                                            <i class="fa-solid fa-angle-right"></i>
                                         </div>
-                                    </div>
-                                    <div class="deal-item_price">
-                                        <del class="deal-item_cost">609.000<sup>đ</sup></del>
-                                        <h3 class="deal-item_sale">573.000<sup>đ</sup></h3>
-                                        <h3 class="deal-item_tax">Giá sau thuế: 1.046.000<sup>đ</sup></h3>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="grid__column-3 deal-item">
-                                <a href="#" class="">
-                                    <div class="deal-item_brand">
-                                        <img src="https://storage.googleapis.com/tripi-flights/agenticons/vjc2021.png"
-                                            alt="" style="width: 24px; height: auto; margin-right: 8px;">
-                                        <h4>Vietjet Air</h4>
-                                    </div>
-                                    <div class="deal-item_info">
-                                        <div class="deal-item_title">
-                                            <h2>Nội Bài</h2>
-                                            <svg width="24" height="24" fill="none">
-                                                <path d="M17.5 10.5L20 13M4 13h16" stroke="#1A202C" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                            <h2>Tân Sơn Nhất</h2>
-                                        </div>
-                                        <div class="deal-item_date">
-                                            <svg width="20" height="20" fill="none" class="svgFillAll"
-                                                style="margin-right: 4px; fill: rgb(74, 85, 104);">
-                                                <path
-                                                    d="M11.648 5.269a.5.5 0 00.485-.129l2.152-2.152a1.667 1.667 0 012.357 2.357L14.49 7.497a.5.5 0 00-.129.485l1.615 5.922a.5.5 0 01-.128.485l-1.094 1.094a.5.5 0 01-.79-.11l-2.303-4.145a.5.5 0 00-.79-.11l-1.743 1.741a.5.5 0 00-.146.354v1.942a.5.5 0 01-.147.354l-1.049 1.05a.5.5 0 01-.828-.196l-.843-2.531a.5.5 0 00-.317-.316l-2.53-.844a.5.5 0 01-.196-.828l1.05-1.05a.5.5 0 01.353-.146h1.943a.5.5 0 00.353-.146L8.513 8.76a.5.5 0 00-.11-.79L4.257 5.667a.5.5 0 01-.11-.79L5.24 3.782a.5.5 0 01.485-.13l5.922 1.616z"
-                                                    fill="#4A5568"></path>
-                                            </svg>
-                                            <h3>Khởi hành: 16/04/2022</h3>
+                                        <div class="ticket_slider">
+                                            <div style="text-align: center;" class="ticket_date-group">
+                                                <h3 class="ticket_date-date">T7, 07 tháng 5</h3>
+                                                <h3 class="ticket_date-price">1000.000đ</h3>
+                                            </div>
+                                            <div style="text-align: center;"
+                                                class="ticket_date-group ticket_date--active">
+                                                <h3 class="ticket_date-date">T7, 07 tháng 5</h3>
+                                                <h3 class="ticket_date-price">1000.000đ</h3>
+                                            </div>
+                                            <div style="text-align: center;" class="ticket_date-group">
+                                                <h3 class="ticket_date-date">T7, 07 tháng 5</h3>
+                                                <h3 class="ticket_date-price">1000.000đ</h3>
+                                            </div>
+                                            <div style="text-align: center;" class="ticket_date-group">
+                                                <h3 class="ticket_date-date">T7, 07 tháng 5</h3>
+                                                <h3 class="ticket_date-price">1000.000đ</h3>
+                                            </div>
+                                            <div style="text-align: center;" class="ticket_date-group">
+                                                <h3 class="ticket_date-date">T7, 07 tháng 5</h3>
+                                                <h3 class="ticket_date-price">1000.000đ</h3>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="deal-item_price">
-                                        <del class="deal-item_cost">609.000<sup>đ</sup></del>
-                                        <h3 class="deal-item_sale">573.000<sup>đ</sup></h3>
-                                        <h3 class="deal-item_tax">Giá sau thuế: 1.046.000<sup>đ</sup></h3>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="grid__column-3 deal-item">
-                                <a href="#" class="">
-                                    <div class="deal-item_brand">
-                                        <img src="https://storage.googleapis.com/tripi-flights/agenticons/vjc2021.png"
-                                            alt="" style="width: 24px; height: auto; margin-right: 8px;">
-                                        <h4>Vietjet Air</h4>
-                                    </div>
-                                    <div class="deal-item_info">
-                                        <div class="deal-item_title">
-                                            <h2>Nội Bài</h2>
-                                            <svg width="24" height="24" fill="none">
-                                                <path d="M17.5 10.5L20 13M4 13h16" stroke="#1A202C" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                            <h2>Tân Sơn Nhất</h2>
-                                        </div>
-                                        <div class="deal-item_date">
-                                            <svg width="20" height="20" fill="none" class="svgFillAll"
-                                                style="margin-right: 4px; fill: rgb(74, 85, 104);">
-                                                <path
-                                                    d="M11.648 5.269a.5.5 0 00.485-.129l2.152-2.152a1.667 1.667 0 012.357 2.357L14.49 7.497a.5.5 0 00-.129.485l1.615 5.922a.5.5 0 01-.128.485l-1.094 1.094a.5.5 0 01-.79-.11l-2.303-4.145a.5.5 0 00-.79-.11l-1.743 1.741a.5.5 0 00-.146.354v1.942a.5.5 0 01-.147.354l-1.049 1.05a.5.5 0 01-.828-.196l-.843-2.531a.5.5 0 00-.317-.316l-2.53-.844a.5.5 0 01-.196-.828l1.05-1.05a.5.5 0 01.353-.146h1.943a.5.5 0 00.353-.146L8.513 8.76a.5.5 0 00-.11-.79L4.257 5.667a.5.5 0 01-.11-.79L5.24 3.782a.5.5 0 01.485-.13l5.922 1.616z"
-                                                    fill="#4A5568"></path>
-                                            </svg>
-                                            <h3>Khởi hành: 16/04/2022</h3>
-                                        </div>
-                                    </div>
-                                    <div class="deal-item_price">
-                                        <del class="deal-item_cost">609.000<sup>đ</sup></del>
-                                        <h3 class="deal-item_sale">573.000<sup>đ</sup></h3>
-                                        <h3 class="deal-item_tax">Giá sau thuế: 1.046.000<sup>đ</sup></h3>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="grid__column-3 deal-item">
-                                <a href="#" class="">
-                                    <div class="deal-item_brand">
-                                        <img src="https://storage.googleapis.com/tripi-flights/agenticons/vjc2021.png"
-                                            alt="" style="width: 24px; height: auto; margin-right: 8px;">
-                                        <h4>Vietjet Air</h4>
-                                    </div>
-                                    <div class="deal-item_info">
-                                        <div class="deal-item_title">
-                                            <h2>Nội Bài</h2>
-                                            <svg width="24" height="24" fill="none">
-                                                <path d="M17.5 10.5L20 13M4 13h16" stroke="#1A202C" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                            <h2>Tân Sơn Nhất</h2>
-                                        </div>
-                                        <div class="deal-item_date">
-                                            <svg width="20" height="20" fill="none" class="svgFillAll"
-                                                style="margin-right: 4px; fill: rgb(74, 85, 104);">
-                                                <path
-                                                    d="M11.648 5.269a.5.5 0 00.485-.129l2.152-2.152a1.667 1.667 0 012.357 2.357L14.49 7.497a.5.5 0 00-.129.485l1.615 5.922a.5.5 0 01-.128.485l-1.094 1.094a.5.5 0 01-.79-.11l-2.303-4.145a.5.5 0 00-.79-.11l-1.743 1.741a.5.5 0 00-.146.354v1.942a.5.5 0 01-.147.354l-1.049 1.05a.5.5 0 01-.828-.196l-.843-2.531a.5.5 0 00-.317-.316l-2.53-.844a.5.5 0 01-.196-.828l1.05-1.05a.5.5 0 01.353-.146h1.943a.5.5 0 00.353-.146L8.513 8.76a.5.5 0 00-.11-.79L4.257 5.667a.5.5 0 01-.11-.79L5.24 3.782a.5.5 0 01.485-.13l5.922 1.616z"
-                                                    fill="#4A5568"></path>
-                                            </svg>
-                                            <h3>Khởi hành: 16/04/2022</h3>
-                                        </div>
-                                    </div>
-                                    <div class="deal-item_price">
-                                        <del class="deal-item_cost">609.000<sup>đ</sup></del>
-                                        <h3 class="deal-item_sale">573.000<sup>đ</sup></h3>
-                                        <h3 class="deal-item_tax">Giá sau thuế: 1.046.000<sup>đ</sup></h3>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="grid__column-3 deal-item">
-                                <a href="#" class="">
-                                    <div class="deal-item_brand">
-                                        <img src="https://storage.googleapis.com/tripi-flights/agenticons/vjc2021.png"
-                                            alt="" style="width: 24px; height: auto; margin-right: 8px;">
-                                        <h4>Vietjet Air</h4>
-                                    </div>
-                                    <div class="deal-item_info">
-                                        <div class="deal-item_title">
-                                            <h2>Nội Bài</h2>
-                                            <svg width="24" height="24" fill="none">
-                                                <path d="M17.5 10.5L20 13M4 13h16" stroke="#1A202C" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                            <h2>Tân Sơn Nhất</h2>
-                                        </div>
-                                        <div class="deal-item_date">
-                                            <svg width="20" height="20" fill="none" class="svgFillAll"
-                                                style="margin-right: 4px; fill: rgb(74, 85, 104);">
-                                                <path
-                                                    d="M11.648 5.269a.5.5 0 00.485-.129l2.152-2.152a1.667 1.667 0 012.357 2.357L14.49 7.497a.5.5 0 00-.129.485l1.615 5.922a.5.5 0 01-.128.485l-1.094 1.094a.5.5 0 01-.79-.11l-2.303-4.145a.5.5 0 00-.79-.11l-1.743 1.741a.5.5 0 00-.146.354v1.942a.5.5 0 01-.147.354l-1.049 1.05a.5.5 0 01-.828-.196l-.843-2.531a.5.5 0 00-.317-.316l-2.53-.844a.5.5 0 01-.196-.828l1.05-1.05a.5.5 0 01.353-.146h1.943a.5.5 0 00.353-.146L8.513 8.76a.5.5 0 00-.11-.79L4.257 5.667a.5.5 0 01-.11-.79L5.24 3.782a.5.5 0 01.485-.13l5.922 1.616z"
-                                                    fill="#4A5568"></path>
-                                            </svg>
-                                            <h3>Khởi hành: 16/04/2022</h3>
-                                        </div>
-                                    </div>
-                                    <div class="deal-item_price">
-                                        <del class="deal-item_cost">609.000<sup>đ</sup></del>
-                                        <h3 class="deal-item_sale">573.000<sup>đ</sup></h3>
-                                        <h3 class="deal-item_tax">Giá sau thuế: 1.046.000<sup>đ</sup></h3>
-                                    </div>
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <script>
+                $('#filterClear').click(function () {
+                    $('.content_filter input[type="checkbox"]:checked').click();
+                })
+            </script>
+            <style>
+                /* ==== */
+                .content_ticket {
+                    width: 100%;
+                    margin-top: 0;
+                    padding: 0;
+                    border-radius: 4px;
+                    background-color: var(--white-color);
+                    box-shadow: rgb(0 0 0 / 20%) 0px 15px 15px;
+                }
 
-            <!-- Category statistic -->
-            <div class="category-statistic">
-                <div class="grid">
-                    <h2 class="statistic-heading">Nền tảng kết nối người dùng và hãng bay</h2>
-                    <ul class="statistic-list">
-                        <li class="statistic-item">
-                            <i class="statistic-item__icon fas fa-user-check"></i>
-                            <div class="statistic-item__header">
-                                <h3 class="statistic-item__heading">Tìm kiếm được cá nhân hóa</h3>
-                                <p class="statistic-item__description">
-                                    100 tuyến đường bay trên toàn quốc, chủ động và đa dạng lựa chọn.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="statistic-item">
-                            <i class="statistic-item__icon far fa-hand-point-up"></i>
-                            <div class="statistic-item__header">
-                                <h3 class="statistic-item__heading">Đặt vé dễ dàng</h3>
-                                <p class="statistic-item__description">
-                                    Đặt vé chỉ với 60s. Chọn chuyến bay yêu thích cực nhanh và thuận tiện.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="statistic-item">
-                            <i class="statistic-item__icon far fa-calendar-check"></i>
-                            <div class="statistic-item__header">
-                                <h3 class="statistic-item__heading">Đảm bảo có vé</h3>
-                                <p class="statistic-item__description">
-                                    Hoàn ngay 150% nếu không có vé, mang đến hành trình trọn vẹn.
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+                .ticket_date {
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                .ticket_slider {
+                    display: flex;
+                    width: 3840px;
+                    margin-left: -5px;
+                    margin-right: -5px;
+                    padding: 5px 10px;
+                    height: 55px;
+                }
+
+                .ticket_date-group {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    justify-content: center;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    width: 192.5px;
+                }
+
+                .ticket_date-date {
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    color: var(--text-color);
+                    margin-bottom: 4px;
+                }
+
+                .ticket_date-price {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                }
+
+                .arrow {
+                    position: absolute;
+                    cursor: pointer;
+                }
+
+                .arrow i {
+                    margin: auto;
+                    color: var(--white-color);
+                    font-size: 1.6rem;
+                }
+
+                .ticket_date-arrow-left {
+                    display: flex;
+                    top: 25%;
+                    left: 20px;
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 50%;
+                    box-shadow: rgb(0 0 0 / 10%) 0px 8px 12px;
+                    background-color: var(--primary-color);
+                }
+
+                .ticket_date-arrow-right {
+                    display: flex;
+                    top: 25%;
+                    right: 20px;
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 50%;
+                    box-shadow: rgb(0 0 0 / 10%) 0px 8px 12px;
+                    background-color: var(--primary-color);
+                }
+
+                .ticket_date--active {
+                    background-color: var(--background-color);
+                    border: 1px solid var(--primary-color);
+                }
+            </style>
         </div>
 
         <!-- Footer -->
-        <footer class="footer">
+        <!-- <footer class="footer">
             <div class="grid">
                 <div class="footer-nav">
                     <div class="footer-menu">
@@ -808,7 +807,7 @@
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer> -->
     </div>
 
     <div class="modal" id="modal_login">
@@ -1038,6 +1037,62 @@
                 $('#hintArrflight').addClass('search-input__hint--hidden')
             })
         })
+    </script>
+
+    <!-- SearchPage Js -->
+    <script>
+        $('.header').css('position', 'relative').css('border', 'none')
+
+        $(window).scroll(function () {
+            var y = pageYOffset;
+            if (y > 98) {
+                $('.search__content').addClass('fixed');
+                $('.search_body').css('margin-top', '240px')
+            } else {
+                $('.search__content').removeClass('fixed');
+                $('.search_body').css('margin', '30px 0')
+            }
+        })
+
+        var filterPriceInput = $('#filterPriceInput');
+        var filterPriceSpan = $('#filterPriceSpan');
+
+        filterPriceInput.on('input', function () {
+            $('#filterPriceInput').val(filterPriceInput.val())
+            var numberFormat = new Intl.NumberFormat().format(filterPriceInput.val());
+            filterPriceSpan.html(numberFormat);
+        })
+
+        $('.ticket_date-group').click(function () {
+            removeClassTicketDate();
+            $(this).addClass('ticket_date--active');
+
+        })
+
+        function removeClassTicketDate() {
+            var ticketDateActive = $('.ticket_date--active');
+            ticketDateActive.removeClass('ticket_date--active');
+        }
+    </script>
+    <script>
+        // var slide_index = 5;
+        // slidesDisplay(slide_index);
+        // function nextSlide(n) {
+        //     slidesDisplay(slide_index += n);
+        // }
+        // function currentSlide(n) {
+        //     slidesDisplay(slide_index = n);
+        // }
+        // function slidesDisplay(n) {
+        //     var i;
+        //     var slides = document.getElementsByClassName("ticket_date-group");
+        //     if (n > slides.length) { slide_index = 5 }
+        //     if (n < 5) { slide_index = slides.length }
+        //     for (i = 0; i < slides.length; i++) {
+        //         slides[i].style.display = "none";
+        //     }
+        //     slides[slide_index - 5].style.display = "block";
+        // }
     </script>
 </body>
 
