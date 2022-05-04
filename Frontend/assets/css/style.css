@@ -1124,3 +1124,185 @@ form .txt_field{
     margin: 0 8px;
     padding: 20px 14px;
 }
+/* Ticker_user */
+.ticker_info{
+    color: #1a202c;
+    width: 100%;
+    margin: 10px 0px;
+    display: flex;
+    padding: 0px 16px 16px 16px;
+    max-width: 1188px;
+    border: 2px solid rgba(0,0,0,9%);
+    border-radius: 8px;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+.id_ticker{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding: 10px 0px;
+    border-bottom: 1px solid var(--border-color);
+    
+}
+.detail_ticker{
+    margin-top: 15px;
+    display: flex;
+    margin-bottom: 20px;
+}
+.detail_ticker_info{
+    width: 50%;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.title_ticker_info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.sub_ticker_info{
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.time_ticker_info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.detail_ticker_price{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.ticker_price{
+    display: flex;
+    flex-direction: column;
+}
+.id_ticker__info{
+    align-items: flex-end;
+}
+.id_ticker__info > span{
+    color:var(--primary-color); 
+    margin-left: 5px;
+}
+.show_detail_ticket{
+    display: flex;
+}
+.show_detail_ticket > i{
+    color:var(--primary-color); 
+    margin-right: 10px;
+}
+.show_detail_ticket > span{
+    font-size: 1.6rem; 
+    font-weight: 500; 
+    align-items: center;  
+    padding-bottom: 4px; 
+    color:var(--primary-color);
+}
+.icon_ticket_info{
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+}
+.ticker_plane__logo{
+    display: flex;
+}
+.Plane__name{
+    display: flex; 
+    flex-direction: column; 
+    font-size: 1.8rem;  
+    font-weight: 500;
+}
+.total_ticker__price{
+    display: flex; 
+    flex-direction: column;  
+    align-items: flex-end; 
+    margin-bottom: 20px;
+}
+.ticker_price > h6 {
+    background: rgb(237, 137, 54); color: #ffffff;
+    height: 24px;
+    font-size: 1.4rem;
+    display: flex;
+    padding: 0 8px;
+    align-items: center;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+.ticker_status{
+    width:100%; 
+    display: flex;
+}
+.ticker_status-item{
+    height: 80px;
+    padding: 16px;
+    position: relative;
+    margin-right: 16px;
+    border-radius: 8px;
+    background-color: #bac2c7; 
+    display: flex; 
+    flex-direction: column; 
+    width: 33.33%;
+}
+.ticker_status-title {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 22px; 
+    margin-bottom: 10px;
+}
+.ticker_status-value{
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    line-height: 22px;
+}
+.div_line{
+    background-color:var(--border-color); 
+    width: 100%; 
+    height: 1px; 
+    margin-right: 10px; 
+    margin-bottom: 20px;
+}
+.user_info{
+    display: flex;
+}
+.user_info-item{
+    width: 1030px; 
+    max-width: 100%;
+    display: flex; 
+    margin-bottom: 10px;
+}
+.user_contact_info{
+    display: flex;
+    flex-direction: column;
+}
+.user_contact_info > span{
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-top: 10px;
+    padding-bottom: 8px;
+}
+.user_contact-title > span{
+    font-size: 1.8rem; 
+    line-height: 22px; 
+    font-weight:600
+}
