@@ -31,7 +31,7 @@ html {
 }
 
 ::-webkit-scrollbar {
-    width: 4px;
+    width: 0;
 }
 
 /* Track */
@@ -154,6 +154,11 @@ html {
     top: 0;
     width: 1300px;
     margin-top: 10px;
+}
+
+/* Hiddem */
+.hidden {
+    display: none !important;
 }
 
 /* Button */

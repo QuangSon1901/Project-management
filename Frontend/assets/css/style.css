@@ -1301,7 +1301,7 @@ form .txt_field {
 
 /* Search Page */
 .search_body {
-    margin: 30px 0;
+    margin: 30px 0 100px;
 }
 
 .breadcrumb_list {
@@ -1444,4 +1444,298 @@ form .txt_field {
 
 .filter_rank-item img {
     margin: 0 5px;
+}
+
+/* Search ticket */
+
+.content_ticket-date {
+    width: 100%;
+    margin-top: 0;
+    padding: 0;
+    border-radius: 4px;
+    background-color: var(--white-color);
+    box-shadow: rgb(0 0 0 / 20%) 0px 15px 15px;
+}
+
+.ticket_date {
+    position: relative;
+    overflow: hidden;
+}
+
+.ticket_slider {
+    display: flex;
+    width: 3840px;
+    margin-left: -5px;
+    margin-right: -5px;
+    padding: 5px 10px;
+    height: 55px;
+}
+
+.ticket_date-group {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 192.5px !important;
+}
+
+.ticket_date-date {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 4px;
+}
+
+.ticket_date-price {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.arrow {
+    position: absolute;
+    cursor: pointer;
+}
+
+.arrow i {
+    margin: auto;
+    color: var(--white-color);
+    font-size: 1.6rem;
+}
+
+.ticket_date-arrow-left {
+    display: flex;
+    top: 25%;
+    left: 20px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    box-shadow: rgb(0 0 0 / 10%) 0px 8px 12px;
+    background-color: var(--primary-color);
+}
+
+.ticket_date-arrow-right {
+    display: flex;
+    top: 25%;
+    right: 20px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    box-shadow: rgb(0 0 0 / 10%) 0px 8px 12px;
+    background-color: var(--primary-color);
+}
+
+.ticket_date--active {
+    background-color: var(--background-color);
+    border: 1px solid var(--primary-color);
+}
+
+.content_ticket-sort {
+    width: 100%;
+    padding-top: 22px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.ticket_sort-list {
+    display: flex;
+}
+
+.ticket_sort-item i {
+    font-size: 1rem;
+    padding-left: 4px;
+}
+
+.ticket_sort-item {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-right: 30px;
+    cursor: pointer;
+    padding-bottom: 6px;
+}
+
+.ticket_sort-input:checked ~ .ticket_sort-item,
+.ticket_sort-input:hover ~ .ticket_sort-item {
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.ticket_body-item {
+    background-color: var(--white-color);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-shadow: rgb(0 0 0 / 20%) 0px 5px 10px;
+}
+
+.ticket_info-name {
+    display: flex;
+    align-items: center;
+    width: 35%;
+}
+
+.ticket_body-item:hover {
+    border: 1px solid var(--primary-color);
+}
+
+.ticket_info {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.ticket_info img {
+    height: 10px;
+    margin: 0 20px;
+}
+
+.ticket_info-brand-airline h4 {
+    font-size: 1.6rem;
+}
+
+.ticket_info-brand-name  {
+    font-weight: 500;
+}
+
+.ticket_info-brand-id {
+    font-weight: 400;
+    margin-top: 6px;
+}
+
+.ticket_info-time-dep {
+    display: flex;
+    margin: 0 90px;
+    width: 30%;
+}
+
+.ticket_info-time-dep h4 {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.ticket_info-time-dep svg {
+    margin: 0 20px;
+}
+
+
+
+.ticket_info-place {
+    font-weight: 400 !important;
+    margin-top: 6px;
+}
+
+.ticket_info-time-fly {
+    width: 35%;
+}
+
+.ticket_info-time-fly h4 {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.ticket_info-fly-route {
+    font-weight: 400 !important;
+    margin-top: 6px; 
+}
+
+
+.class_seat-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.ticket_expansion {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 20px;
+    padding: 16px 0;
+}
+
+.ticket_expansion > span {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.ticket_expansion i {
+    margin-left: 4px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.class_seat-item h4 {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.class_seat-name{
+    display: flex;
+    width: 35%;
+}
+
+.class_seat-it {
+    padding: 2px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 4px;
+    margin-left: 10px;
+    line-height: 1.6rem;
+    transform: translateY(-10%);
+}
+
+.class_seat-desc {
+    display: flex;
+    width: 30%;
+
+}
+
+.class_seat-desc > div {
+    display: flex;
+    padding: 4px 8px;
+    background-color: var(--background-color);
+    /* border: 1px solid var(--primary-color); */
+    color: var(--text-color);
+    border-radius: 20px;
+    margin-left: 10px;
+    align-items: center;
+}
+
+.class_seat-desc svg {
+    margin-right: 6px;
+}
+
+.class_seat-order {
+    display: flex;
+    align-items: center;
+    width: 35%;
+    justify-content: flex-end;
+}
+
+.class_seat-price {
+    text-align: right;
+    margin-right: 10px;
+}
+
+.class_seat-price > h5 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+
+.class_seat-price > h4 {
+    font-size: 1.8rem;
+}
+
+.class_seat-item > button {
+    width: 100px; 
+    padding: 10px 0;
+    border-radius: 10px;
 }

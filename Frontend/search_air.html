@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <div class="app" style="background-color: var(--background-color); height: 2000px;">
+    <div class="app" style="background-color: var(--background-color);">
         <!-- Header -->
         <header class="header">
             <div class="grid">
@@ -616,7 +616,7 @@
                                 </div>
                             </div>
                             <div class="grid__column-9">
-                                <div class="content_ticket">
+                                <div class="content_ticket-date">
                                     <div class="ticket_date swiper mySwiper">
                                         <div class="arrow ticket_date-arrow-left swiper-button-prev">
                                             <i class="fa-solid fa-angle-left"></i>
@@ -665,6 +665,696 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="content_ticket-sort">
+                                    <div class="ticket_sort-list">
+                                        <label> <input type="radio" name="ticket_sort-input" checked
+                                                class="ticket_sort-input">
+                                            <div class="ticket_sort-item">Đề xuất<i class="fa-solid fa-sort"></i>
+                                            </div>
+                                        </label>
+                                        <label> <input type="radio" name="ticket_sort-input" class="ticket_sort-input">
+                                            <div class="ticket_sort-item">Giá tăng dần<i class="fa-solid fa-sort"></i>
+                                            </div>
+                                        </label>
+                                        <label> <input type="radio" name="ticket_sort-input" class="ticket_sort-input">
+                                            <div class="ticket_sort-item">Thời gian cất cánh<i
+                                                    class="fa-solid fa-sort"></i></div>
+                                        </label>
+                                        <label> <input type="radio" name="ticket_sort-input" class="ticket_sort-input">
+                                            <div class="ticket_sort-item">Thời gian bay<i class="fa-solid fa-sort"></i>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="content_ticket-body">
+                                    <ul class="ticket_body-list">
+                                        <li class="ticket_body-item">
+                                            <div class="ticket_info">
+                                                <div class="ticket_info-name">
+                                                    <img src="https://storage.googleapis.com/tripi-flights/agenticons/Vietjet_Air_logo_transparent.png"
+                                                        alt="">
+                                                    <div class="ticket_info-brand-airline">
+                                                        <h4 class="ticket_info-brand-name">Vietjet Air</h4>
+                                                        <h4 class="ticket_info-brand-id">VJ785/ Airbus A321 NEO</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="ticket_info-time-dep">
+                                                    <div class="ticket_info-time-start">
+                                                        <h4>20:05</h4>
+                                                        <h4 class="ticket_info-place">HN</h4>
+                                                    </div>
+                                                    <svg width="40" height="20" fill="none">
+                                                        <g clip-path="url(#icon_arrow_flight_long_svg__clip0)"
+                                                            stroke="#718096" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round">
+                                                            <path d="M33.5 8.5L36 11M4 11h32"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="icon_arrow_flight_long_svg__clip0">
+                                                                <path fill="#fff" d="M0 0h40v20H0z"></path>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                    <div class="ticket_info-time-end">
+                                                        <h4>21:55</h4>
+                                                        <h4 class="ticket_info-place">SG</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="ticket_info-time-fly">
+                                                    <h4>1h50'</h4>
+                                                    <h4 class="ticket_info-fly-route">Bay thẳng</h4>
+                                                </div>
+                                            </div>
+                                            <div class="ticket_class-seat">
+                                                <ul class="class_seat-list">
+                                                    <li class="class_seat-item">
+                                                        <div class="class_seat-name">
+                                                            <h4>Phổ thông</h4>
+                                                            <h4 class="class_seat-it">EB</h4>
+                                                        </div>
+                                                        <div class="class_seat-desc">
+                                                            <div class="class_seat-package-heft">
+                                                                <svg width="20" height="20" fill="none"
+                                                                    class="MuiChip-icon svgFillAll"
+                                                                    style="width: 20px; stroke: rgb(74, 85, 104); height: 20px;">
+                                                                    <path
+                                                                        d="M4.884 17.17v1.163M15.737 17.17v1.163M7.985 12.519h4.651"
+                                                                        stroke="#1A202C" stroke-miterlimit="10"
+                                                                        stroke-linecap="round"></path>
+                                                                    <path
+                                                                        d="M17.287 15.17a2 2 0 01-2 2H5.333a2 2 0 01-2-2V6.317c0-.852.698-1.55 1.55-1.55h10.854c.852 0 1.55.698 1.55 1.55v8.853zM12.636 4.767v-2.1a1 1 0 00-1-1H8.985a1 1 0 00-1 1v2.1M3.333 9.418h13.954"
+                                                                        stroke="#1A202C" stroke-miterlimit="10"
+                                                                        stroke-linecap="square"></path>
+                                                                </svg>
+                                                                <h4>7 kg</h4>
+                                                            </div>
+                                                            <div class="class_seat-detail">
+                                                                <svg width="20" height="20" fill="none"
+                                                                    class="MuiChip-icon svgFillAll"
+                                                                    style="width: auto; stroke: rgb(74, 85, 104);">
+                                                                    <path
+                                                                        d="M10 17.5a7.5 7.5 0 100-15 7.5 7.5 0 000 15zM10 6.667h.008"
+                                                                        stroke="#1A202C" stroke-linecap="round"
+                                                                        stroke-linejoin="round"></path>
+                                                                    <path d="M9.166 10H10v3.333h.833" stroke="#1A202C"
+                                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                                    </path>
+                                                                </svg>
+                                                                <h4>Chi tiết</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="class_seat-order">
+                                                            <div class="class_seat-price">
+                                                                <h5 class="class_seat-cost">909.000đ</h5>
+                                                                <h4 class="class_seat-sale">909.000đ</h4>
+                                                            </div>
+                                                            <button class=" btn--primary">Chọn</button>
+                                                        </div>
+                                                    </li>
+                                                    <li class="class_seat-item hidden">
+                                                        <div class="class_seat-name">
+                                                            <h4>Phổ thông</h4>
+                                                            <h4 class="class_seat-it">EB</h4>
+                                                        </div>
+                                                        <div class="class_seat-desc">
+                                                            <div class="class_seat-package-heft">
+                                                                <svg width="20" height="20" fill="none"
+                                                                    class="MuiChip-icon svgFillAll"
+                                                                    style="width: 20px; stroke: rgb(74, 85, 104); height: 20px;">
+                                                                    <path
+                                                                        d="M4.884 17.17v1.163M15.737 17.17v1.163M7.985 12.519h4.651"
+                                                                        stroke="#1A202C" stroke-miterlimit="10"
+                                                                        stroke-linecap="round"></path>
+                                                                    <path
+                                                                        d="M17.287 15.17a2 2 0 01-2 2H5.333a2 2 0 01-2-2V6.317c0-.852.698-1.55 1.55-1.55h10.854c.852 0 1.55.698 1.55 1.55v8.853zM12.636 4.767v-2.1a1 1 0 00-1-1H8.985a1 1 0 00-1 1v2.1M3.333 9.418h13.954"
+                                                                        stroke="#1A202C" stroke-miterlimit="10"
+                                                                        stroke-linecap="square"></path>
+                                                                </svg>
+                                                                <h4>7 kg</h4>
+                                                            </div>
+                                                            <div class="class_seat-detail">
+                                                                <svg width="20" height="20" fill="none"
+                                                                    class="MuiChip-icon svgFillAll"
+                                                                    style="width: auto; stroke: rgb(74, 85, 104);">
+                                                                    <path
+                                                                        d="M10 17.5a7.5 7.5 0 100-15 7.5 7.5 0 000 15zM10 6.667h.008"
+                                                                        stroke="#1A202C" stroke-linecap="round"
+                                                                        stroke-linejoin="round"></path>
+                                                                    <path d="M9.166 10H10v3.333h.833" stroke="#1A202C"
+                                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                                    </path>
+                                                                </svg>
+                                                                <h4>Chi tiết</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="class_seat-order">
+                                                            <div class="class_seat-price">
+                                                                <h5 class="class_seat-cost">909.000đ</h5>
+                                                                <h4 class="class_seat-sale">909.000đ</h4>
+                                                            </div>
+                                                            <button class=" btn--primary">Chọn</button>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="ticket_expansion">
+                                                <span><input type="checkbox">Xem thêm hạng ghế và giá vé<i class="fa-solid fa-angle-down"></i></span>
+                                            </div>
+                                        </li>
+                                        <li class="ticket_body-item">
+                                            <div class="ticket_info">
+                                                <div class="ticket_info-name">
+                                                    <img src="https://storage.googleapis.com/tripi-flights/agenticons/Vietjet_Air_logo_transparent.png"
+                                                        alt="">
+                                                    <div class="ticket_info-brand-airline">
+                                                        <h4 class="ticket_info-brand-name">Vietjet Air</h4>
+                                                        <h4 class="ticket_info-brand-id">VJ785/ Airbus A321 NEO</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="ticket_info-time-dep">
+                                                    <div class="ticket_info-time-start">
+                                                        <h4>20:05</h4>
+                                                        <h4 class="ticket_info-place">HN</h4>
+                                                    </div>
+                                                    <svg width="40" height="20" fill="none">
+                                                        <g clip-path="url(#icon_arrow_flight_long_svg__clip0)"
+                                                            stroke="#718096" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round">
+                                                            <path d="M33.5 8.5L36 11M4 11h32"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="icon_arrow_flight_long_svg__clip0">
+                                                                <path fill="#fff" d="M0 0h40v20H0z"></path>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                    <div class="ticket_info-time-end">
+                                                        <h4>21:55</h4>
+                                                        <h4 class="ticket_info-place">SG</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="ticket_info-time-fly">
+                                                    <h4>1h50'</h4>
+                                                    <h4 class="ticket_info-fly-route">Bay thẳng</h4>
+                                                </div>
+                                            </div>
+                                            <div class="ticket_class-seat">
+                                                <ul class="class_seat-list">
+                                                    <li class="class_seat-item">
+                                                        <div class="class_seat-name">
+                                                            <h4>Phổ thông</h4>
+                                                            <h4 class="class_seat-it">EB</h4>
+                                                        </div>
+                                                        <div class="class_seat-desc">
+                                                            <div class="class_seat-package-heft">
+                                                                <svg width="20" height="20" fill="none"
+                                                                    class="MuiChip-icon svgFillAll"
+                                                                    style="width: 20px; stroke: rgb(74, 85, 104); height: 20px;">
+                                                                    <path
+                                                                        d="M4.884 17.17v1.163M15.737 17.17v1.163M7.985 12.519h4.651"
+                                                                        stroke="#1A202C" stroke-miterlimit="10"
+                                                                        stroke-linecap="round"></path>
+                                                                    <path
+                                                                        d="M17.287 15.17a2 2 0 01-2 2H5.333a2 2 0 01-2-2V6.317c0-.852.698-1.55 1.55-1.55h10.854c.852 0 1.55.698 1.55 1.55v8.853zM12.636 4.767v-2.1a1 1 0 00-1-1H8.985a1 1 0 00-1 1v2.1M3.333 9.418h13.954"
+                                                                        stroke="#1A202C" stroke-miterlimit="10"
+                                                                        stroke-linecap="square"></path>
+                                                                </svg>
+                                                                <h4>7 kg</h4>
+                                                            </div>
+                                                            <div class="class_seat-detail">
+                                                                <svg width="20" height="20" fill="none"
+                                                                    class="MuiChip-icon svgFillAll"
+                                                                    style="width: auto; stroke: rgb(74, 85, 104);">
+                                                                    <path
+                                                                        d="M10 17.5a7.5 7.5 0 100-15 7.5 7.5 0 000 15zM10 6.667h.008"
+                                                                        stroke="#1A202C" stroke-linecap="round"
+                                                                        stroke-linejoin="round"></path>
+                                                                    <path d="M9.166 10H10v3.333h.833" stroke="#1A202C"
+                                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                                    </path>
+                                                                </svg>
+                                                                <h4>Chi tiết</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="class_seat-order">
+                                                            <div class="class_seat-price">
+                                                                <h5 class="class_seat-cost">909.000đ</h5>
+                                                                <h4 class="class_seat-sale">909.000đ</h4>
+                                                            </div>
+                                                            <button class=" btn--primary">Chọn</button>
+                                                        </div>
+                                                    </li>
+                                                    <li class="class_seat-item hidden">
+                                                        <div class="class_seat-name">
+                                                            <h4>Phổ thông</h4>
+                                                            <h4 class="class_seat-it">EB</h4>
+                                                        </div>
+                                                        <div class="class_seat-desc">
+                                                            <div class="class_seat-package-heft">
+                                                                <svg width="20" height="20" fill="none"
+                                                                    class="MuiChip-icon svgFillAll"
+                                                                    style="width: 20px; stroke: rgb(74, 85, 104); height: 20px;">
+                                                                    <path
+                                                                        d="M4.884 17.17v1.163M15.737 17.17v1.163M7.985 12.519h4.651"
+                                                                        stroke="#1A202C" stroke-miterlimit="10"
+                                                                        stroke-linecap="round"></path>
+                                                                    <path
+                                                                        d="M17.287 15.17a2 2 0 01-2 2H5.333a2 2 0 01-2-2V6.317c0-.852.698-1.55 1.55-1.55h10.854c.852 0 1.55.698 1.55 1.55v8.853zM12.636 4.767v-2.1a1 1 0 00-1-1H8.985a1 1 0 00-1 1v2.1M3.333 9.418h13.954"
+                                                                        stroke="#1A202C" stroke-miterlimit="10"
+                                                                        stroke-linecap="square"></path>
+                                                                </svg>
+                                                                <h4>7 kg</h4>
+                                                            </div>
+                                                            <div class="class_seat-detail">
+                                                                <svg width="20" height="20" fill="none"
+                                                                    class="MuiChip-icon svgFillAll"
+                                                                    style="width: auto; stroke: rgb(74, 85, 104);">
+                                                                    <path
+                                                                        d="M10 17.5a7.5 7.5 0 100-15 7.5 7.5 0 000 15zM10 6.667h.008"
+                                                                        stroke="#1A202C" stroke-linecap="round"
+                                                                        stroke-linejoin="round"></path>
+                                                                    <path d="M9.166 10H10v3.333h.833" stroke="#1A202C"
+                                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                                    </path>
+                                                                </svg>
+                                                                <h4>Chi tiết</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="class_seat-order">
+                                                            <div class="class_seat-price">
+                                                                <h5 class="class_seat-cost">909.000đ</h5>
+                                                                <h4 class="class_seat-sale">909.000đ</h4>
+                                                            </div>
+                                                            <button class=" btn--primary">Chọn</button>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="ticket_expansion">
+                                                <span><input type="checkbox">Xem thêm hạng ghế và giá vé<i class="fa-solid fa-angle-down"></i></span>
+                                            </div>
+                                        </li>
+                                        <li class="ticket_body-item">
+                                            <div class="ticket_info">
+                                                <div class="ticket_info-name">
+                                                    <img src="https://storage.googleapis.com/tripi-flights/agenticons/Vietjet_Air_logo_transparent.png"
+                                                        alt="">
+                                                    <div class="ticket_info-brand-airline">
+                                                        <h4 class="ticket_info-brand-name">Vietjet Air</h4>
+                                                        <h4 class="ticket_info-brand-id">VJ785/ Airbus A321 NEO</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="ticket_info-time-dep">
+                                                    <div class="ticket_info-time-start">
+                                                        <h4>20:05</h4>
+                                                        <h4 class="ticket_info-place">HN</h4>
+                                                    </div>
+                                                    <svg width="40" height="20" fill="none">
+                                                        <g clip-path="url(#icon_arrow_flight_long_svg__clip0)"
+                                                            stroke="#718096" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round">
+                                                            <path d="M33.5 8.5L36 11M4 11h32"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="icon_arrow_flight_long_svg__clip0">
+                                                                <path fill="#fff" d="M0 0h40v20H0z"></path>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                    <div class="ticket_info-time-end">
+                                                        <h4>21:55</h4>
+                                                        <h4 class="ticket_info-place">SG</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="ticket_info-time-fly">
+                                                    <h4>1h50'</h4>
+                                                    <h4 class="ticket_info-fly-route">Bay thẳng</h4>
+                                                </div>
+                                            </div>
+                                            <div class="ticket_class-seat">
+                                                <ul class="class_seat-list">
+                                                    <li class="class_seat-item">
+                                                        <div class="class_seat-name">
+                                                            <h4>Phổ thông</h4>
+                                                            <h4 class="class_seat-it">EB</h4>
+                                                        </div>
+                                                        <div class="class_seat-desc">
+                                                            <div class="class_seat-package-heft">
+                                                                <svg width="20" height="20" fill="none"
+                                                                    class="MuiChip-icon svgFillAll"
+                                                                    style="width: 20px; stroke: rgb(74, 85, 104); height: 20px;">
+                                                                    <path
+                                                                        d="M4.884 17.17v1.163M15.737 17.17v1.163M7.985 12.519h4.651"
+                                                                        stroke="#1A202C" stroke-miterlimit="10"
+                                                                        stroke-linecap="round"></path>
+                                                                    <path
+                                                                        d="M17.287 15.17a2 2 0 01-2 2H5.333a2 2 0 01-2-2V6.317c0-.852.698-1.55 1.55-1.55h10.854c.852 0 1.55.698 1.55 1.55v8.853zM12.636 4.767v-2.1a1 1 0 00-1-1H8.985a1 1 0 00-1 1v2.1M3.333 9.418h13.954"
+                                                                        stroke="#1A202C" stroke-miterlimit="10"
+                                                                        stroke-linecap="square"></path>
+                                                                </svg>
+                                                                <h4>7 kg</h4>
+                                                            </div>
+                                                            <div class="class_seat-detail">
+                                                                <svg width="20" height="20" fill="none"
+                                                                    class="MuiChip-icon svgFillAll"
+                                                                    style="width: auto; stroke: rgb(74, 85, 104);">
+                                                                    <path
+                                                                        d="M10 17.5a7.5 7.5 0 100-15 7.5 7.5 0 000 15zM10 6.667h.008"
+                                                                        stroke="#1A202C" stroke-linecap="round"
+                                                                        stroke-linejoin="round"></path>
+                                                                    <path d="M9.166 10H10v3.333h.833" stroke="#1A202C"
+                                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                                    </path>
+                                                                </svg>
+                                                                <h4>Chi tiết</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="class_seat-order">
+                                                            <div class="class_seat-price">
+                                                                <h5 class="class_seat-cost">909.000đ</h5>
+                                                                <h4 class="class_seat-sale">909.000đ</h4>
+                                                            </div>
+                                                            <button class=" btn--primary">Chọn</button>
+                                                        </div>
+                                                    </li>
+                                                    <li class="class_seat-item hidden">
+                                                        <div class="class_seat-name">
+                                                            <h4>Phổ thông</h4>
+                                                            <h4 class="class_seat-it">EB</h4>
+                                                        </div>
+                                                        <div class="class_seat-desc">
+                                                            <div class="class_seat-package-heft">
+                                                                <svg width="20" height="20" fill="none"
+                                                                    class="MuiChip-icon svgFillAll"
+                                                                    style="width: 20px; stroke: rgb(74, 85, 104); height: 20px;">
+                                                                    <path
+                                                                        d="M4.884 17.17v1.163M15.737 17.17v1.163M7.985 12.519h4.651"
+                                                                        stroke="#1A202C" stroke-miterlimit="10"
+                                                                        stroke-linecap="round"></path>
+                                                                    <path
+                                                                        d="M17.287 15.17a2 2 0 01-2 2H5.333a2 2 0 01-2-2V6.317c0-.852.698-1.55 1.55-1.55h10.854c.852 0 1.55.698 1.55 1.55v8.853zM12.636 4.767v-2.1a1 1 0 00-1-1H8.985a1 1 0 00-1 1v2.1M3.333 9.418h13.954"
+                                                                        stroke="#1A202C" stroke-miterlimit="10"
+                                                                        stroke-linecap="square"></path>
+                                                                </svg>
+                                                                <h4>7 kg</h4>
+                                                            </div>
+                                                            <div class="class_seat-detail">
+                                                                <svg width="20" height="20" fill="none"
+                                                                    class="MuiChip-icon svgFillAll"
+                                                                    style="width: auto; stroke: rgb(74, 85, 104);">
+                                                                    <path
+                                                                        d="M10 17.5a7.5 7.5 0 100-15 7.5 7.5 0 000 15zM10 6.667h.008"
+                                                                        stroke="#1A202C" stroke-linecap="round"
+                                                                        stroke-linejoin="round"></path>
+                                                                    <path d="M9.166 10H10v3.333h.833" stroke="#1A202C"
+                                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                                    </path>
+                                                                </svg>
+                                                                <h4>Chi tiết</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="class_seat-order">
+                                                            <div class="class_seat-price">
+                                                                <h5 class="class_seat-cost">909.000đ</h5>
+                                                                <h4 class="class_seat-sale">909.000đ</h4>
+                                                            </div>
+                                                            <button class=" btn--primary">Chọn</button>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="ticket_expansion">
+                                                <span><input type="checkbox">Xem thêm hạng ghế và giá vé<i class="fa-solid fa-angle-down"></i></span>
+                                            </div>
+                                        </li>
+                                        <li class="ticket_body-item">
+                                            <div class="ticket_info">
+                                                <div class="ticket_info-name">
+                                                    <img src="https://storage.googleapis.com/tripi-flights/agenticons/Vietjet_Air_logo_transparent.png"
+                                                        alt="">
+                                                    <div class="ticket_info-brand-airline">
+                                                        <h4 class="ticket_info-brand-name">Vietjet Air</h4>
+                                                        <h4 class="ticket_info-brand-id">VJ785/ Airbus A321 NEO</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="ticket_info-time-dep">
+                                                    <div class="ticket_info-time-start">
+                                                        <h4>20:05</h4>
+                                                        <h4 class="ticket_info-place">HN</h4>
+                                                    </div>
+                                                    <svg width="40" height="20" fill="none">
+                                                        <g clip-path="url(#icon_arrow_flight_long_svg__clip0)"
+                                                            stroke="#718096" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round">
+                                                            <path d="M33.5 8.5L36 11M4 11h32"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="icon_arrow_flight_long_svg__clip0">
+                                                                <path fill="#fff" d="M0 0h40v20H0z"></path>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                    <div class="ticket_info-time-end">
+                                                        <h4>21:55</h4>
+                                                        <h4 class="ticket_info-place">SG</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="ticket_info-time-fly">
+                                                    <h4>1h50'</h4>
+                                                    <h4 class="ticket_info-fly-route">Bay thẳng</h4>
+                                                </div>
+                                            </div>
+                                            <div class="ticket_class-seat">
+                                                <ul class="class_seat-list">
+                                                    <li class="class_seat-item">
+                                                        <div class="class_seat-name">
+                                                            <h4>Phổ thông</h4>
+                                                            <h4 class="class_seat-it">EB</h4>
+                                                        </div>
+                                                        <div class="class_seat-desc">
+                                                            <div class="class_seat-package-heft">
+                                                                <svg width="20" height="20" fill="none"
+                                                                    class="MuiChip-icon svgFillAll"
+                                                                    style="width: 20px; stroke: rgb(74, 85, 104); height: 20px;">
+                                                                    <path
+                                                                        d="M4.884 17.17v1.163M15.737 17.17v1.163M7.985 12.519h4.651"
+                                                                        stroke="#1A202C" stroke-miterlimit="10"
+                                                                        stroke-linecap="round"></path>
+                                                                    <path
+                                                                        d="M17.287 15.17a2 2 0 01-2 2H5.333a2 2 0 01-2-2V6.317c0-.852.698-1.55 1.55-1.55h10.854c.852 0 1.55.698 1.55 1.55v8.853zM12.636 4.767v-2.1a1 1 0 00-1-1H8.985a1 1 0 00-1 1v2.1M3.333 9.418h13.954"
+                                                                        stroke="#1A202C" stroke-miterlimit="10"
+                                                                        stroke-linecap="square"></path>
+                                                                </svg>
+                                                                <h4>7 kg</h4>
+                                                            </div>
+                                                            <div class="class_seat-detail">
+                                                                <svg width="20" height="20" fill="none"
+                                                                    class="MuiChip-icon svgFillAll"
+                                                                    style="width: auto; stroke: rgb(74, 85, 104);">
+                                                                    <path
+                                                                        d="M10 17.5a7.5 7.5 0 100-15 7.5 7.5 0 000 15zM10 6.667h.008"
+                                                                        stroke="#1A202C" stroke-linecap="round"
+                                                                        stroke-linejoin="round"></path>
+                                                                    <path d="M9.166 10H10v3.333h.833" stroke="#1A202C"
+                                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                                    </path>
+                                                                </svg>
+                                                                <h4>Chi tiết</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="class_seat-order">
+                                                            <div class="class_seat-price">
+                                                                <h5 class="class_seat-cost">909.000đ</h5>
+                                                                <h4 class="class_seat-sale">909.000đ</h4>
+                                                            </div>
+                                                            <button class=" btn--primary">Chọn</button>
+                                                        </div>
+                                                    </li>
+                                                    <li class="class_seat-item hidden">
+                                                        <div class="class_seat-name">
+                                                            <h4>Phổ thông</h4>
+                                                            <h4 class="class_seat-it">EB</h4>
+                                                        </div>
+                                                        <div class="class_seat-desc">
+                                                            <div class="class_seat-package-heft">
+                                                                <svg width="20" height="20" fill="none"
+                                                                    class="MuiChip-icon svgFillAll"
+                                                                    style="width: 20px; stroke: rgb(74, 85, 104); height: 20px;">
+                                                                    <path
+                                                                        d="M4.884 17.17v1.163M15.737 17.17v1.163M7.985 12.519h4.651"
+                                                                        stroke="#1A202C" stroke-miterlimit="10"
+                                                                        stroke-linecap="round"></path>
+                                                                    <path
+                                                                        d="M17.287 15.17a2 2 0 01-2 2H5.333a2 2 0 01-2-2V6.317c0-.852.698-1.55 1.55-1.55h10.854c.852 0 1.55.698 1.55 1.55v8.853zM12.636 4.767v-2.1a1 1 0 00-1-1H8.985a1 1 0 00-1 1v2.1M3.333 9.418h13.954"
+                                                                        stroke="#1A202C" stroke-miterlimit="10"
+                                                                        stroke-linecap="square"></path>
+                                                                </svg>
+                                                                <h4>7 kg</h4>
+                                                            </div>
+                                                            <div class="class_seat-detail">
+                                                                <svg width="20" height="20" fill="none"
+                                                                    class="MuiChip-icon svgFillAll"
+                                                                    style="width: auto; stroke: rgb(74, 85, 104);">
+                                                                    <path
+                                                                        d="M10 17.5a7.5 7.5 0 100-15 7.5 7.5 0 000 15zM10 6.667h.008"
+                                                                        stroke="#1A202C" stroke-linecap="round"
+                                                                        stroke-linejoin="round"></path>
+                                                                    <path d="M9.166 10H10v3.333h.833" stroke="#1A202C"
+                                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                                    </path>
+                                                                </svg>
+                                                                <h4>Chi tiết</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="class_seat-order">
+                                                            <div class="class_seat-price">
+                                                                <h5 class="class_seat-cost">909.000đ</h5>
+                                                                <h4 class="class_seat-sale">909.000đ</h4>
+                                                            </div>
+                                                            <button class=" btn--primary">Chọn</button>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="ticket_expansion">
+                                                <span><input type="checkbox">Xem thêm hạng ghế và giá vé<i class="fa-solid fa-angle-down"></i></span>
+                                            </div>
+                                        </li>
+                                        <li class="ticket_body-item">
+                                            <div class="ticket_info">
+                                                <div class="ticket_info-name">
+                                                    <img src="https://storage.googleapis.com/tripi-flights/agenticons/Vietjet_Air_logo_transparent.png"
+                                                        alt="">
+                                                    <div class="ticket_info-brand-airline">
+                                                        <h4 class="ticket_info-brand-name">Vietjet Air</h4>
+                                                        <h4 class="ticket_info-brand-id">VJ785/ Airbus A321 NEO</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="ticket_info-time-dep">
+                                                    <div class="ticket_info-time-start">
+                                                        <h4>20:05</h4>
+                                                        <h4 class="ticket_info-place">HN</h4>
+                                                    </div>
+                                                    <svg width="40" height="20" fill="none">
+                                                        <g clip-path="url(#icon_arrow_flight_long_svg__clip0)"
+                                                            stroke="#718096" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round">
+                                                            <path d="M33.5 8.5L36 11M4 11h32"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="icon_arrow_flight_long_svg__clip0">
+                                                                <path fill="#fff" d="M0 0h40v20H0z"></path>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                    <div class="ticket_info-time-end">
+                                                        <h4>21:55</h4>
+                                                        <h4 class="ticket_info-place">SG</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="ticket_info-time-fly">
+                                                    <h4>1h50'</h4>
+                                                    <h4 class="ticket_info-fly-route">Bay thẳng</h4>
+                                                </div>
+                                            </div>
+                                            <div class="ticket_class-seat">
+                                                <ul class="class_seat-list">
+                                                    <li class="class_seat-item">
+                                                        <div class="class_seat-name">
+                                                            <h4>Phổ thông</h4>
+                                                            <h4 class="class_seat-it">EB</h4>
+                                                        </div>
+                                                        <div class="class_seat-desc">
+                                                            <div class="class_seat-package-heft">
+                                                                <svg width="20" height="20" fill="none"
+                                                                    class="MuiChip-icon svgFillAll"
+                                                                    style="width: 20px; stroke: rgb(74, 85, 104); height: 20px;">
+                                                                    <path
+                                                                        d="M4.884 17.17v1.163M15.737 17.17v1.163M7.985 12.519h4.651"
+                                                                        stroke="#1A202C" stroke-miterlimit="10"
+                                                                        stroke-linecap="round"></path>
+                                                                    <path
+                                                                        d="M17.287 15.17a2 2 0 01-2 2H5.333a2 2 0 01-2-2V6.317c0-.852.698-1.55 1.55-1.55h10.854c.852 0 1.55.698 1.55 1.55v8.853zM12.636 4.767v-2.1a1 1 0 00-1-1H8.985a1 1 0 00-1 1v2.1M3.333 9.418h13.954"
+                                                                        stroke="#1A202C" stroke-miterlimit="10"
+                                                                        stroke-linecap="square"></path>
+                                                                </svg>
+                                                                <h4>7 kg</h4>
+                                                            </div>
+                                                            <div class="class_seat-detail">
+                                                                <svg width="20" height="20" fill="none"
+                                                                    class="MuiChip-icon svgFillAll"
+                                                                    style="width: auto; stroke: rgb(74, 85, 104);">
+                                                                    <path
+                                                                        d="M10 17.5a7.5 7.5 0 100-15 7.5 7.5 0 000 15zM10 6.667h.008"
+                                                                        stroke="#1A202C" stroke-linecap="round"
+                                                                        stroke-linejoin="round"></path>
+                                                                    <path d="M9.166 10H10v3.333h.833" stroke="#1A202C"
+                                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                                    </path>
+                                                                </svg>
+                                                                <h4>Chi tiết</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="class_seat-order">
+                                                            <div class="class_seat-price">
+                                                                <h5 class="class_seat-cost">909.000đ</h5>
+                                                                <h4 class="class_seat-sale">909.000đ</h4>
+                                                            </div>
+                                                            <button class=" btn--primary">Chọn</button>
+                                                        </div>
+                                                    </li>
+                                                    <li class="class_seat-item hidden">
+                                                        <div class="class_seat-name">
+                                                            <h4>Phổ thông</h4>
+                                                            <h4 class="class_seat-it">EB</h4>
+                                                        </div>
+                                                        <div class="class_seat-desc">
+                                                            <div class="class_seat-package-heft">
+                                                                <svg width="20" height="20" fill="none"
+                                                                    class="MuiChip-icon svgFillAll"
+                                                                    style="width: 20px; stroke: rgb(74, 85, 104); height: 20px;">
+                                                                    <path
+                                                                        d="M4.884 17.17v1.163M15.737 17.17v1.163M7.985 12.519h4.651"
+                                                                        stroke="#1A202C" stroke-miterlimit="10"
+                                                                        stroke-linecap="round"></path>
+                                                                    <path
+                                                                        d="M17.287 15.17a2 2 0 01-2 2H5.333a2 2 0 01-2-2V6.317c0-.852.698-1.55 1.55-1.55h10.854c.852 0 1.55.698 1.55 1.55v8.853zM12.636 4.767v-2.1a1 1 0 00-1-1H8.985a1 1 0 00-1 1v2.1M3.333 9.418h13.954"
+                                                                        stroke="#1A202C" stroke-miterlimit="10"
+                                                                        stroke-linecap="square"></path>
+                                                                </svg>
+                                                                <h4>7 kg</h4>
+                                                            </div>
+                                                            <div class="class_seat-detail">
+                                                                <svg width="20" height="20" fill="none"
+                                                                    class="MuiChip-icon svgFillAll"
+                                                                    style="width: auto; stroke: rgb(74, 85, 104);">
+                                                                    <path
+                                                                        d="M10 17.5a7.5 7.5 0 100-15 7.5 7.5 0 000 15zM10 6.667h.008"
+                                                                        stroke="#1A202C" stroke-linecap="round"
+                                                                        stroke-linejoin="round"></path>
+                                                                    <path d="M9.166 10H10v3.333h.833" stroke="#1A202C"
+                                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                                    </path>
+                                                                </svg>
+                                                                <h4>Chi tiết</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="class_seat-order">
+                                                            <div class="class_seat-price">
+                                                                <h5 class="class_seat-cost">909.000đ</h5>
+                                                                <h4 class="class_seat-sale">909.000đ</h4>
+                                                            </div>
+                                                            <button class=" btn--primary">Chọn</button>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="ticket_expansion">
+                                                <span><input type="checkbox">Xem thêm hạng ghế và giá vé<i class="fa-solid fa-angle-down"></i></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -675,97 +1365,10 @@
                     $('.content_filter input[type="checkbox"]:checked').click();
                 })
             </script>
-            <style>
-                /* ==== */
-                .content_ticket {
-                    width: 100%;
-                    margin-top: 0;
-                    padding: 0;
-                    border-radius: 4px;
-                    background-color: var(--white-color);
-                    box-shadow: rgb(0 0 0 / 20%) 0px 15px 15px;
-                }
-
-                .ticket_date {
-                    position: relative;
-                    overflow: hidden;
-                }
-
-                .ticket_slider {
-                    display: flex;
-                    width: 3840px;
-                    margin-left: -5px;
-                    margin-right: -5px;
-                    padding: 5px 10px;
-                    height: 55px;
-                }
-
-                .ticket_date-group {
-                    display: flex;
-                    flex-direction: column;
-                    text-align: center;
-                    justify-content: center;
-                    border-radius: 8px;
-                    cursor: pointer;
-                    padding-left: 10px;
-                    padding-right: 10px;
-                    width: 192.5px;
-                }
-
-                .ticket_date-date {
-                    font-size: 1.2rem;
-                    font-weight: 500;
-                    color: var(--text-color);
-                    margin-bottom: 4px;
-                }
-
-                .ticket_date-price {
-                    font-size: 1.2rem;
-                    font-weight: 600;
-                }
-
-                .arrow {
-                    position: absolute;
-                    cursor: pointer;
-                }
-
-                .arrow i {
-                    margin: auto;
-                    color: var(--white-color);
-                    font-size: 1.6rem;
-                }
-
-                .ticket_date-arrow-left {
-                    display: flex;
-                    top: 25%;
-                    left: 20px;
-                    width: 28px;
-                    height: 28px;
-                    border-radius: 50%;
-                    box-shadow: rgb(0 0 0 / 10%) 0px 8px 12px;
-                    background-color: var(--primary-color);
-                }
-
-                .ticket_date-arrow-right {
-                    display: flex;
-                    top: 25%;
-                    right: 20px;
-                    width: 28px;
-                    height: 28px;
-                    border-radius: 50%;
-                    box-shadow: rgb(0 0 0 / 10%) 0px 8px 12px;
-                    background-color: var(--primary-color);
-                }
-
-                .ticket_date--active {
-                    background-color: var(--background-color);
-                    border: 1px solid var(--primary-color);
-                }
-            </style>
         </div>
 
         <!-- Footer -->
-        <!-- <footer class="footer">
+        <footer class="footer">
             <div class="grid">
                 <div class="footer-nav">
                     <div class="footer-menu">
@@ -824,7 +1427,7 @@
                     </div>
                 </div>
             </div>
-        </footer> -->
+        </footer>
     </div>
 
     <div class="modal" id="modal_login">
@@ -1062,12 +1665,12 @@
 
         $(window).scroll(function () {
             var y = pageYOffset;
-            if (y > 98) {
+            if (y > 94) {
                 $('.search__content').addClass('fixed');
                 $('.search_body').css('margin-top', '240px')
             } else {
                 $('.search__content').removeClass('fixed');
-                $('.search_body').css('margin', '30px 0')
+                $('.search_body').css('margin', '30px 0 100px')
             }
         })
 
@@ -1105,6 +1708,32 @@
             },
         });
     </script>
+
+<script>
+    $('.ticket_expansion').click(function () {
+        if ($(this).find('input').is(':checked')) {
+            $(this).find('span').html(`
+                <input type="checkbox"> Xem thêm hạng ghế và giá vé<i class="fa-solid fa-angle-down"></i>
+            `);
+            $(this).find('input').prop('checked', false);
+            let ticketList = $(this).closest('.ticket_body-item').find('.class_seat-item');
+            ticketList.each(function (index, element) {
+                if (index > 0) {
+                    element.classList.add('hidden');
+
+                }
+            })
+        } else {
+            $(this).find('span').html(`
+                <input type="checkbox"> Thu gọn<i class="fa-solid fa-angle-up"></i>
+            `);
+            $(this).find('input').prop('checked', true);
+            let ticketList = $(this).closest('.ticket_body-item').find('.hidden');
+            ticketList.removeClass('hidden');
+        }
+
+    })
+</script>
 </body>
 
 </html>
