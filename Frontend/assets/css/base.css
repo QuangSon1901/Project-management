@@ -700,3 +700,71 @@ ul {
     width: 200px;
     margin: 0 auto;
 }
+/* Ticker_user */
+.ticker_info{
+    color: #1a202c;
+    width: 100%;
+    margin: 10px 0px;
+    display: flex;
+    padding: 0px 16px 16px 16px;
+    max-width: 1188px;
+    
+    border: 2px solid rgba(0,0,0,9%);
+    border-radius: 8px;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+.id_ticker{
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding: 10px 0px;
+    border-bottom: 1px solid var(--border-color);
+    
+}
+.detail_ticker_info{
+    width: 50%;
+    margin-right: 20px;
+}
+.detail_ticker{
+    margin-top: 15px;
+    display: flex;
+}
+.title_ticker_info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.sub_ticker_info{
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.time_ticker_info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.detail_ticker_price{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.ticker_price{
+    display: flex;
+    flex-direction: column;
+}
