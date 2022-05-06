@@ -1681,7 +1681,7 @@ form .txt_field {
     min-height: 60.6px;
     overflow: hidden;
     transition-property: height;
-    transition-duration: 1s;
+    transition-duration: .4s;
 }
 
 .class_seat-item {
@@ -1689,7 +1689,7 @@ form .txt_field {
     min-height: 60.6px;
     overflow: hidden;
     transition-property: height;
-    transition-duration: 1s;
+    transition-duration: .4s;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -1706,13 +1706,13 @@ form .txt_field {
     justify-content: flex-end;
     margin: 0 20px;
     padding: 16px 0;
+    cursor: pointer;
 }
 
 .ticket_expansion>span {
     font-size: 1.6rem;
     color: var(--text-color);
     padding-right: 20px;
-    cursor: pointer;
 }
 
 .ticket_expansion i {
