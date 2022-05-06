@@ -129,7 +129,7 @@
     transition-property: height;
     transition-duration: 1s;
     border-bottom: 1px solid var(--border-color);
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .search-input {
