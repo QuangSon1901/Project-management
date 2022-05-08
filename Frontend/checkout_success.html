@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Booking</title>
+    <link rel="stylesheet" href="/Frontend/assets/css/style.css">
+    <link rel="stylesheet" href="/Frontend/assets/css/base.css">
+    <link rel="shortcut icon" href="/Frontend/assets/img/logo-icon.png">
+    <link rel="stylesheet" href="/Frontend/assets/css/loading-css.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="checkout_success">
+            <div class="checkout_success-body">
+                <img src="/Frontend/assets/img/success.png" alt="">
+                <h2>Đặt vé thành công</h2>
+                <h3>Đơn hàng của bạn đã được đăng ký thành công.</h3>
+                <h3>Bạn có thể xem lại nội dung chi tiết đơn hàng.</h3>
+                <div class="view_detail-order">
+                    <h2>Chi tiết đơn hàng</h2>
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                <div class="checkout_success-info">
+                    <div class="grid__row">
+                        <div class="grid__column-6">
+                            <div class="id_order">
+                                <h3>Mã đơn hàng:</h3>
+                                <h2>F3845628</h2>
+                            </div>
+                            <div class="info_contact">
+                                <h3>Thông tin liên hệ:</h3>
+                                <ul class="info_contact-list">
+                                    <li class="info_contact-item">
+                                        <h3>Họ tên:</h3>
+                                        <h3 class="info_contact-input">Nguyễn Văn A</h3>
+                                    </li>
+                                    <li class="info_contact-item">
+                                        <h3>Số điện thoại:</h3>
+                                        <h3 class="info_contact-input">0123654789</h3>
+                                    </li>
+                                    <li class="info_contact-item">
+                                        <h3>Email:</h3>
+                                        <h3 class="info_contact-input">VanA@gmail.com</h3>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="grid__column-6">
+                            <div class="id_order">
+                                <h3>Mã đặt chỗ:</h3>
+                                <h2 class="id_seat">F3845628</h2>
+                            </div>
+                            <div class="info_contact">
+                                <h3>Thông tin hành khách: <span>(1 khách)</span></h3>
+                                <ul class="info_contact-list">
+                                    <li class="info_contact-item">
+                                        <h3>Họ tên:</h3>
+                                        <h3 class="info_contact-input">Nguyễn Văn A</h3>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkout_success-place">
+                    <div>
+                        <h3 class="success_place-name">Nội Bài (HN)</h3>
+                        <h4 class="success_place-date">23:10, 09 tháng 05</h4>
+                        <div class="success_place-air">
+                            <img alt=""
+                                src="https://storage.googleapis.com/tripi-flights/agenticons/Vietjet_Air_logo_transparent.png"
+                                style="width: 32px;">
+                            <div class="success_place-air-name">
+                                Vietjet Air</div>
+                            <div class="success_place-air-id">
+                                VJ779 . Airbus A321</div>
+                        </div>
+                    </div>
+                    <div class="checkout_success-place-icon">
+                        <div>
+                            <span></span>
+                            <i class="fa-solid fa-plane"></i>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="success_place-name">Nội Bài (HN)</h3>
+                        <h4 class="success_place-date">23:10, 09 tháng 05</h4>
+                        <div class="success_place-air">
+                            <img alt=""
+                                src="https://storage.googleapis.com/tripi-flights/agenticons/Vietjet_Air_logo_transparent.png"
+                                style="width: 32px;">
+                            <div class="success_place-air-name">
+                                Vietjet Air</div>
+                            <div class="success_place-air-id">
+                                VJ779 . Airbus A321</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back_home">
+                    <button class="btn btn--primary">Trở về trang chủ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .checkout_success {
+            display: flex;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: var(--background-color-2);
+        }
+
+        .checkout_success-body {
+            width: 600px;
+            margin: auto;
+            background-color: var(--white-color);
+            text-align: center;
+            padding: 26px 0 0;
+            border-radius: 10px;
+            box-shadow: #48bb78 0px -4px 1px;
+        }
+
+        .checkout_success-body>img {
+            width: 50px;
+            object-fit: cover;
+        }
+
+        .checkout_success-body>h2 {
+            margin: 10px;
+        }
+
+        .checkout_success-body>h3 {
+            font-weight: 400;
+            margin: 4px;
+        }
+
+        .view_detail-order {
+            margin: 30px 20px 10px;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            color: #322cdf;
+            cursor: pointer;
+        }
+
+        .view_detail-order>h2 {
+            margin-right: 10px;
+        }
+
+        .view_detail-order>i {
+            font-size: 1.4rem;
+        }
+
+        .checkout_success-info {
+            padding: 0 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .id_order {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: var(--background-color-2);
+            border-radius: 10px;
+        }
+
+        .id_order>h2 {
+            color: #322cdf;
+        }
+
+        .id_seat {
+            color: var(--primary-color) !important;
+        }
+
+        .info_contact {
+            text-align: left;
+            padding: 20px 0;
+        }
+
+        .info_contact-item {
+            display: flex;
+
+        }
+
+        .info_contact-item>h3 {
+            width: 50%;
+            font-weight: 400;
+            margin-top: 10px;
+        }
+
+        .checkout_success-place {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .checkout_success-place>div {
+            text-align: left;
+        }
+
+        .success_place-air {
+            margin-top: 2px;
+            display: flex;
+            align-items: center;
+        }
+
+        .success_place-air>img {
+            height: 10px;
+            margin-right: 10px;
+        }
+
+        .success_place-date {
+            margin-top: 2px;
+            font-weight: 400;
+            margin-right: 10px;
+        }
+
+        .success_place-name {
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+        .checkout_success-place-icon {
+            width: 110px;
+            margin-top: 14px;
+        }
+
+        .checkout_success-place-icon > div {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkout_success-place-icon > div > span {
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: var(--black-color);
+            margin: 0 10px;
+        }
+
+        .back_home {
+            margin: 10px 0;
+        }
+
+        .back_home > button{
+            font-weight: 600;
+            font-size: 1.2rem;
+            border-radius: 10px;
+        }
+    </style>
+</body>
+
+</html>

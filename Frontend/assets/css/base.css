@@ -6,6 +6,7 @@
     --primary-blur-color: #2140ee0d;
     --border-color: #dbdbdb;
     --background-color: #fff5f7;
+    --background-color-2: #F4F8FA;
     --secondary-color: #EBEFF4;
 
     --header-height: 67px;
@@ -194,9 +195,9 @@ html {
 /* Fixed */
 .fixed {
     position: fixed;
-    top: 0;
+    /* top: 0;
     width: 1300px;
-    margin-top: 10px;
+    margin-top: 10px; */
 }
 
 /* Hiddem */
