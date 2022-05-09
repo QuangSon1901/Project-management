@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Infomation New</title>
+    <link rel="stylesheet" href="/Frontend/assets/css/style.css">
+    <link rel="stylesheet" href="/Frontend/assets/css/base.css">
+    <link rel="shortcut icon" href="/Frontend/assets/img/logo-icon.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <script src="assets/js/sweetalert/sweetalert.min.js"></script>
+    <script src="assets/js/helpers.js"></script>
+    <link href="assets/js/sweetalert/sweetalert.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="grid">
+                <div class="navbar">
+                    <div class="navbar__logo">
+                        <a href="#" class="navbar__logo-link">
+                            <img src="assets/img/logo-bus-qsc.png" class="navbar__logo-img" alt="Logo Bus">
+                        </a>
+                    </div>
+                    <div class="navbar__select">
+                        <ul class="navbar__category">
+                            <li class="navbar__category-item navbar__category-item--active">
+                                <a href="#" class="navbar__category-link">
+                                    <i class="navbar__category-icon fas fa-plane-departure"></i>
+                                    Máy bay
+                                </a>
+                            </li>
+                            <li class="navbar__category-item">
+                                <a href="#" class="navbar__category-link">
+                                    <i class="navbar__category-icon fas fa-subway"></i>
+                                    Tàu hỏa
+                                </a>
+                            </li>
+                            <li class="navbar__category-item">
+                                <a href="#" class="navbar__category-link">
+                                    <i class="navbar__category-icon fas fa-bus-alt"></i>
+                                    Xe khách
+                                </a>
+                            </li>
+                            <li class="navbar__category-item ">
+                                <a href="#" class="navbar__category-link">
+                                    <i class="navbar__category-icon fas fa-hotel"></i>
+                                    Khách sạn
+                                </a>
+                            </li>
+                        </ul>
+
+                        <ul class="navbar__category">
+                            <li class="navbar__category-item">
+
+                                <a href="#" class="navbar__category-link">
+                                    <i class="navbar__category-icon fab fa-buffer"></i>
+                                    Dịch vụ
+                                </a>
+                            </li>
+                            <li class="navbar__category-item">
+                                <a href="#" class="navbar__category-link">
+                                    <i class="navbar__category-icon fas fa-headset"></i>
+                                    Liên hệ
+                                </a>
+                            </li>
+                            <li class="navbar__category-item" id="btn_login">
+                                <a href="#" class="navbar__category-link">
+                                    <i class="navbar__category-icon fas fa-user"></i>
+                                    Đăng nhập / Đăng ký
+                                </a>
+                            </li>
+                            <!-- <li class="navbar__category-item">
+                                <div class="action">
+                                    <div class="profile" onclick="menuToggle();">
+                                        <img src="assets/img/2.png" alt="">
+                                    </div>
+                                    <div class="menu_dropdown">
+                                        <h2 class="profile_name">Nguyen Quang</h2>
+                                        <ul>
+                                            <li><img src="assets/img/user.png"><a href="#" class="profile_info">Thông tin cá nhân</a></li>
+                                            <li><img src="assets/img/settings.png"><a href="#" class="profile_info">Cài đặt</a></li>
+                                            <li><img src="assets/img/log-out.png"><a href="#" class="profile_info">Đăng xuất</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Container -->
+        <div class="container">
+
+            <div class="slider"></div>
+            <div class="grid">
+                <div class="inhapt_content">
+                    <div class="breadcrumb">
+                        <ol class="breadcrumb_list">
+                            <li class="breadcrumd_item">Trang chủ</li>
+                            <li class="breadcrumd_icon"><i class="fa-solid fa-angle-right"></i></li>
+                            <li class="breadcrumd_item">Trang liên hệ</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="grid__row">
+                        <div class="grid__column-3 navbar_info">
+                            <h3>Chuyến bay bán chạy</h3>
+                        </div>
+                        <div class="grid__column-9">
+                            <div class="content_info">
+                                <form id="infoForm">
+                                    <div class="navbar_info ">
+                                        <h3 class="content_info-title">Liên lạc với chúng tôi qua email</h3>
+                                    </div>
+                                    <div class="content_info-body">
+                                        <div class="grid__row">
+                                            <div class="grid__column-12">
+                                                <div class="content_info-profile">
+                                                    <div class="group_input">
+                                                        <span>Họ và tên:</span>
+                                                        <input type="text" class="input_form">
+                                                    </div>
+                                                    <div class="group_input">
+                                                        <span>Số điện thoại:</span>
+                                                        <input type="text" class="input_form">
+                                                    </div>
+                                                    <div class="group_input">
+                                                        <span>Email:</span>
+                                                        <input type="text" class="input_form">
+                                                    </div>
+                                                    <div class="group_input">
+                                                        <span>Nội dung:</span>
+                                                        <textarea class="textarea_input"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_info-footer">
+                                        <button type="submit" class="btn btn--primary">Gửi</button>
+                                    </div>
+                                </form>
+                                <div>
+                                    <ul class="contact_info">
+                                        <li>Công ty cổ phần du lịch Việt Nam TravelTime</li>
+                                        <li>Văn phòng Hà Nội:
+                                            <ul class="contact_info-ul">
+                                                <li><i class="fa-solid fa-location-dot contact_info-icon" ></i>Tầng 11, Toà Peakview, 36 Hoàng Cầu, Đống Đa</li>
+                                                <li><i class="fa-solid fa-phone contact_info-icon"></i>Điện thoại: 024 7109 9999.</li>
+                                                <li><i class="fa-solid fa-envelope contact_info-icon"></i>Email: info@traveltine.vn</li>
+                                            </ul>
+                                        </li>
+                                        <li>Văn phòng TP.Hồ Chí Minh:
+                                            <ul class="contact_info-ul">
+                                                <li><i class="fa-solid fa-location-dot contact_info-icon" ></i>Tầng 11, Toà Peakview, 36 Hoàng Cầu, Đống Đa</li>
+                                                <li><i class="fa-solid fa-phone contact_info-icon"></i>Điện thoại: 024 7109 9999.</li>
+                                                <li><i class="fa-solid fa-envelope contact_info-icon"></i>Email: info@traveltine.vn</li>
+                                            </ul>
+                                        </li>
+                                        <li>Liên hệ hợp tác,truyền thông:
+                                            <ul class="contact_info-ul">
+                                                <li><i class="fa-solid fa-location-dot contact_info-icon" ></i>Tầng 11, Toà Peakview, 36 Hoàng Cầu, Đống Đa</li>
+                                                <li><i class="fa-solid fa-phone contact_info-icon"></i>Điện thoại: 024 7109 9999.</li>
+                                                <li><i class="fa-solid fa-envelope contact_info-icon"></i>Email: info@traveltine.vn</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="grid">
+                <div class="footer-nav">
+                    <div class="footer-menu">
+                        <div class="footer-menu__list">
+                            <a href="#" class="footer-menu__item">
+                                Giới thiệu
+                                <span class="underline footer-menu__item--underline"></span>
+                            </a>
+                            <a href="#" class="footer-menu__item">
+                                Liên hệ
+                                <span class="underline footer-menu__item--underline"></span>
+                            </a>
+                            <a href="#" class="footer-menu__item">
+                                Video
+                                <span class="underline footer-menu__item--underline"></span>
+                            </a>
+                            <a href="#" class="footer-menu__item">
+                                Tải về
+                                <span class="underline footer-menu__item--underline"></span>
+                            </a>
+                            <a href="#" class="footer-menu__item">
+                                Tuyển dụng
+                                <span class="underline footer-menu__item--underline"></span>
+                            </a>
+                            <a href="#" class="footer-menu__item">
+                                Hình ảnh
+                                <span class="underline footer-menu__item--underline"></span>
+                            </a>
+                            <a href="#" class="footer-menu__item">
+                                Đến trang công ty
+                                <span class="underline footer-menu__item--underline"></span>
+                            </a>
+                        </div>
+                        <h5 class="footer-menu__copy-right">
+                            © 2022 QSC CITY - Developed by TAB
+                        </h5>
+                    </div>
+                    <div class="footer-social">
+                        <div class="footer-social__list">
+                            <a href="" class="footer-social__item">
+                                <i class="footer-social__icon fab fa-youtube"></i>
+                            </a>
+                            <a href="" class="footer-social__item">
+                                <i class="footer-social__icon fab fa-facebook-f"></i>
+                            </a>
+                            <a href="" class="footer-social__item">
+                                <i class="footer-social__icon fab fa-google-plus-g"></i>
+                            </a>
+                            <a href="" class="footer-social__item">
+                                <i class="footer-social__icon fab fa-twitter"></i>
+                            </a>
+                            <a href="" class="footer-social__item">
+                                <i class="footer-social__icon fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="/Frontend/assets/js/input-file.js"></script>
+    <script>
+        config = {
+            dateFormat: "d/m/Y"
+        }
+        flatpickr("input[type=datetime-local]", config);
+
+        $(document).ready(function () {
+            $('#btnFile').click(function (e) {
+                e.preventDefault();
+                $('#inputFile').click();
+            })
+
+            $('#inputFile').change(function (e) {
+                e.preventDefault();
+                var imageData = '';
+                var fileTypes = ['image/png', 'image/jpeg'];
+                var maxSize = 1024 * 1024; // 1MB
+                var imgDefault = "assets/img/lanlan.jpg";
+                onChangeInput(e, '#imagePreview', imageData, fileTypes, maxSize, imgDefault);
+            })
+        })
+
+
+    </script>
+
+</body>
+
+</html>

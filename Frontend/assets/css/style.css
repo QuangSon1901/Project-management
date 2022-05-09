@@ -1149,9 +1149,24 @@ form .txt_field {
 .content {
     padding-top: 20px;
 }
-
-.navbar_info {
-    /* border: 1px solid var(--black-color); */
+.inhapt_content{
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 10px 0px;
+    width: 100%;
+    border-bottom:1px solid var(--border-color); ;
+}
+.navbar_info{
+    border-radius: 6px;
+}
+.navbar_info > h3 {
+    background: #d3e8f0;
+    font-size: 1.8rem;
+    font-weight: 500;
+    height: 49px;
+    padding: 13px 15px;
+    border-bottom: 1px solid var(--border-color);
+    width: 100%;
 }
 
 .navbar_info-group {
@@ -1917,4 +1932,40 @@ form .txt_field {
 .class_seat-desc-info-body.body_3 svg {
     margin-right: 10px;
     width: 10%;
+}
+/* contact */
+.textarea_input{
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    box-sizing: border-box;
+    box-shadow: rgb(0 0 0 / 2%) 0px 2px 0px 0px inset;
+    color: rgb(34, 34, 34);
+    height: 79px;
+    padding: 10px;
+    outline: none;
+    resize: none;
+    width: 100%;
+}
+.contact_info{
+    padding: 30px 20px;
+}
+.contact_info > li{
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 3px 0;
+}
+.contact_info-ul{
+    padding: 5px 5px;
+    font-size: 1.4  rem;
+    font-weight: 400;
+}
+.contact_info-ul > li{
+ padding: 3px 0;
+}
+.contact_info-icon{
+    margin-right: 5px;
 }
