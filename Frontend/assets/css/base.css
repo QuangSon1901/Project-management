@@ -377,6 +377,19 @@ label {
     -webkit-touch-callout: none;
 }
 
+/* Status */
+.on_way {
+    background: rgb(237, 137, 54); color: #ffffff;
+    height: 24px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: flex;
+    padding: 8px;
+    align-items: center;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
 /* Input */
 input {
     -moz-user-select: none;

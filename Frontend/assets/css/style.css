@@ -2172,3 +2172,156 @@ form .txt_field {
 .bank_item-show {
     border: 1px solid var(--primary-color);
 }
+/* Ticker_user */
+.ticker_info{
+    color: #1a202c;
+    display: flex;
+    padding: 0 16px;
+    box-shadow: 1px 1px 1px 2px rgb(0 0 0 / 8%);
+    border-radius: 2px;
+    flex-direction: column;
+    background-color: #fff;
+    margin: 20px 20px; 
+}
+
+.id_ticker{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 10px 0px;
+    border-bottom: 1px solid var(--border-color);
+}
+.detail_ticker{
+    margin-top: 15px;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+.detail_ticker_info{
+    width: 45%;
+    padding-right: 40px;
+    border-right: 1px solid var(--border-color);
+}
+
+.title_ticker_info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.sub_ticker_info{
+    display: flex;
+    justify-content: space-between;
+    color: var(--black-color);
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.time_ticker_info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.detail_ticker_price{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.ticker_price{
+    display: flex;
+    flex-direction: column;
+}
+.id_ticker__info{
+    align-items: flex-end;
+}
+.id_ticker__info > span{
+    color:var(--primary-color); 
+    margin-left: 5px;
+}
+.show_detail_ticket{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.show_detail_ticket > i{
+    color:var(--primary-color); 
+    margin-right: 10px;
+}
+.show_detail_ticket > span{
+    font-size: 1.6rem; 
+    font-weight: 400; 
+    align-items: center;  
+    padding-bottom: 4px; 
+    color:var(--primary-color);
+}
+.icon_ticket_info{
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+}
+.ticker_plane__logo{
+    display: flex;
+}
+.Plane__name{
+    display: flex; 
+    flex-direction: column; 
+    font-size: 1.8rem;  
+    font-weight: 500;
+}
+.total_ticker__price{
+    display: flex; 
+    flex-direction: column;  
+    align-items: flex-end; 
+    margin-bottom: 20px;
+}
+.ticker_price > h6 {
+    background: rgb(237, 137, 54); color: #ffffff;
+    height: 24px;
+    font-size: 1.4rem;
+    display: flex;
+    padding: 0 8px;
+    align-items: center;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+.ticker_status{
+    width:100%; 
+    display: flex;
+    justify-content: space-between;
+}
+.ticker_status-item{
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #F7FAFC; 
+    display: flex; 
+    flex-direction: column; 
+    width: 24%;
+}
+.ticker_status-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 22px; 
+    margin-bottom: 6px;
+}
+.ticker_status-value{
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+
+
+.ticketFormDetail {
+    padding: 0 20px;
+}
