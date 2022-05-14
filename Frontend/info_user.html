@@ -588,6 +588,22 @@
             dateFormat: "d/m/Y"
         }
         flatpickr("input[type=datetime-local]", config);
+
+        $(document).ready(function () {
+            $('#btnFile').click(function (e) {
+                e.preventDefault();
+                $('#inputFile').click();
+            })
+
+            $('#inputFile').change(function (e) {
+                e.preventDefault();
+                var imageData = '';
+                var fileTypes = ['image/png', 'image/jpeg'];
+                var maxSize = 1024 * 1024; // 1MB
+                var imgDefault = "assets/img/lanlan.jpg";
+                onChangeInput(e, '#imagePreview', imageData, fileTypes, maxSize, imgDefault);
+            })
+        })
     </script>
 
 </body>
