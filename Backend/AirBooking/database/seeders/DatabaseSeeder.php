@@ -2,8 +2,10 @@
 
 namespace Database\Seeders;
 
+use DateTime;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,5 +22,12 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        DB::table('users')->insert([
+            [
+                'name' => 'Quang',
+                'email' => 'quang@gmail.com',
+                'password' => bcrypt('222222'),
+            ]
+        ]);
     }
 }
