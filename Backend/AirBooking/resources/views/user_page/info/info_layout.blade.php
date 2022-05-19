@@ -17,7 +17,9 @@
                                 <img src="{{URL::to('upload/'.auth()->user()->avatar)}}" class="navbar_info-avatar" alt="">
                                 <div>
                                     <h3 class="navbar_info-name">{{auth()->user()->name}}</h3>
-                                    <span class="navbar_info-phone">0394062185</span>
+                                    @isset(auth()->user()->phone)
+                                    <span class="navbar_info-phone">{{auth()->user()->phone}}</span>
+                                    @endisset
                                 </div>
                             </div>
                             <div class="navbar_info-group navbar_info-body">

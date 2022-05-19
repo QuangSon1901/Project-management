@@ -14,17 +14,17 @@
                     </div>
                     <span class="close-modal close">&#10005;</span>
                     <div class="txt_field">
-                        <input type="text" name="fullnameInput" placeholder=" ">
+                        <input class="inputForm" type="text" name="fullnameInput" placeholder=" ">
                         <span></span>
                         <label>Họ tên</label>
                     </div>
                     <div class="txt_field">
-                        <input type="text" name="emailInput" placeholder=" ">
+                        <input class="inputForm" type="text" name="emailInput" placeholder=" ">
                         <span></span>
                         <label>Email</label>
                     </div>
                     <div class="txt_field">
-                        <input type="password" name="passwordInput" placeholder=" ">
+                        <input class="inputForm" type="password" name="passwordInput" placeholder=" ">
                         <span></span>
                         <label>Mật khẩu</label>
                     </div>
@@ -35,7 +35,7 @@
                         &amp;
                         <a style="color: var(--primary-color);font-size: 12px;" href="">Privacy Policy</a>
                     </div>
-                    <button type="submit">Đăng ký</button>
+                    <button type="submit" id="btnRegister">Đăng ký</button>
                 </form>
             </div>
 
@@ -52,17 +52,17 @@
                     <span class="close-modal close">&#10005;</span>
                     <span>hoặc dùng tài khoản TravelTime để đăng nhập</span>
                     <div class="txt_field">
-                        <input type="text" name="emailInput" placeholder=" ">
+                        <input class="inputForm" type="text" name="emailInput" placeholder=" ">
                         <span></span>
                         <label>Email</label>
                     </div>
                     <div class="txt_field">
-                        <input type="password" name="passwordInput" placeholder=" ">
+                        <input class="inputForm" type="password" name="passwordInput" placeholder=" ">
                         <span></span>
                         <label>Mật khẩu</label>
                     </div>
                     <a style="cursor:pointer" id="forgotPassword" class="form-container__signin">Quên mật khẩu?</a>
-                    <button type="submit">Đăng nhập</button>
+                    <button type="submit" id="btnLogin">Đăng nhập</button>
                 </form>
             </div>
             <div class="overlay-container">
@@ -87,6 +87,8 @@
     $(document).ready(function() {
         $('#loginForm').submit(function(e) {
             e.preventDefault();
+            $('#btnLogin').html('Đang xử lý...').prop('disabled',
+                true);
             let data = {
                 '_token': $(this).find('input[name="_token"]').val(),
                 'email': $(this).find('input[name="emailInput"]').val(),
@@ -102,14 +104,23 @@
                         swal('Thông báo', res.msg, 'error');
                     }
                     if (res.status === 200) {
-                        window.location.href = '/';
+                        swal('Thông báo', res.msg, 'success');
+                        setTimeout(function() {
+                            window.location.href = '/';
+                        }, 1000);
                     }
+                    $('#btnLogin').html('Đăng nhập').prop('disabled',
+                        false);
                 }
             })
         })
+    })
 
+    $(document).ready(function(e) {
         $('#registerForm').submit(function(e) {
             e.preventDefault();
+            $('#btnRegister').html('Đang xử lý...').prop('disabled',
+                true);
             let data = {
                 '_token': $(this).find('input[name="_token"]').val(),
                 'fullname': $(this).find('input[name="fullnameInput"]').val(),
@@ -126,14 +137,21 @@
                         swal('Thông báo', res.msg, 'error');
                     }
                     if (res.status === 200) {
-                        window.location.href = '/';
+                        swal('Thông báo', res.msg, 'success');
+                        setTimeout(function() {
+                            window.location.href = '/';
+                        }, 1000);
                     }
+                    $('#btnRegister').html('Đăng ký').prop('disabled',
+                        false);
                 }
             })
         })
+    })
 
+    $(document).ready(function() {
         $('#forgotPassword').click(function(e) {
-            e.preventDefault();
+            e.preventDefault();     
             Swal.fire({
                 title: 'Nhập email tài khoản',
                 input: 'email',
@@ -146,14 +164,12 @@
                         type: 'get',
                         success: function(res) {
                             if (res.status === 403) {
-                                Swal.fire({
-                                    title: res.msg,
-                                })
+                                swal('Thông báo', res.msg, 'error');
+
                             }
                             if (res.status === 200) {
-                                Swal.fire({
-                                    title: res.msg,
-                                })
+                                swal('Thông báo', res.msg, 'success');
+
                             }
                             loadingFlight('hide');
                         }

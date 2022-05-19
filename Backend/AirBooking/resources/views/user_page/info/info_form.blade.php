@@ -13,7 +13,7 @@
                 <div class="content_info-profile">
                     <div class="group_input">
                         <span>Họ và tên:</span>
-                        <input type="text" name="name" class="input_form" value="{{auth()->user()->name}}">
+                        <input type="text" name="name" class="input_form is" value="{{auth()->user()->name}}">
                     </div>
                     <div class="group_input">
                         <span>Số điện thoại:</span>
@@ -57,7 +57,7 @@
                 <div class="content_info-avt">
                     <img src="{{URL::to('upload/'.auth()->user()->avatar)}}" id="imagePreview" class="content_info-avatar">
                     <input accept="image/*" name="avatar" type="file" id="inputFile">
-                    <button id="btnFile" class="btn btn--hollow">Chọn ảnh</button>
+                    <button id="btnFile" type="button" class="btn btn--hollow">Chọn ảnh</button>
                     <div class="content_info-desc">
                         <span>Dụng lượng file tối đa 1 MB</span>
                         <span>Định dạng: .JPEG, .PNG</span>
@@ -67,18 +67,11 @@
         </div>
     </div>
     <div class="content_info-footer">
-        <button type="submit" class="btn btn--primary">Cập nhật</button>
+        <button type="submit" id="btnInfoChange" class="btn btn--primary">Cập nhật</button>
     </div>
 </form>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script>
-    config = {
-        altInput: true,
-        altFormat: "F j, Y",
-        dateFormat: "d-m-Y",
-    }
-    flatpickr("input[type=datetime-local]", config);
-
     $(document).ready(function() {
         $('#btnFile').click(function(e) {
             e.preventDefault();
@@ -98,11 +91,10 @@
 <script>
     $(document).ready(function() {
         $('#infoForm').submit(function(e) {
+            $('#btnInfoChange').html('Đang xử lý...').prop('disabled',
+                true);
             e.preventDefault();
             let formData = this;
-            for (var value of new FormData(formData)) {
-                console.log(value);
-            }
             $.ajax({
                 url: '/info',
                 type: 'post',
@@ -117,6 +109,8 @@
                     if (res.status === 200) {
                         swal('Thông báo', res.msg, 'success');
                     }
+                    $('#btnInfoChange').html('Cập nhật').prop('disabled',
+                        false);
                 }
             });
         })

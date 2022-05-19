@@ -9,7 +9,7 @@ use Illuminate\Validation\ValidationException;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Foundation\Http\FormRequest as LaravelFormRequest;
 
-class LoginRequest extends FormRequest
+class RegisterRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -29,7 +29,8 @@ class LoginRequest extends FormRequest
     public function rules()
     {
         return [
-            'email' => 'required|email',
+            'fullname' => 'required',
+            'email' => 'required|email|unique:users',
             'password' => 'required|min:6'
         ];
     }
@@ -38,6 +39,8 @@ class LoginRequest extends FormRequest
     {
         return [
             'required' => ':attribute không được để trống',
+            'email' => ':attribute sai định dạng',
+            'unique' => ':attribute đã tồn tại',
             'min' => ':attribute tối thiểu :min ký tự',
         ];
     }
@@ -45,6 +48,7 @@ class LoginRequest extends FormRequest
     public function attributes()
     {
         return [
+            'fullname' => 'Họ tên',
             'email' => 'Email',
             'password' => 'Mật khẩu',
         ];

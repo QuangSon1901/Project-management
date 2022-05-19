@@ -4,7 +4,7 @@ namespace App\Http\Controllers\User\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\User;
+use App\Models\User, App\Models\RandomModal;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
@@ -15,13 +15,14 @@ class ForgotPasswordController extends Controller
 {
     public function forgot_password($email)
     {
+        $RandomModal = new RandomModal;
         
         $user = User::where('email', $email)->first();
         if (!$user) {
-            return response()->json(['status' => 403, 'msg' => 'Email này chưa đắng ký!']);
+            return response()->json(['status' => 403, 'msg' => 'Email này chưa đăng ký!']);
         }
         
-        $newPass = $this->randomString(10);
+        $newPass = $RandomModal->randomString(10);
         $update = User::where('email', $email)->update(['password' => bcrypt($newPass)]);
         if($update) {
             $data = [
@@ -40,14 +41,5 @@ class ForgotPasswordController extends Controller
         }
     }
 
-    public function randomString($length = 10)
-    {
-        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        $charactersLength = strlen($characters);
-        $randomString = '';
-        for ($i = 0; $i < $length; $i++) {
-            $randomString .= $characters[rand(0, $charactersLength - 1)];
-        }
-        return $randomString;
-    }
+    
 }

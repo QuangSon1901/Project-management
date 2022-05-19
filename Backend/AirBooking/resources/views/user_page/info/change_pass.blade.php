@@ -29,12 +29,14 @@
         </div>
     </div>
     <div class="content_info-footer">
-        <button type="submit" class="btn btn--primary">Xác nhận</button>
+        <button type="submit" id="btnChangePass" class="btn btn--primary">Xác nhận</button>
     </div>
 </form>
 <script>
     $(document).ready(function() {
         $('#passwordForm').submit(function(e) {
+            $('#btnChangePass').html('Đang xử lý...').prop('disabled',
+                true);
             e.preventDefault();
             let data = {
                 '_token': $('input[name="_token"]').val(),
@@ -55,8 +57,10 @@
                         swal('Thông báo', res.msg, 'success');
                         setTimeout(function() {
                             window.location.href = '/logout';
-                        }, 2000);
+                        }, 1000);
                     }
+                    $('#btnChangePass').html('Xác nhận').prop('disabled',
+                        false);
                 }
             })
         })
@@ -75,14 +79,12 @@
                         type: 'get',
                         success: function(res) {
                             if (res.status === 403) {
-                                Swal.fire({
-                                    title: res.msg,
-                                })
+                                swal('Thông báo', res.msg, 'error');
+
                             }
                             if (res.status === 200) {
-                                Swal.fire({
-                                    title: res.msg,
-                                })
+                                swal('Thông báo', res.msg, 'success');
+
                             }
                             loadingFlight('hide');
                         }

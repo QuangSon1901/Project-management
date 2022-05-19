@@ -22,7 +22,7 @@ function loadingFlight(display, text) {
                     <span></span>
                     <span></span>
                 </div>
-                <h1>` + text + `</h1>
+                <h1>${text}</h1>
             </div>
         </div>
         `)
