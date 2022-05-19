@@ -2,6 +2,7 @@ config = {
     altInput: true,
     altFormat: "F j, Y",
     dateFormat: "d-m-Y",
+    minDate: "today"
 }
 flatpickr("input[type=datetime-local]", config);
 

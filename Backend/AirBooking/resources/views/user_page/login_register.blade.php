@@ -106,8 +106,8 @@
                     if (res.status === 200) {
                         swal('Thông báo', res.msg, 'success');
                         setTimeout(function() {
-                            window.location.href = '/';
-                        }, 1000);
+                            window.location.reload();
+                        }, 500);
                     }
                     $('#btnLogin').html('Đăng nhập').prop('disabled',
                         false);
@@ -139,8 +139,8 @@
                     if (res.status === 200) {
                         swal('Thông báo', res.msg, 'success');
                         setTimeout(function() {
-                            window.location.href = '/';
-                        }, 1000);
+                            window.location.reload();
+                        }, 500);
                     }
                     $('#btnRegister').html('Đăng ký').prop('disabled',
                         false);

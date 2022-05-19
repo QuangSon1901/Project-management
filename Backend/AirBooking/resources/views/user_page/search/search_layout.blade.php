@@ -17,20 +17,18 @@
                 <div class="grid">
                     <div class="breadcrumb">
                         <ol class="breadcrumb_list">
-                            <li class="breadcrumd_item">Trang chủ</li>
+                            <li class="breadcrumd_item"><a href="/" style="color:var(--text-color)">Trang chủ</a></li>
                             <li class="breadcrumd_icon"><i class="fa-solid fa-angle-right"></i></li>
-                            <li class="breadcrumd_item">Chuyến bay từ Hà Nội đến Sài Gòn</li>
+                            <li class="breadcrumd_item"><a href="#" style="color:var(--text-color)">Chuyến bay từ {{old('inputFromText')}} đến {{old('inputToText')}}</a></li>
                         </ol>
                     </div>
                     <div class="search_body-place">
-                        <div class="search_place-heading">Hà Nội (HN) - Sài Gòn (SG): <span>15 chuyến bay</span>
+                        <div class="search_place-heading">{{old('inputFromText')}} - {{old('inputToText')}}: <span>15 chuyến bay</span>
                         </div>
                         <ol class="search_place-desc">
-                            <li>Thứ 4, 11 tháng 05</li>
+                            <li>{{date('d', strtotime(old('dateFromInput')))}} tháng {{date('m', strtotime(old('dateFromInput')))}}</li>
                             <li>-</li>
-                            <li>1 khách</li>
-                            <li>-</li>
-                            <li>Phổ thông</li>
+                            <li>{{old('adultInput') + old('childrenInput') + old('infantInput')}} khách</li>
                         </ol>
                     </div>
                     <div class="search_body-content">

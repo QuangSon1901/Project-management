@@ -33,7 +33,7 @@ Route::group(['prefix' => '/'], function () {
     Route::post('/register', [RegisterController::class, 'register'])->middleware('CheckLogin');
     Route::get('/logout', function () {
         Auth::logout();
-        return redirect()->back();
+        return redirect()->refresh();
     })->middleware('auth');
     Route::get('/forgot-password/{email}', [ForgotPasswordController::class, 'forgot_password']);
 
@@ -45,6 +45,6 @@ Route::group(['prefix' => '/'], function () {
     });
 
     Route::group(['prefix' => '/search'], function () {
-        Route::post('/', [SearchController::class, 'search']);
+        Route::post('/', [SearchController::class, 'search'])->name('searchFlight');
     });
 });
