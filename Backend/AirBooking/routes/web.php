@@ -6,6 +6,7 @@ use App\Http\Controllers\User\Auth\RegisterController;
 use App\Http\Controllers\User\Info\InfoController;
 use App\Http\Controllers\User\Info\OrderController;
 use App\Http\Controllers\User\Search\SearchController;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -22,25 +23,25 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('user_layout');
-});
+})->middleware('preventBackHistory');
 Route::get('/home', function () {
     return view('user_layout');
-})->name('home');
+})->name('home')->middleware('preventBackHistory');
 
 
-Route::group(['prefix' => '/'], function () {
+Route::middleware('preventBackHistory')->group(function () {
     Route::post('/login', [LoginController::class, 'login'])->middleware('CheckLogin');
     Route::post('/register', [RegisterController::class, 'register'])->middleware('CheckLogin');
     Route::get('/logout', function () {
         Auth::logout();
-        return redirect()->refresh();
+        return redirect()->route('home');
     })->middleware('auth');
     Route::get('/forgot-password/{email}', [ForgotPasswordController::class, 'forgot_password']);
 
-    
+
     Route::group(['prefix' => '/info'], function () {
-        Route::match(['get','post'], '/', [InfoController::class, 'info'])->middleware('auth');
-        Route::match(['get','post'], '/change-pass', [InfoController::class, 'change_pass'])->middleware('auth');
+        Route::match(['get', 'post'], '/', [InfoController::class, 'info'])->middleware('auth');
+        Route::match(['get', 'post'], '/change-pass', [InfoController::class, 'change_pass'])->middleware('auth');
         Route::get('/order', [OrderController::class, 'order'])->middleware('auth');
     });
 
