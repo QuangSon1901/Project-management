@@ -59,4 +59,10 @@ Route::middleware('preventBackHistory')->group(function () {
             return 'hello';
         });
     });
+
+    Route::group(['prefix' => '/checkout'], function () {
+        Route::get('/', function(){
+            return 'hello';
+        });
+    });
 });
