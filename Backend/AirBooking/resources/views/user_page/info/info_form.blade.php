@@ -72,6 +72,14 @@
 </form>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script>
+    config = {
+        altInput: true,
+        altFormat: "F j, Y",
+        dateFormat: "d-m-Y"
+    }
+    flatpickr("input[type=datetime-local]", config);
+</script>
+<script>
     $(document).ready(function() {
         $('#btnFile').click(function(e) {
             e.preventDefault();
