@@ -23,7 +23,7 @@
                         </ol>
                     </div>
                     <div class="search_body-place">
-                        <div class="search_place-heading">{{old('inputFromText')}} - {{old('inputToText')}}: <span>{{count($ticketList)}} chuyến bay</span>
+                        <div class="search_place-heading">{{old('inputFromText')}} - {{old('inputToText')}}: <span>15 chuyến bay</span>
                         </div>
                         <ol class="search_place-desc">
                             <li>{{date('d', strtotime(old('dateFromInput')))}} tháng {{date('m', strtotime(old('dateFromInput')))}}</li>
@@ -149,7 +149,20 @@
             ticketDateActive.removeClass('ticket_date--active');
         }
     </script>
-    
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 5,
+            slidesPerGroup: 1,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 
     <script>
         $('.ticket_expansion').click(function() {

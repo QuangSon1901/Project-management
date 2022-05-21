@@ -200,18 +200,6 @@ html {
     margin-top: 10px; */
 }
 
-/*  */
-.inputError {
-    border: 1px solid red;
-    position: relative;
-}
-
-.textError {
-    color: red;
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
 /* Hiddem */
 .hidden {
     display: none !important;
@@ -264,7 +252,7 @@ html {
 }
 
 .btn--hollow:hover {
-    background: rgba(0, 0, 0, .02);
+    background: rgba(0,0,0,.02);
 }
 
 /* Animation */
@@ -391,8 +379,7 @@ label {
 
 /* Status */
 .on_way {
-    background: rgb(237, 137, 54);
-    color: #ffffff;
+    background: rgb(237, 137, 54); color: #ffffff;
     height: 24px;
     font-size: 1.6rem;
     font-weight: 500;
@@ -557,20 +544,18 @@ ol {
     z-index: 1;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow:0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22) ;
     position: relative;
     overflow: hidden;
     width: 768px;
     max-width: 100%;
     min-height: 480px;
 }
-
-.modal__body.h1 {
+.modal__body.h1{
     font-weight: bold;
     margin: 0;
 }
-
-.modal__body.p {
+.modal__body.p{
     font-size: 14px;
     font-weight: 100;
     line-height: 20px;
@@ -578,17 +563,15 @@ ol {
     margin: 20px 0 30px;
 }
 
-.modal__body.a {
+.modal__body.a{
     color: #333;
     font-size: 14px;
     text-decoration: none;
     margin: 15px 0;
 }
-
 .lock-overlay {
     overflow-y: hidden;
 }
-
 /* ======= */
 
 /* Header */
@@ -616,7 +599,7 @@ ol {
     margin-right: 40px;
 }
 
-.navbar__logo .navbar__logo-img {
+.navbar__logo .navbar__logo-img{
     height: 69px;
 }
 
@@ -649,7 +632,7 @@ ol {
 .navbar__category-icon {
     font-size: 1.6rem;
     margin-right: 12px;
-    color: rgba(0, 0, 0, .6);
+    color: rgba(0,0,0,.6);
 }
 
 .navbar__category-item,
@@ -657,7 +640,7 @@ ol {
     display: inline-block;
     font-size: 1.6rem;
     font-weight: 500;
-    color: rgba(0, 0, 0, .6);
+    color: rgba(0,0,0,.6);
     text-decoration: none;
 }
 
