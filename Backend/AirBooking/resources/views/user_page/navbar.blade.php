@@ -3,7 +3,7 @@
         <div class="navbar">
             <div class="navbar__logo">
                 <a href="/" class="navbar__logo-link">
-                    <img src="{{asset('user_asset/assets/img/logo-bus-qsc.svg')}}" class="navbar__logo-img" alt="Logo Bus">
+                    <img src="{{asset('user_asset/assets/img/logo-bus-qsc.png')}}" class="navbar__logo-img" alt="Logo Bus">
                 </a>
             </div>
             <div class="navbar__select">

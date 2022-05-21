@@ -35,7 +35,7 @@ Route::middleware('preventBackHistory')->group(function () {
     Route::post('/register', [RegisterController::class, 'register'])->middleware('CheckLogin');
     Route::get('/logout', function () {
         Auth::logout();
-        return redirect()->back();
+        return redirect()->route('home');
     })->middleware('auth');
     Route::get('/forgot-password/{email}', [ForgotPasswordController::class, 'forgot_password']);
 
@@ -47,7 +47,7 @@ Route::middleware('preventBackHistory')->group(function () {
     });
 
     Route::group(['prefix' => '/search'], function () {
-        Route::get('/', [SearchController::class, 'search'])->name('searchFlight');
+        Route::post('/', [SearchController::class, 'search'])->name('searchFlight');
     });
 
     Route::group(['prefix' => '/checkout'], function () {

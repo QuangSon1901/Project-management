@@ -11,16 +11,30 @@
     <div class="filter_brand-airline">
         <h4 class="filter_title">Hãng bay</h4>
         <ul class="filter_brand-list">
-            @foreach($airlineList as $item)
             <li class="filter_brand-item">
                 <label class="option-checkbox">
                     <input type="checkbox" id="search_checkbox">
                     <i class="icon-checkbox"></i>
-                    <img src="{{URL::to('upload/'.$item->airline_logo)}}" alt="">
-                    {{$item->airline_name}}
+                    <img src="https://storage.googleapis.com/tripi-flights/agenticons/VNA_logo_notext.png" alt="">
+                    Vietnam Airline
                 </label>
             </li>
-            @endforeach
+            <li class="filter_brand-item">
+                <label class="option-checkbox">
+                    <input type="checkbox" id="search_checkbox">
+                    <i class="icon-checkbox"></i>
+                    <img src="https://storage.googleapis.com/tripi-flights/agenticons/bamboo_airway.png" alt="">
+                    Bamboo Airways
+                </label>
+            </li>
+            <li class="filter_brand-item">
+                <label class="option-checkbox">
+                    <input type="checkbox" id="search_checkbox">
+                    <i class="icon-checkbox"></i>
+                    <img src="https://storage.googleapis.com/tripi-flights/agenticons/Vietjet_Air_logo_transparent.png" alt="">
+                    Vietjet Air
+                </label>
+            </li>
         </ul>
     </div>
     <div class="filter_time-dep">
@@ -80,16 +94,22 @@
     <div class="filter_rank-ticket">
         <h4 class="filter_title">Hạng vé</h4>
         <ul class="filter_rank-list">
-            @foreach($ticketClass as $item)
             <li class="filter_rank-item">
                 <label class="option-checkbox">
                     <input type="checkbox" id="search_checkbox">
                     <i class="icon-checkbox"></i>
                     <img src="" alt="">
-                    {{$item->ticket_class_name}}
+                    Phổ thông
                 </label>
             </li>
-            @endforeach
+            <li class="filter_rank-item">
+                <label class="option-checkbox">
+                    <input type="checkbox" id="search_checkbox">
+                    <i class="icon-checkbox"></i>
+                    <img src="" alt="">
+                    Thương gia
+                </label>
+            </li>
         </ul>
     </div>
 </div>
