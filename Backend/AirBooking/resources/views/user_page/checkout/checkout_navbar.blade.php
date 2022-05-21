@@ -2,45 +2,33 @@
     <div class="grid">
         <div class="navbar">
             <div class="navbar__logo">
-                <a href="/" class="navbar__logo-link">
-                    <img src="{{asset('user_asset/assets/img/logo-bus-qsc.png')}}" class="navbar__logo-img" alt="Logo Bus">
+                <a href="#" class="navbar__logo-link">
+                    <img src="assets/img/logo-bus-qsc.png" class="navbar__logo-img" alt="Logo Bus">
                 </a>
             </div>
             <div class="navbar__select">
-                <ul class="navbar__category">
-                    <li class="navbar__category-item navbar__category-item--active">
+                <ul class="navbar__category" style="flex: 1; justify-content:center">
+                    <li style="pointer-events: none;" class="navbar__category-item navbar__step-item--active">
                         <a href="#" class="navbar__category-link">
-                            <i class="navbar__category-icon fas fa-plane-departure"></i>
-                            Máy bay
+                            <span class="checkout-step-icon">1</span>
+                            Thông tin hành khách
                         </a>
                     </li>
-                    <li class="navbar__category-item">
+                    <li style="pointer-events: none;" class="navbar__category-item">
                         <a href="#" class="navbar__category-link">
-                            <i class="navbar__category-icon fas fa-subway"></i>
-                            Tàu hỏa
+                            <span class="checkout-step-icon">2</span>
+                            Thanh toán
                         </a>
                     </li>
-                    <li class="navbar__category-item">
+                    <li style="pointer-events: none;" class="navbar__category-item">
                         <a href="#" class="navbar__category-link">
-                            <i class="navbar__category-icon fas fa-bus-alt"></i>
-                            Xe khách
-                        </a>
-                    </li>
-                    <li class="navbar__category-item ">
-                        <a href="#" class="navbar__category-link">
-                            <i class="navbar__category-icon fas fa-hotel"></i>
-                            Khách sạn
+                            <span class="checkout-step-icon">3</span>
+                            Hoàn thành
                         </a>
                     </li>
                 </ul>
 
                 <ul class="navbar__category">
-                    <li class="navbar__category-item">
-                        <a href="#" class="navbar__category-link">
-                            <i class="navbar__category-icon fab fa-buffer"></i>
-                            Dịch vụ
-                        </a>
-                    </li>
                     <li class="navbar__category-item">
                         <a href="#" class="navbar__category-link">
                             <i class="navbar__category-icon fas fa-headset"></i>

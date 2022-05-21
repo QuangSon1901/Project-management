@@ -21,6 +21,4 @@
 
     <link rel="stylesheet" href="{{asset('user_asset/assets/css/loading-css.css')}}">
     <script src="{{asset('user_asset/assets/js/loading-js.js')}}"></script>
-
-    <link rel="stylesheet" href="{{asset('user_asset/assets/css/slide-bar.css')}}" />
 </head>

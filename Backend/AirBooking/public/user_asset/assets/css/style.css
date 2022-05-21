@@ -119,7 +119,7 @@
 /* -- */
 .search__content {
     width: 100%;
-    min-height: 172px;
+    height: 172px;
     margin-top: 40px;
     padding: 20px 10px;
     border-radius: 4px;
@@ -1621,11 +1621,8 @@ form .txt_field {
 }
 
 .ticket_info img {
-    height: 30px;
-    width: 30px;
-    margin: 0px 10px;
-    background-size: cover;
-    object-fit: cover;
+    height: 10px;
+    margin: 0 20px;
 }
 
 .ticket_info-brand-airline h4 {
@@ -1866,8 +1863,8 @@ form .txt_field {
 }
 
 .seat_desc-info-place-brandfly img {
-    width: 24px;
-    margin: 0 10px;
+    height: 10px;
+    margin-right: 10px;
 }
 
 .seat_desc-info-place-brandfly-air-name {
