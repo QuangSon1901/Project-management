@@ -48,4 +48,10 @@ Route::middleware('preventBackHistory')->group(function () {
     Route::group(['prefix' => '/search'], function () {
         Route::get('/', [SearchController::class, 'search'])->name('searchFlight');
     });
+
+    Route::group(['prefix' => '/checkout'], function () {
+        Route::get('/', function(){
+            return 'hello';
+        });
+    });
 });
