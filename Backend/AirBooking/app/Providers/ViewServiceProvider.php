@@ -2,11 +2,13 @@
 
 namespace App\Providers;
 
+use App\Models\Airline;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use App\Models\Inland;
 use App\Models\Cities;
 use App\Models\International;
+use App\Models\TicketClass;
 
 class ViewServiceProvider extends ServiceProvider
 {
@@ -28,7 +30,7 @@ class ViewServiceProvider extends ServiceProvider
     public function boot()
     {
         View::composer(['user_page.search'], function ($view) {
-            
+            // Search
             $hint = array();
             $inland = Inland::get();
             foreach($inland as $item) {
@@ -54,6 +56,16 @@ class ViewServiceProvider extends ServiceProvider
             }
 
             $view->with('hint', $hint)->with('hint2', $hint2);
+        });
+
+        View::composer(['user_page.search.search_filter'], function($view) {
+            // List Airline
+            $airlineList = Airline::get();
+            $view->with('airlineList', $airlineList);
+
+            // List Ticket Class
+            $ticketClass = TicketClass::get();
+            $view->with('ticketClass', $ticketClass);
         });
     }
 }
