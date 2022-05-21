@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Redirect;
 
 class Authenticate extends Middleware
@@ -15,8 +16,9 @@ class Authenticate extends Middleware
      */
     protected function redirectTo($request)
     {
-        if (! $request->expectsJson()) {
-            return '/';
+        if (!$request->expectsJson()) {
+            Session::flash('openLogin', 403);
+            return '/home' ;
         }
-    }   
+    }
 }

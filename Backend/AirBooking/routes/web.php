@@ -3,6 +3,7 @@
 use App\Http\Controllers\User\Auth\ForgotPasswordController;
 use App\Http\Controllers\User\Auth\LoginController;
 use App\Http\Controllers\User\Auth\RegisterController;
+use App\Http\Controllers\User\Checkout\CheckoutController;
 use App\Http\Controllers\User\Info\InfoController;
 use App\Http\Controllers\User\Info\OrderController;
 use App\Http\Controllers\User\Search\SearchController;
@@ -46,12 +47,25 @@ Route::middleware('preventBackHistory')->group(function () {
     });
 
     Route::group(['prefix' => '/search'], function () {
-        Route::get('/', [SearchController::class, 'search'])->name('searchFlight');
+        Route::get('/{dateFlightDepp?}', [SearchController::class, 'search'])->name('searchFlight');
     });
 
     Route::group(['prefix' => '/checkout'], function () {
-        Route::get('/', function(){
-            return 'hello';
-        });
+        Route::get('/', [CheckoutController::class, 'checkout'])->name('checkoutTicket')->middleware('auth');
+        Route::get('/payment', [CheckoutController::class, 'checkout_payment'])->name('checkoutPayment')->middleware('auth');
     });
+});
+
+Route::get('/test/{id?}', function ($id = null) {
+    $date = date_create("2022-05-25");
+    date_modify($date, "-10 days");
+    
+    $dateList = array();
+    for($i = 0; $i < 20; $i++) {
+        date_modify($date, "+1 days");
+        array_push($dateList, date_format($date, "d-m-Y"));
+    }
+
+
+    return $dateList;
 });

@@ -1,3 +1,6 @@
+@php
+$dateList = Session::get('dateList');
+@endphp
 <div class="content_ticket-date">
     <div class="ticket_date swiper mySwiper">
         <div class="arrow ticket_date-arrow-left swiper-button-prev">
@@ -7,42 +10,12 @@
             <i class="fa-solid fa-angle-right"></i>
         </div>
         <div class="ticket_slider swiper-wrapper">
-            <div style="text-align: center;" class="ticket_date-group swiper-slide">
-                <h3 class="ticket_date-date">T7, 07 tháng 5</h3>
+            @foreach($dateList as $item)
+            <div style="text-align: center;" data-filter="{{$item}}" class="ticket_date-group swiper-slide @if($item == $_GET['dateFromInput']) ticket_date--active @endif">
+                <h3 class="ticket_date-date">{{date('d', strtotime($item))}} tháng {{date('m', strtotime($item))}}</h3>
                 <h3 class="ticket_date-price">1000.000đ</h3>
             </div>
-            <div style="text-align: center;" class="ticket_date-group ticket_date--active">
-                <h3 class="ticket_date-date">T7, 07 tháng 5</h3>
-                <h3 class="ticket_date-price">2000.000đ</h3>
-            </div>
-            <div style="text-align: center;" class="ticket_date-group swiper-slide">
-                <h3 class="ticket_date-date">T7, 07 tháng 5</h3>
-                <h3 class="ticket_date-price">3000.000đ</h3>
-            </div>
-            <div style="text-align: center;" class="ticket_date-group swiper-slide">
-                <h3 class="ticket_date-date">T7, 07 tháng 5</h3>
-                <h3 class="ticket_date-price">4000.000đ</h3>
-            </div>
-            <div style="text-align: center;" class="ticket_date-group swiper-slide">
-                <h3 class="ticket_date-date">T7, 07 tháng 5</h3>
-                <h3 class="ticket_date-price">5000.000đ</h3>
-            </div>
-            <div style="text-align: center;" class="ticket_date-group swiper-slide">
-                <h3 class="ticket_date-date">T7, 07 tháng 5</h3>
-                <h3 class="ticket_date-price">6000.000đ</h3>
-            </div>
-            <div style="text-align: center;" class="ticket_date-group swiper-slide">
-                <h3 class="ticket_date-date">T7, 07 tháng 5</h3>
-                <h3 class="ticket_date-price">7000.000đ</h3>
-            </div>
-            <div style="text-align: center;" class="ticket_date-group swiper-slide">
-                <h3 class="ticket_date-date">T7, 07 tháng 5</h3>
-                <h3 class="ticket_date-price">8000.000đ</h3>
-            </div>
-            <div style="text-align: center;" class="ticket_date-group swiper-slide">
-                <h3 class="ticket_date-date">T7, 07 tháng 5</h3>
-                <h3 class="ticket_date-price">9000.000đ</h3>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>

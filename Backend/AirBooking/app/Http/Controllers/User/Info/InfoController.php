@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class InfoController extends Controller
 {
@@ -106,6 +107,8 @@ class InfoController extends Controller
 
         if (Hash::check($request->oldPassword, auth()->user()->password)) {
             User::find(auth()->user()->id)->update(['password' => Hash::make($request->newPassword)]);
+
+            Session::flash('openLogin', 403);
             return response()->json(['status' => 200, 'msg' => 'Thay đổi mật khẩu thành công, vui lòng đăng nhập lại!']);
         } else {
             return response()->json(['status' => 403, 'msg' => 'Mật khẩu hiện tại không đúng']);

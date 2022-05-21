@@ -66,25 +66,6 @@
             })
         })
 
-        // $(function() {
-        //     $('#navbar_info-click').click(function(e) {
-        //         let isopened = $(this).find('ul').css('display');
-        //         if (isopened == 'none') {
-        //             $(this).find('ul').slideToggle(500);
-        //         }
-        //     })
-
-
-        //     $('#navbar_ticket-click').click(function(e) {
-        //         if (!$('#navbar_info-click').is(e.target) && $('#navbar_info-click').has(e.target).length === 0) {
-        //             let isopened = $('#navbar_info-click').find('ul').css('display');
-        //             if (isopened == 'block') {
-        //                 $('#navbar_info-click').find('ul').slideToggle(500);
-        //             }
-        //         }
-        //     })
-        // })
-
         $(document).on('pjax:error', function(event, data, status, xhr, options) {
             swal('Thông báo!', 'Gặp 1 chút sự cố khi tải lên dữ liệu, vui lòng tải lại trang!', 'warning')
         });
