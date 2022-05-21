@@ -3,6 +3,7 @@
 use App\Http\Controllers\User\Auth\ForgotPasswordController;
 use App\Http\Controllers\User\Auth\LoginController;
 use App\Http\Controllers\User\Auth\RegisterController;
+use App\Http\Controllers\User\Checkout\CheckoutController;
 use App\Http\Controllers\User\Info\InfoController;
 use App\Http\Controllers\User\Info\OrderController;
 use App\Http\Controllers\User\Search\SearchController;
@@ -47,5 +48,9 @@ Route::middleware('preventBackHistory')->group(function () {
 
     Route::group(['prefix' => '/search'], function () {
         Route::post('/', [SearchController::class, 'search'])->name('searchFlight');
+    });
+
+    Route::group(['prefix' => '/checkout'], function () {
+        Route::get('/', [CheckoutController::class, 'checkout'])->name('checkoutTicket');
     });
 });
