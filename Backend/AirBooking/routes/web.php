@@ -51,16 +51,6 @@ Route::middleware('preventBackHistory')->group(function () {
     });
 
     Route::group(['prefix' => '/checkout'], function () {
-        Route::get('/', [CheckoutController::class, 'checkout'])->name('checkoutTicket');
-    });
-
-    Route::group(['prefix' => '/checkout'], function () {
-        Route::get('/', function(){
-            return 'hello';
-        });
-    });
-
-    Route::group(['prefix' => '/checkout'], function () {
         Route::get('/', function(){
             return 'hello';
         });
