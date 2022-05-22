@@ -3,6 +3,7 @@
 
 <ul class="ticket_body-list">
     @foreach($ticketList as $row)
+    @if(count($row['ticket']) > 0)
     <li class="ticket_body-item">
         <div class="ticket_info">
             <div class="ticket_info-name">
@@ -223,6 +224,45 @@
             <span><input type="checkbox">Xem thêm hạng ghế và giá vé<i class="fa-solid fa-angle-down"></i></span>
         </div>
     </li>
+    @endif
     @endforeach
 </ul>
+<script>
+    $('.ticket_expansion').click(function() {
+        if ($(this).find('input').is(':checked')) {
+            $(this).find('span').html(`
+                <input type="checkbox"> Xem thêm hạng ghế và giá vé<i class="fa-solid fa-angle-down"></i>
+            `);
+            $(this).find('input').prop('checked', false);
+            let unChecked = $(this).closest('.ticket_body-item').find('.class_seat-detail').find('input[type="checkbox"]:checked');
+            unChecked.prop('checked', false)
+            $(this).closest('.ticket_body-item').find('.class_seat-desc-info').removeClass('show_seat-detail');
+            $(this).closest('.ticket_body-item').find('.class_seat-item').css('height', '60.6px');
+            $(this).closest('.ticket_body-item').find('.class_seat-list').css('height', '60.6px');
+        } else {
+            $(this).find('span').html(`
+                <input type="checkbox"> Thu gọn<i class="fa-solid fa-angle-up"></i>
+            `);
+            $(this).find('input').prop('checked', true);
+            let countTicket = $(this).closest('.ticket_body-item').find('.class_seat-item').length;
+            let countTicketDetail = $(this).closest('.ticket_body-item').find('.show_seat-detail').length;
+            $(this).closest('.ticket_body-item').find('.class_seat-list').css('height', (countTicketDetail * 406) + (countTicket * 60.6) + 'px');
+        }
+    })
+    $('.class_seat-detail').click(function() {
+        if ($(this).find('input').is(':checked')) {
+            $(this).find('input').prop('checked', false);
+            let ticketListHeight = $(this).closest('.ticket_body-item').find('.class_seat-list').height();
+            $(this).closest('.class_seat-item').find('.class_seat-desc-info').removeClass('show_seat-detail');
+            $(this).closest('.class_seat-item').css('height', '60.6px');
+            $(this).closest('.ticket_body-item').find('.class_seat-list').css('height', ticketListHeight - 406 + 'px');
+        } else {
+            $(this).find('input').prop('checked', true);
+            let ticketListHeight = $(this).closest('.ticket_body-item').find('.class_seat-list').height();
+            $(this).closest('.class_seat-item').find('.class_seat-desc-info').addClass('show_seat-detail');
+            $(this).closest('.class_seat-item').css('height', '466.6px');
+            $(this).closest('.ticket_body-item').find('.class_seat-list').css('height', ticketListHeight + 406 + 'px');
+        }
+    })
+</script>
 @endsection

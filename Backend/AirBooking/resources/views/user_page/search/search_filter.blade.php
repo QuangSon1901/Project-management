@@ -93,3 +93,37 @@
         </ul>
     </div>
 </div>
+<!-- SearchPage Js -->
+<script>
+    var filterPriceInput = $('#filterPriceInput');
+    var filterPriceSpan = $('#filterPriceSpan');
+    filterPriceInput.on('input', function() {
+        $('#filterPriceInput').val(filterPriceInput.val())
+        var numberFormat = new Intl.NumberFormat().format(filterPriceInput.val());
+        filterPriceSpan.html(numberFormat);
+    })
+</script>
+
+<script>
+    $('#filterPriceInput').change(function() {
+        let dateFromInput = $('.ticket_date--active').data('filter');
+        $.pjax({
+            type: 'get',
+            url: '/search/filter',
+            data: {
+                inputFromText: $('#searchForm input[name="inputFromText"]').val(),
+                inputFromID: $('#searchForm input[name="inputFromID"]').val(),
+                inputToText: $('#searchForm input[name="inputToText"]').val(),
+                inputToID: $('#searchForm input[name="inputToID"]').val(),
+                dateFromInput: dateFromInput,
+                dateToInput: $('#searchForm input[name="dateToInput"]').val(),
+                adultInput: $('#searchForm select[name="adultInput"] :selected').val(),
+                childrenInput: $('#searchForm select[name="childrenInput"] :selected').val(),
+                infantInput: $('#searchForm select[name="infantInput"] :selected').val(),
+                priceFilter: $(this).val()
+            },
+            container: '#searchBody',
+            timeout: 9000000,
+        })
+    })
+</script>

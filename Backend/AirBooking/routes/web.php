@@ -58,6 +58,7 @@ Route::middleware('preventBackHistory')->group(function () {
     Route::get('/forgot-password/{email}', [ForgotPasswordController::class, 'forgot_password']);
 
     Route::group(['prefix' => '/search'], function () {
-        Route::get('/{dateFlightDepp?}', [SearchController::class, 'search'])->name('searchFlight');
+        Route::get('/', [SearchController::class, 'search'])->name('searchFlight');
+        Route::get('/filter', [SearchController::class, 'filter'])->name('filterFlight');
     });
 });
