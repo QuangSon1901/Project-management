@@ -8,18 +8,14 @@
     <div class="content_info-body">
         <div class="grid__row">
             <div class="grid__column-12">
-                <div class="content_info-hollow content_hollow">
-                    <img src="{{asset('user_asset/assets/img/empty-box.jpg')}}" class="content_hollow-img" alt="">
-                    <span>Bạn chưa có vé máy bay nào</span>
-                    <button type="button" id="btnfile" class="btn btn--primary">Tìm chuyến bay</button>
-                </div>
+                @forelse($orderList as $item)
                 <div class="content_info-ticket">
                     <div class="ticker_info">
                         <div class="id_ticker">
                             <div class="id_ticker__info">Mã đơn hàng:
-                                <span>F001</span>
+                                <span>{{$item['billOrder']->bill_id}}</span>
                             </div>
-                            <div class="show_detail_ticket">
+                            <div class="show_detail_ticket detail_order" data-url="/info/order-detail/{{$item['billOrder']->bill_id}}">
                                 <i class="fa fa-arrow-right"></i>
                                 <span>Xem chi tiết</span>
                             </div>
@@ -27,7 +23,7 @@
                         <div class="detail_ticker">
                             <div class="detail_ticker_info">
                                 <div class="title_ticker_info">
-                                    <p>SGN</p>
+                                    <p style="line-height: 2rem;">{{$item['aliasFrom']->airport_name}} ({{$item['aliasFrom']->airport_alias}})</p>
                                     <div class="icon_ticket_info">
                                         <div style="background: linear-gradient(270deg, rgb(160, 174, 192) 0%, rgba(160, 174, 192, 0) 100%); width: 24px; height: 1px; margin-right: 10px;">
                                         </div>
@@ -37,40 +33,47 @@
                                         <div style="background: linear-gradient(270deg, rgb(160, 174, 192) 0%, rgba(160, 174, 192, 0) 100%); width: 24px; height: 1px; margin-right: 10px;">
                                         </div>
                                     </div>
-                                    <p>HAN</p>
+                                    <p style="line-height: 2rem; text-align:right" >{{$item['aliasTo']->airport_name}} ({{$item['aliasTo']->airport_alias}})</p>
                                 </div>
                                 <div class="sub_ticker_info">
-                                    <p>Thành phố Hồ Chí Minh</p>
-                                    <p>Hà Nội</p>
+                                    <p>{{$item['aliasFrom']->cities_name}}</p>
+                                    <p>{{$item['aliasTo']->cities_name}}</p>
                                 </div>
                                 <div class="time_ticker_info">
-                                    <p>22:50, 27 tháng 04</p>
-                                    <p>00:55, 28 tháng 04</p>
+                                    <p>{{date('H:i', strtotime($item['billOrder']->flight_time_departure))}}, {{date('d', strtotime($item['billOrder']->flight_time_departure))}} tháng {{date('m', strtotime($item['billOrder']->flight_time_departure))}}</p>
+                                    <p>{{date('H:i', $item['timeArr'])}}, {{date('d', $item['timeArr'])}} tháng {{date('m', $item['timeArr'])}}</p>
                                 </div>
                             </div>
                             <div class="detail_ticker_price">
                                 <div class="ticker_plane__logo">
                                     <div class="plane__logo">
-                                        <img class="jss767 jss929" width="40px" style="background:cover; margin-right: 10px;" alt="" src="https://storage.googleapis.com/tripi-assets/flight_services/agent_icons/VietjetAir_transpng.png">
+                                        <img class="jss767 jss929" width="40px" style="background:cover; margin-right: 10px;" alt="" src="{{URL::to('upload/'.$item['billOrder']->airline_logo)}}">
                                     </div>
                                     <div class="Plane__name">
-                                        <span style="margin-bottom: 8px;">VietjetAir</span>
-                                        <span style="color: #555;font-size: 1.4rem; font-weight: 400;">VJ132</span>
+                                        <span style="margin-bottom: 8px;">{{$item['billOrder']->airline_name}}</span>
+                                        <span style="color: #555;font-size: 1.4rem; font-weight: 400;">{{$item['billOrder']->airplane_name}} . {{$item['billOrder']->airplane_number}}</span>
                                     </div>
                                 </div>
                                 <div class="ticker_price">
                                     <div class="total_ticker__price">
                                         <span style="font-size: 1.4rem;  font-weight: 400; margin-bottom: 8px;">Tổng
                                             Tiền</span>
-                                        <span style="color: #555;font-size: 1.8rem; font-weight: 500;">2.000.000
+                                        <span style="color: #555;font-size: 1.8rem; font-weight: 500;">{{number_format($item['billOrder']->bill_total_price)}}
                                             đ</span>
                                     </div>
-                                    <h6>Chờ thanh toán</h6>
+                                    <h6>Đang giữ chỗ</h6>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                @empty
+                <div class="content_info-hollow content_hollow">
+                    <img src="{{asset('user_asset/assets/img/empty-box.jpg')}}" class="content_hollow-img" alt="">
+                    <span>Bạn chưa có vé máy bay nào</span>
+                    <button type="button" id="btnfile" class="btn btn--primary">Tìm chuyến bay</button>
+                </div>
+                @endforelse
             </div>
         </div>
     </div>
@@ -80,5 +83,17 @@
         removeActiveInfo();
         $('#navbar_ticket-click').addClass('navbar_info-option--active');
     })
+
+    $(function() {
+            $('.detail_order').click(function() {
+                let _url = $(this).data('url');
+                $.pjax({
+                    type: 'get',
+                    url: _url,
+                    container: '#contentInfo',
+                    timeout: 9000000,
+                })
+            })
+        })
 </script>
 @endsection

@@ -202,8 +202,8 @@ html {
 
 /*  */
 .inputError {
-    border: 1px solid red;
-    position: relative;
+    border: 1px solid red !important;
+    position: relative !important;
 }
 
 .textError {

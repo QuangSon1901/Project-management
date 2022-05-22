@@ -1608,7 +1608,6 @@ form .txt_field {
 
 .ticket_info {
     display: flex;
-    align-items: center;
     padding: 20px 0;
     border-bottom: 1px solid var(--border-color);
 }
@@ -2084,19 +2083,19 @@ form .txt_field {
 }
 
 .order_info-payment {
-    padding: 0; 
-    display: flex; 
+    padding: 0;
+    display: flex;
     justify-content: space-between;
     cursor: pointer;
 }
 
 .order_place-icon {
-    display: flex; 
-    align-items:center; 
+    display: flex;
+    align-items: center;
     padding: 0 30px;
 }
 
-.order_place-icon > i {
+.order_place-icon>i {
     font-size: 1.6rem;
 }
 
@@ -2163,15 +2162,16 @@ form .txt_field {
     justify-content: center;
 }
 
-.bank_item > img{
+.bank_item>img {
     object-fit: cover;
 }
 
 .bank_item-show {
     border: 1px solid var(--primary-color);
 }
+
 /* Ticker_user */
-.ticker_info{
+.ticker_info {
     color: #1a202c;
     display: flex;
     padding: 0 16px;
@@ -2179,10 +2179,10 @@ form .txt_field {
     border-radius: 2px;
     flex-direction: column;
     background-color: #fff;
-    margin: 20px 20px; 
+    margin: 20px 20px;
 }
 
-.id_ticker{
+.id_ticker {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -2191,19 +2191,21 @@ form .txt_field {
     padding: 10px 0px;
     border-bottom: 1px solid var(--border-color);
 }
-.detail_ticker{
+
+.detail_ticker {
     margin-top: 15px;
     display: flex;
     margin-bottom: 20px;
     justify-content: space-between;
 }
-.detail_ticker_info{
+
+.detail_ticker_info {
     width: 45%;
     padding-right: 40px;
     border-right: 1px solid var(--border-color);
 }
 
-.title_ticker_info{
+.title_ticker_info {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -2212,7 +2214,7 @@ form .txt_field {
     margin-bottom: 8px;
 }
 
-.sub_ticker_info{
+.sub_ticker_info {
     display: flex;
     justify-content: space-between;
     color: var(--black-color);
@@ -2221,7 +2223,8 @@ form .txt_field {
     font-size: 1.4rem;
     font-weight: 400;
 }
-.time_ticker_info{
+
+.time_ticker_info {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -2229,61 +2232,72 @@ form .txt_field {
     font-weight: 400;
 }
 
-.detail_ticker_price{
+.detail_ticker_price {
     display: flex;
     justify-content: space-between;
     width: 50%;
 }
 
-.ticker_price{
+.ticker_price {
     display: flex;
     flex-direction: column;
 }
-.id_ticker__info{
+
+.id_ticker__info {
     align-items: flex-end;
 }
-.id_ticker__info > span{
-    color:var(--primary-color); 
+
+.id_ticker__info>span {
+    color: var(--primary-color);
     margin-left: 5px;
 }
-.show_detail_ticket{
+
+.show_detail_ticket {
     display: flex;
     align-items: center;
     cursor: pointer;
 }
-.show_detail_ticket > i{
-    color:var(--primary-color); 
+
+.show_detail_ticket>i {
+    color: var(--primary-color);
     margin-right: 10px;
 }
-.show_detail_ticket > span{
-    font-size: 1.6rem; 
-    font-weight: 400; 
-    align-items: center;  
-    padding-bottom: 4px; 
-    color:var(--primary-color);
+
+.show_detail_ticket>span {
+    font-size: 1.6rem;
+    font-weight: 400;
+    align-items: center;
+    padding-bottom: 4px;
+    color: var(--primary-color);
 }
-.icon_ticket_info{
-    display: flex; 
-    align-items: center; 
+
+.icon_ticket_info {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
 }
-.ticker_plane__logo{
+
+.ticker_plane__logo {
     display: flex;
 }
-.Plane__name{
-    display: flex; 
-    flex-direction: column; 
-    font-size: 1.8rem;  
+
+.Plane__name {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8rem;
     font-weight: 500;
 }
-.total_ticker__price{
-    display: flex; 
-    flex-direction: column;  
-    align-items: flex-end; 
+
+.total_ticker__price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     margin-bottom: 20px;
 }
-.ticker_price > h6 {
-    background: rgb(237, 137, 54); color: #ffffff;
+
+.ticker_price>h6 {
+    background: rgb(237, 137, 54);
+    color: #ffffff;
     height: 24px;
     font-size: 1.4rem;
     display: flex;
@@ -2292,26 +2306,30 @@ form .txt_field {
     border-radius: 4px;
     text-transform: uppercase;
 }
-.ticker_status{
-    width:100%; 
+
+.ticker_status {
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.ticker_status-item{
+
+.ticker_status-item {
     padding: 10px;
     border-radius: 8px;
-    background-color: #F7FAFC; 
-    display: flex; 
-    flex-direction: column; 
+    background-color: #F7FAFC;
+    display: flex;
+    flex-direction: column;
     width: 24%;
 }
+
 .ticker_status-title {
     font-size: 1.4rem;
     font-weight: 500;
-    line-height: 22px; 
+    line-height: 22px;
     margin-bottom: 6px;
 }
-.ticker_status-value{
+
+.ticker_status-value {
     color: var(--primary-color);
     font-size: 1.8rem;
     font-weight: 500;
@@ -2379,4 +2397,157 @@ form .txt_field {
 .payment_info h4 {
     font-size: 1.4rem;
     font-weight: 400;
+}
+
+/* Checkout completed */
+.checkout_success {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--background-color-2);
+}
+
+.checkout_success-body {
+    width: 600px;
+    margin: auto;
+    background-color: var(--white-color);
+    text-align: center;
+    padding: 26px 0 0;
+    border-radius: 10px;
+    box-shadow: #48bb78 0px -4px 1px;
+}
+
+.checkout_success-body>img {
+    width: 50px;
+    object-fit: cover;
+}
+
+.checkout_success-body>h2 {
+    margin: 10px;
+}
+
+.checkout_success-body>h3 {
+    font-weight: 400;
+    margin: 4px;
+}
+
+.view_detail-order {
+    margin: 30px 20px 10px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    color: #322cdf;
+    cursor: pointer;
+}
+
+.view_detail-order>h2 {
+    margin-right: 10px;
+}
+
+.view_detail-order>i {
+    font-size: 1.4rem;
+}
+
+.checkout_success-info {
+    padding: 0 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.id_order {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--background-color-2);
+    border-radius: 10px;
+}
+
+.id_order>h2 {
+    color: #322cdf;
+}
+
+.id_seat {
+    color: var(--primary-color) !important;
+}
+
+.info_contact {
+    text-align: left;
+    padding: 20px 0;
+}
+
+.info_contact-item {
+    display: flex;
+
+}
+
+.info_contact-item>h3 {
+    width: 50%;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.checkout_success-place {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.checkout_success-place>div {
+    text-align: left;
+}
+
+.success_place-air {
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.success_place-air>img {
+    height: 10px;
+    margin-right: 10px;
+}
+
+.success_place-date {
+    margin-top: 2px;
+    font-weight: 400;
+    margin-right: 10px;
+}
+
+.success_place-name {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.checkout_success-place-icon {
+    width: 110px;
+    margin-top: 14px;
+}
+
+.checkout_success-place-icon>div {
+    display: flex;
+    align-items: center;
+}
+
+.checkout_success-place-icon>div>span {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--black-color);
+    margin: 0 10px;
+}
+
+.back_home {
+    margin: 10px 0;
+}
+
+.back_home>button {
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-radius: 10px;
 }

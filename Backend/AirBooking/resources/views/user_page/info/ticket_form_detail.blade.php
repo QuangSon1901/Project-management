@@ -4,39 +4,39 @@
     <div class="id_ticker">
         <div class="show_detail_ticket">
             <i class="fa fa-arrow-left"></i>
-            <span>Quay lại đơn hàng</span>
+            <span onclick="history.back()">Quay lại đơn hàng</span>
         </div>
     </div>
     <div class="detail_ticker">
         <div class="ticker_status">
             <div class="ticker_status-item">
                 <span class="ticker_status-title">Mã đơn hàng</span>
-                <span class="ticker_status-value">FGT30</span>
+                <span class="ticker_status-value">{{$orderList['billOrder']->bill_id}}</span>
             </div>
             <div class="ticker_status-item">
                 <span class="ticker_status-title">Mã đặt chỗ</span>
-                <span class="ticker_status-value">G37</span>
+                <span class="ticker_status-value">...</span>
             </div>
             <div class="ticker_status-item">
                 <span class="ticker_status-title">Trạng thái</span>
-                <span class="on_way">Chờ thanh toán</span>
+                <span class="on_way">Đang giữ chỗ</span>
             </div>
             <div class="ticker_status-item">
                 <span class="ticker_status-title">Ngày đặt</span>
-                <span class="ticker_status-value" style="color:black; font-weight:400; font-size:1.4rem">27/04/2020,
-                    16:57:20</span>
+                <span class="ticker_status-value" style="color:black; font-weight:400; font-size:1.4rem">
+                    {{date('d/m/Y', strtotime($orderList['billOrder']->bill_created_at))}}, {{date('H:i:s', strtotime($orderList['billOrder']->bill_created_at))}}</span>
             </div>
         </div>
     </div>
     <div class="grid__row">
         <div class="grid__column-2" style="display: flex;">
-            <img src="assets/img/order_flight.png" style="width: 100px; height: 70px; margin: 0 auto;" alt="">
+            <img src="{{asset('user_asset/assets/img/order_flight.png')}}" style="width: 100px; height: 70px; margin: 0 auto;" alt="">
         </div>
         <div class="grid__column-10">
             <div style="display: flex; padding-bottom: 20px; border-bottom: 1px solid var(--border-color);">
                 <div class="detail_ticker_info">
                     <div class="title_ticker_info">
-                        <p>SGN</p>
+                        <p style="line-height: 2rem;">{{$orderList['aliasFrom']->airport_name}} ({{$orderList['aliasFrom']->airport_alias}})</p>
                         <div class="icon_ticket_info">
                             <div style="background: linear-gradient(270deg, rgb(160, 174, 192) 0%, rgba(160, 174, 192, 0) 100%); width: 24px; height: 1px; margin-right: 10px;">
                             </div>
@@ -46,15 +46,15 @@
                             <div style="background: linear-gradient(270deg, rgb(160, 174, 192) 0%, rgba(160, 174, 192, 0) 100%); width: 24px; height: 1px; margin-right: 10px;">
                             </div>
                         </div>
-                        <p>HAN</p>
+                        <p style="line-height: 2rem; text-align:right">{{$orderList['aliasTo']->airport_name}} ({{$orderList['aliasTo']->airport_alias}})</p>
                     </div>
                     <div class="sub_ticker_info">
-                        <p>Thành phố Hồ Chí Minh</p>
-                        <p>Hà Nội</p>
+                        <p>{{$orderList['aliasFrom']->cities_name}}</p>
+                        <p>{{$orderList['aliasTo']->cities_name}}</p>
                     </div>
                     <div class="time_ticker_info">
-                        <p>22:50, 27 tháng 04</p>
-                        <p>00:55, 28 tháng 04</p>
+                        <p>{{date('H:i', strtotime($orderList['billOrder']->flight_time_departure))}}, {{date('d', strtotime($orderList['billOrder']->flight_time_departure))}} tháng {{date('m', strtotime($orderList['billOrder']->flight_time_departure))}}</p>
+                        <p>{{date('H:i', $orderList['timeArr'])}}, {{date('d', $orderList['timeArr'])}} tháng {{date('m', $orderList['timeArr'])}}</p>
                     </div>
                 </div>
                 <div class="ticker_plane__logo" style="padding-left: 40px; align-items: center;">
@@ -62,9 +62,9 @@
                         <img class="jss767 jss929" width="40px" style="background:cover; margin-right: 10px;" alt="" src="https://storage.googleapis.com/tripi-assets/flight_services/agent_icons/VietjetAir_transpng.png">
                     </div>
                     <div class="Plane__name">
-                        <span style="margin-bottom: 10px;">VietjetAir</span>
+                        <span style="margin-bottom: 10px;">{{$orderList['billOrder']->airline_name}}</span>
 
-                        <span style="color: #555;font-size: 1.4rem; font-weight: 400;">VJ132</span>
+                        <span style="color: #555;font-size: 1.4rem; font-weight: 400;">{{$orderList['billOrder']->airplane_name}} . {{$orderList['billOrder']->airplane_number}}</span>
                     </div>
                 </div>
             </div>
@@ -73,34 +73,36 @@
                     <h3>Thông tin liên hệ</h3>
                     <div class="ticket_info-group">
                         <h4>Họ tên:</h4>
-                        <h4 class="ticket_info-input">Nguyễn Duy Quang</h4>
+                        <h4 class="ticket_info-input">{{$orderList['billOrder']->customer_name}}</h4>
                     </div>
                     <div class="ticket_info-group">
                         <h4>Số điện thoại:</h4>
-                        <h4 class="ticket_info-input">0394062111</h4>
+                        <h4 class="ticket_info-input">{{$orderList['billOrder']->customer_phone}}</h4>
                     </div>
                     <div class="ticket_info-group">
                         <h4>Email:</h4>
-                        <h4 class="ticket_info-input">QuangBui@gmail.com</h4>
+                        <h4 class="ticket_info-input">{{$orderList['billOrder']->customer_email}}</h4>
                     </div>
                 </div>
                 <div class="ticket_info-body">
-                    <h3>Thông tin hành khách</h3>
+                    <h3>Thông tin hành khách: <span style="font-weight: 400;">({{count($orderList['ownTicket'])}} khách)</span></h3>
+                    @foreach($orderList['ownTicket'] as $item)
                     <div class="ticket_info-group">
                         <h4>Họ tên:</h4>
-                        <h4 class="ticket_info-input">Nguyễn Duy Quang</h4>
+                        <h4 class="ticket_info-input">{{$item->own_ticket_name}}</h4>
                     </div>
+                    @endforeach
                 </div>
             </div>
             <div class="payment_info">
                 <h3>Thông tin thanh toán</h3>
                 <div class="ticket_info-group">
                     <h4>Tổng giá:</h4>
-                    <h4 class="ticket_info-input">1.323.315đ</h4>
+                    <h4 class="ticket_info-input">{{number_format($orderList['billOrder']->bill_total_price)}}đ</h4>
                 </div>
                 <div class="ticket_info-group">
                     <h4>Phương thức thanh toán:</h4>
-                    <h4 class="ticket_info-input">Chuyển khoản ngân hàng</h4>
+                    <h4 class="ticket_info-input">{{$orderList['billOrder']->payment_method_name}}</h4>
                 </div>
             </div>
         </div>

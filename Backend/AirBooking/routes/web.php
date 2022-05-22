@@ -44,6 +44,7 @@ Route::middleware('preventBackHistory')->group(function () {
         Route::match(['get', 'post'], '/', [InfoController::class, 'info'])->middleware('auth');
         Route::match(['get', 'post'], '/change-pass', [InfoController::class, 'change_pass'])->middleware('auth');
         Route::get('/order', [OrderController::class, 'order'])->middleware('auth');
+        Route::get('/order-detail/{id}', [OrderController::class, 'order_detail'])->middleware('auth');
     });
 
     Route::group(['prefix' => '/search'], function () {
@@ -53,19 +54,6 @@ Route::middleware('preventBackHistory')->group(function () {
     Route::group(['prefix' => '/checkout'], function () {
         Route::get('/', [CheckoutController::class, 'checkout'])->name('checkoutTicket')->middleware('auth');
         Route::get('/payment', [CheckoutController::class, 'checkout_payment'])->name('checkoutPayment')->middleware('auth');
+        Route::get('/checkout-completed', [CheckoutController::class, 'checkout_completed'])->name('checkoutComplete')->middleware('auth');
     });
-});
-
-Route::get('/test/{id?}', function ($id = null) {
-    $date = date_create("2022-05-25");
-    date_modify($date, "-10 days");
-    
-    $dateList = array();
-    for($i = 0; $i < 20; $i++) {
-        date_modify($date, "+1 days");
-        array_push($dateList, date_format($date, "d-m-Y"));
-    }
-
-
-    return $dateList;
 });

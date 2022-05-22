@@ -5,6 +5,7 @@
         <div class="grid__row">
             <div class="grid__column-7">
                 <form action="/checkout/payment" method="get">
+                    <input type="hidden" name="ticketID" value="{{$_GET['ticket_id']}}">
                     <div class="order_info" style="padding: 0;">
                         {{View::make('user_page.checkout.checkout_flight_info')}}
                     </div>
@@ -27,14 +28,24 @@
                             <div class="order_customer-info">
                                 <div class="customer_info-gender">
                                     <h4>Giới tính</h4>
-                                    <select name="" id="" class="input_form">
-                                        <option value="0" selected>Nam</option>
-                                        <option value="1">Nữ</option>
+                                    <select name="customerGender" id="customerGender" class="input_form @error('customerGender') inputError @enderror">
+                                        <option value="0" {{ old('customerGender') == '0' ? "selected" : "" }}>Nam</option>
+                                        <option value="1" {{ old('customerGender') == '1' ? "selected" : "" }}>Nữ</option>
                                     </select>
+                                    @error('customerGender')
+                                    <span class="textError">
+                                        {{ $message }}
+                                    </span>
+                                    @enderror
                                 </div>
                                 <div class="customer_info-name">
                                     <h4>Họ tên</h4>
-                                    <input oninput="this.value = this.value.toUpperCase()" type="text" class="input_form" placeholder="Họ tên (Ví dụ: NGUYEN VAN A)">
+                                    <input oninput="this.value = this.value.toUpperCase()" name="customerName" value="{{old('customerName')}}" type="text" class="input_form @error('customerName') inputError @enderror" placeholder="Họ tên (Ví dụ: NGUYEN VAN A)">
+                                    @error('customerName')
+                                    <span class="textError">
+                                        {{ $message }}
+                                    </span>
+                                    @enderror
                                 </div>
                             </div>
                         </div>
@@ -52,24 +63,44 @@
                             <div class="order_customer-info">
                                 <div class="customer_info-gender">
                                     <h4>Giới tính</h4>
-                                    <select name="" id="" class="input_form">
-                                        <option value="0" selected>Nam</option>
-                                        <option value="1">Nữ</option>
+                                    <select name="contactGender" id="contactGender" class="input_form  @error('contactGender') inputError @enderror">
+                                        <option value="0" {{ old('contactGender') == '0' ? "selected" : "" }}>Nam</option>
+                                        <option value="1" {{ old('contactGender') == '0' ? "selected" : "" }}>Nữ</option>
                                     </select>
+                                    @error('contactGender')
+                                    <span class="textError">
+                                        {{ $message }}
+                                    </span>
+                                    @enderror
                                 </div>
                                 <div class="customer_info-name">
                                     <h4>Họ tên</h4>
-                                    <input oninput="this.value = this.value.toUpperCase()" type="text" class="input_form" placeholder="Họ tên (Ví dụ: NGUYEN VAN A)">
+                                    <input oninput="this.value = this.value.toUpperCase()" name="contactName" value="{{old('contactName')}}" id="contactName" type="text" class="input_form @error('contactName') inputError @enderror" placeholder="Họ tên (Ví dụ: NGUYEN VAN A)">
+                                    @error('contactName')
+                                    <span class="textError">
+                                        {{ $message }}
+                                    </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="order_customer-info">
                                 <div class="customer_info-phone">
                                     <h4>Số điện thoại</h4>
-                                    <input oninput="this.value = this.value.toUpperCase()" type="text" class="input_form" placeholder="Nhập số điện thoại">
+                                    <input name="contactPhone" id="contactPhone" type="text" value="{{old('contactPhone')}}" class="input_form @error('contactPhone') inputError @enderror" placeholder="Nhập số điện thoại">
+                                    @error('contactPhone')
+                                    <span class="textError">
+                                        {{ $message }}
+                                    </span>
+                                    @enderror
                                 </div>
                                 <div class="customer_info-email">
                                     <h4>Email</h4>
-                                    <input oninput="this.value = this.value.toUpperCase()" type="text" class="input_form" placeholder="Nhập địa chỉ email">
+                                    <input name="contactEmail" id="contactEmail" type="text" value="{{old('contactEmail')}}" class="input_form @error('contactEmail') inputError @enderror" placeholder="Nhập địa chỉ email">
+                                    @error('contactEmail')
+                                    <span class="textError">
+                                        {{ $message }}
+                                    </span>
+                                    @enderror
                                 </div>
                             </div>
                         </div>
