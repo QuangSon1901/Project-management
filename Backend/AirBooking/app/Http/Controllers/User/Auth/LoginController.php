@@ -15,8 +15,6 @@ class LoginController extends Controller
 {
     public function login(LoginRequest $request)
     {
-        $request->all();
-
         if (Auth::attempt($request->only(['email', 'password']))) {
             return response()->json(['status' => 200, 'msg' => 'Đăng nhập thành công!']);
         }

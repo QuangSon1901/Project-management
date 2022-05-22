@@ -31,29 +31,33 @@ Route::get('/home', function () {
 
 
 Route::middleware('preventBackHistory')->group(function () {
-    Route::post('/login', [LoginController::class, 'login'])->middleware('CheckLogin');
-    Route::post('/register', [RegisterController::class, 'register'])->middleware('CheckLogin');
-    Route::get('/logout', function () {
-        Auth::logout();
-        return redirect()->back();
-    })->middleware('auth');
-    Route::get('/forgot-password/{email}', [ForgotPasswordController::class, 'forgot_password']);
-
-
-    Route::group(['prefix' => '/info'], function () {
-        Route::match(['get', 'post'], '/', [InfoController::class, 'info'])->middleware('auth');
-        Route::match(['get', 'post'], '/change-pass', [InfoController::class, 'change_pass'])->middleware('auth');
-        Route::get('/order', [OrderController::class, 'order'])->middleware('auth');
-        Route::get('/order-detail/{id}', [OrderController::class, 'order_detail'])->middleware('auth');
+    Route::middleware('guest')->group(function () {
+        Route::post('/login', [LoginController::class, 'login']);
+        Route::post('/register', [RegisterController::class, 'register']);
     });
+
+    Route::middleware('auth')->group(function () {
+        Route::get('/logout', function () {
+            Auth::logout();
+            return redirect()->back();
+        });
+
+        Route::group(['prefix' => '/info'], function () {
+            Route::match(['get', 'post'], '/', [InfoController::class, 'info']);
+            Route::match(['get', 'post'], '/change-pass', [InfoController::class, 'change_pass']);
+            Route::get('/order', [OrderController::class, 'order']);
+            Route::get('/order-detail/{id}', [OrderController::class, 'order_detail']);
+        });
+        Route::group(['prefix' => '/checkout'], function () {
+            Route::get('/', [CheckoutController::class, 'checkout'])->name('checkoutTicket');
+            Route::get('/payment', [CheckoutController::class, 'checkout_payment'])->name('checkoutPayment');
+            Route::get('/checkout-completed', [CheckoutController::class, 'checkout_completed'])->name('checkoutComplete');
+        });
+    });
+
+    Route::get('/forgot-password/{email}', [ForgotPasswordController::class, 'forgot_password']);
 
     Route::group(['prefix' => '/search'], function () {
         Route::get('/{dateFlightDepp?}', [SearchController::class, 'search'])->name('searchFlight');
-    });
-
-    Route::group(['prefix' => '/checkout'], function () {
-        Route::get('/', [CheckoutController::class, 'checkout'])->name('checkoutTicket')->middleware('auth');
-        Route::get('/payment', [CheckoutController::class, 'checkout_payment'])->name('checkoutPayment')->middleware('auth');
-        Route::get('/checkout-completed', [CheckoutController::class, 'checkout_completed'])->name('checkoutComplete')->middleware('auth');
     });
 });

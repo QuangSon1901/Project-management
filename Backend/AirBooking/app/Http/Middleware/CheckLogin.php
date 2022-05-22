@@ -20,6 +20,7 @@ class CheckLogin
         if(Auth::check()) {
             return '/';
         }
+        
         return $next($request);
     }
 }
