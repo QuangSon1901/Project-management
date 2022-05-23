@@ -12,11 +12,11 @@
             </li>
             <li>
                 <h4>Thuế và phí sân bay</h4>
-                <h4>{{number_format($ticketItem['ticket']->ticket_price)}}đ</h4>
+                <h4>0đ</h4>
             </li>
             <li>
                 <h4>Phí dịch vụ</h4>
-                <h4>{{number_format($ticketItem['ticket']->ticket_price)}}đ</h4>
+                <h4>0đ</h4>
             </li>
             <li>
                 <h4 style="font-weight: bold;">Tổng giá chiều đi</h4>

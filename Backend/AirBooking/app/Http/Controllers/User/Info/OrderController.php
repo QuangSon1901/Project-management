@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User\Info;
 use App\Http\Controllers\Controller;
 use App\Models\Airport;
 use App\Models\Bill;
+use App\Models\Paginate;
 use App\Models\TicketHasCustomer;
 use App\Models\TimeCheckModel;
 use Illuminate\Http\Request;
@@ -13,7 +14,46 @@ class OrderController extends Controller
 {
     public function order()
     {
-        return view('user_page.info.ticket_form');
+        $TimeCheck = new TimeCheckModel;
+        // List Order
+        $orderList = array();
+
+        $billOrder = Bill::select(
+            'tbl_flight.flight_time_departure',
+            'tbl_flight.flight_time_fly',
+            'tbl_airline.airline_name',
+            'tbl_airplane.airplane_name',
+            'tbl_airplane.airplane_number',
+            'tbl_airline.airline_logo',
+            'tbl_bill.bill_id',
+            'tbl_bill.bill_total_price',
+            'tbl_route.departure_airport_id',
+            'tbl_route.arrival_airport_id',
+        )
+            ->join('tbl_flight', 'tbl_bill.flight_id', '=', 'tbl_flight.flight_id')
+            ->join('tbl_route', 'tbl_flight.route_id', '=', 'tbl_route.route_id')
+            ->join('tbl_airplane', 'tbl_flight.airplane_id', '=', 'tbl_airplane.airplane_id')
+            ->join('tbl_airline', 'tbl_airplane.airline_id', '=', 'tbl_airline.airline_id')
+            ->join('tbl_customer', 'tbl_bill.customer_id', '=', 'tbl_customer.customer_id')
+            ->where('tbl_customer.user_id', auth()->user()->id)
+            ->orderByDesc('bill_id')->get();
+
+        foreach ($billOrder as $item) {
+            $getAliasFrom = Airport::select('tbl_airport.airport_alias', 'tbl_airport.airport_name', 'tbl_cities.cities_name')->join('tbl_cities', 'tbl_cities.cities_id', '=', 'tbl_airport.cities_id')->where('airport_id', $item->departure_airport_id)->first();
+            $getAliasTo = Airport::select('tbl_airport.airport_alias', 'tbl_airport.airport_name', 'tbl_cities.cities_name')->join('tbl_cities', 'tbl_cities.cities_id', '=', 'tbl_airport.cities_id')->where('airport_id', $item->arrival_airport_id)->first();
+
+            array_push($orderList, array(
+                'billOrder' => $item,
+                'aliasFrom' => $getAliasFrom,
+                'aliasTo' => $getAliasTo,
+                'timeArr' => $TimeCheck->add2time($item->flight_time_departure, $item->flight_time_fly),
+            ));
+        }
+
+        $Paginate = new Paginate;
+        $orderList = $Paginate->paginate($orderList);
+
+        return view('user_page.info.ticket_form')->with('orderList', $orderList);
     }
 
     public function order_detail($id)
@@ -49,7 +89,7 @@ class OrderController extends Controller
         $getAliasTo = Airport::select('tbl_airport.airport_alias', 'tbl_airport.airport_name', 'tbl_cities.cities_name')->join('tbl_cities', 'tbl_cities.cities_id', '=', 'tbl_airport.cities_id')->where('airport_id', $billOrder->arrival_airport_id)->first();
 
         $getListOwnTicket = TicketHasCustomer::where('customer_id', $billOrder->customer_id)->get();
-        
+
         $orderList = array(
             'billOrder' => $billOrder,
             'aliasFrom' => $getAliasFrom,

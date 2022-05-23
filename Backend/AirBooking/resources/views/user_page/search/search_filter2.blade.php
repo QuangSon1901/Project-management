@@ -51,4 +51,15 @@ $dateList = Session::get('dateList');
             prevEl: ".swiper-button-prev",
         },
     });
+
+    $('.ticket_date-group').click(function() {
+        removeClassTicketDate();
+        $(this).addClass('ticket_date--active');
+    })
+
+    function removeClassTicketDate() {
+        var ticketDateActive = $('.ticket_date--active');
+        ticketDateActive.removeClass('ticket_date--active');
+    }
 </script>
+

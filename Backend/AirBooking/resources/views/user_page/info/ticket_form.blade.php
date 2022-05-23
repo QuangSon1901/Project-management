@@ -33,7 +33,7 @@
                                         <div style="background: linear-gradient(270deg, rgb(160, 174, 192) 0%, rgba(160, 174, 192, 0) 100%); width: 24px; height: 1px; margin-right: 10px;">
                                         </div>
                                     </div>
-                                    <p style="line-height: 2rem; text-align:right" >{{$item['aliasTo']->airport_name}} ({{$item['aliasTo']->airport_alias}})</p>
+                                    <p style="line-height: 2rem; text-align:right">{{$item['aliasTo']->airport_name}} ({{$item['aliasTo']->airport_alias}})</p>
                                 </div>
                                 <div class="sub_ticker_info">
                                     <p>{{$item['aliasFrom']->cities_name}}</p>
@@ -74,6 +74,9 @@
                     <button type="button" id="btnfile" class="btn btn--primary">Tìm chuyến bay</button>
                 </div>
                 @endforelse
+                <div class="paginate_class">
+                    {!! $orderList->links() !!}
+                </div>
             </div>
         </div>
     </div>
@@ -85,15 +88,30 @@
     })
 
     $(function() {
-            $('.detail_order').click(function() {
-                let _url = $(this).data('url');
-                $.pjax({
-                    type: 'get',
-                    url: _url,
-                    container: '#contentInfo',
-                    timeout: 9000000,
-                })
+        $('.detail_order').click(function() {
+            let _url = $(this).data('url');
+            $.pjax({
+                type: 'get',
+                url: _url,
+                container: '#contentInfo',
+                timeout: 9000000,
             })
         })
+    })
+
+    $('.pagination a').unbind('click').on('click', function(e) {
+        e.preventDefault();
+        let page = $(this).attr('href').split('page=')[1];
+        getPosts(page);
+    });
+
+    function getPosts(page) {
+        $.pjax({
+            type: 'get',
+            url: '/info/order?page=' + page,
+            container: '#contentInfo',
+            timeout: 9000000,
+        })
+    }
 </script>
 @endsection

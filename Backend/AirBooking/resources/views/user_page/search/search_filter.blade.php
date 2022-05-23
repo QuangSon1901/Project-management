@@ -14,7 +14,7 @@
             @foreach($airlineList as $item)
             <li class="filter_brand-item">
                 <label class="option-checkbox">
-                    <input type="checkbox" id="search_checkbox">
+                    <input type="checkbox" id="search_checkbox" value="{{$item->airline_id}}" class="filterCheckbox">
                     <i class="icon-checkbox"></i>
                     <img src="{{URL::to('upload/'.$item->airline_logo)}}" alt="">
                     {{$item->airline_name}}
@@ -83,7 +83,7 @@
             @foreach($ticketClass as $item)
             <li class="filter_rank-item">
                 <label class="option-checkbox">
-                    <input type="checkbox" id="search_checkbox">
+                    <input type="checkbox" id="search_checkbox" value="{{$item->ticket_class_id}}" class="filterCheckbox">
                     <i class="icon-checkbox"></i>
                     <img src="" alt="">
                     {{$item->ticket_class_name}}
@@ -93,3 +93,64 @@
         </ul>
     </div>
 </div>
+<!-- SearchPage Js -->
+<script>
+    var filterPriceInput = $('#filterPriceInput');
+    var filterPriceSpan = $('#filterPriceSpan');
+    filterPriceInput.on('input', function() {
+        $('#filterPriceInput').val(filterPriceInput.val())
+        var numberFormat = new Intl.NumberFormat().format(filterPriceInput.val());
+        filterPriceSpan.html(numberFormat);
+    })
+</script>
+
+<script>
+    $('#filterPriceInput').change(function() {
+        let dateFromInput = $('.ticket_date--active').data('filter');
+        let data = {
+            inputFromText: $('#searchForm input[name="inputFromText"]').val(),
+            inputFromID: $('#searchForm input[name="inputFromID"]').val(),
+            inputToText: $('#searchForm input[name="inputToText"]').val(),
+            inputToID: $('#searchForm input[name="inputToID"]').val(),
+            dateFromInput: dateFromInput,
+            dateToInput: $('#searchForm input[name="dateToInput"]').val(),
+            adultInput: $('#searchForm select[name="adultInput"] :selected').val(),
+            childrenInput: $('#searchForm select[name="childrenInput"] :selected').val(),
+            infantInput: $('#searchForm select[name="infantInput"] :selected').val(),
+            priceFilter: $(this).val()
+        };
+        filterAjax(data);
+    })
+
+    // $('.filterCheckbox').click(function() {
+    //     let dateFromInput = $('.ticket_date--active').data('filter');
+    //     let airlineFilter = []
+    //     $('.filterCheckbox:checked').each(function() {
+    //         airlineFilter.push($(this).val());
+    //     })
+    //     let data = {
+    //         inputFromText: $('#searchForm input[name="inputFromText"]').val(),
+    //         inputFromID: $('#searchForm input[name="inputFromID"]').val(),
+    //         inputToText: $('#searchForm input[name="inputToText"]').val(),
+    //         inputToID: $('#searchForm input[name="inputToID"]').val(),
+    //         dateFromInput: dateFromInput,
+    //         dateToInput: $('#searchForm input[name="dateToInput"]').val(),
+    //         adultInput: $('#searchForm select[name="adultInput"] :selected').val(),
+    //         childrenInput: $('#searchForm select[name="childrenInput"] :selected').val(),
+    //         infantInput: $('#searchForm select[name="infantInput"] :selected').val(),
+    //         priceFilter: $(this).val(),
+    //         airlineFilter: airlineFilter
+    //     };
+    //     filterAjax(data);
+    // })
+
+    function filterAjax(data) {
+        $.pjax({
+            type: 'get',
+            url: '/search/filter',
+            data: data,
+            container: '#searchBody',
+            timeout: 9000000,
+        })
+    }
+</script>

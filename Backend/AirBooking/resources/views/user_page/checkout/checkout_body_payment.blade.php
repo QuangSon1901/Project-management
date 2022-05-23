@@ -16,6 +16,11 @@
                                 {{ $message }}
                             </span>
                             @enderror
+                            @error('message')
+                            <span class="textError">
+                                {{ $message }}
+                            </span>
+                            @enderror
                         </div>
                         <div class="order_payment">
                             <ul class="payment_method">
@@ -26,7 +31,7 @@
                                             {!! $item->payment_method_svg !!}
                                             <h4>{{$item->payment_method_name}}</h4>
                                         </div>
-                                        <input type="radio" value="{{$item->payment_method_id}}" name="payment_method">
+                                        <input type="radio" value="{{$item->payment_method_id}}" {{ old('payment_method') == $item->payment_method_id ? "checked" : "" }} name="payment_method">
                                         <i class="icon-radio"></i>
                                     </label>
                                     @if($item->payment_method_html != null)
