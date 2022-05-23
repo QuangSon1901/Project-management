@@ -12,6 +12,7 @@ use App\Models\Airport;
 use App\Models\Bill;
 use App\Models\Customer;
 use App\Models\Flight;
+use App\Models\PaymentMethod;
 use App\Models\RandomModal;
 use App\Models\TicketHasCustomer;
 use App\Models\TimeCheckModel;
@@ -71,6 +72,11 @@ class CheckoutController extends Controller
 
     public function checkout_completed(PaymentMethodRequest $request) {
         $checkoutInfo = Session::get('checkoutInfo');
+        session()->flashInput($request->input());
+        $paymentMethod = PaymentMethod::where('payment_method_id', $request->payment_method)->first();
+        if($paymentMethod->payment_method_status == 2) {
+            return redirect()->back()->withErrors(['message'=>'Phương thức thanh toán này đang bảo trì, vui lòng chọn phương thức thanh toán khác!']);
+        }
 
         $customerData = array(
             'customer_name' => $checkoutInfo['contactName'],

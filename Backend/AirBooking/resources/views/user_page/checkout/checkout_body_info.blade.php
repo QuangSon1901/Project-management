@@ -40,7 +40,7 @@
                                 </div>
                                 <div class="customer_info-name">
                                     <h4>Họ tên</h4>
-                                    <input oninput="this.value = this.value.toUpperCase()" name="customerName" value="{{old('customerName')}}" type="text" class="input_form @error('customerName') inputError @enderror" placeholder="Họ tên (Ví dụ: NGUYEN VAN A)">
+                                    <input oninput="this.value = this.value.toUpperCase()" id="customerName" name="customerName" value="{{old('customerName')}}" type="text" class="input_form @error('customerName') inputError @enderror" placeholder="Họ tên (Ví dụ: NGUYEN VAN A)">
                                     @error('customerName')
                                     <span class="textError">
                                         {{ $message }}
@@ -114,4 +114,37 @@
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        $('#search_checkbox').click(function() {
+            if ($(this).is(':checked')) {
+                $('#contactName').val($('#customerName').val());
+            }
+        })
+
+        $('#customerName').keyup(function() {
+            if ($('#search_checkbox').is(':checked')) {
+                $('#contactName').val($(this).val());
+            }
+        })
+
+        $('#customerName').change(function() {
+            if ($('#search_checkbox').is(':checked')) {
+                $('#contactName').val($(this).val());
+            }
+        })
+
+        $('#contactName').keyup(function() {
+            if ($('#search_checkbox').is(':checked')) {
+                $('#search_checkbox').prop('checked', false);
+            }
+        })
+
+        $('#contactName').change(function() {
+            if ($('#search_checkbox').is(':checked')) {
+                $('#search_checkbox').prop('checked', false);
+            }
+        })
+    })
+</script>
 @endsection

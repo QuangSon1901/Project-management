@@ -9,7 +9,7 @@
                 <h3>Đơn hàng của bạn đã được đăng ký thành công.</h3>
                 <h3>Bạn có thể xem lại nội dung chi tiết đơn hàng.</h3>
                 <div class="view_detail-order">
-                    <h2>Chi tiết đơn hàng</h2>
+                    <h2 onclick="location.href = '/info/order'">Chi tiết đơn hàng</h2>
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
                 <div class="checkout_success-info">

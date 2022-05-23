@@ -15,6 +15,8 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css?1233">
 
+    <link rel="stylesheet" href="{{asset('user_asset/assets/bootstrap/bootstrap.min.css')}}">
+
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="{{asset('user_asset/assets/js/sweetalert/sweetalert.css')}}">
     <script src="{{asset('user_asset/assets/js/sweetalert/sweetalert.min.js')}}"></script>
