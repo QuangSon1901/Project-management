@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\Account\UserController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\Dashboard\DashboardController;
 use Illuminate\Support\Facades\Auth;
@@ -12,5 +13,14 @@ Route::middleware('auth:admin')->group(function (){
         Auth::guard('admin')->logout();
         return redirect()->back();
     });
-    Route::get('/', [DashboardController::class, 'dashboard'])->name('dashboard');
+    Route::get('/', [DashboardController::class, 'dashboard']);
+
+    Route::get('/dashboard', [DashboardController::class, 'dashboard']);
+
+    Route::group(['prefix' => '/user'], function () {
+        Route::get('/', [UserController::class, 'user']);
+        Route::get('/change-status-user', [UserController::class, 'change_status_user']);
+        Route::get('/reset-pass', [UserController::class, 'reset_pass']);
+        Route::get('/del-user', [UserController::class, 'del_user']);
+    });
 });

@@ -30,6 +30,20 @@
     </div>
     <!-- container-scroller -->
 
+    <script>
+        $(function() {
+            $('.nav_item-click').click(function() {
+                let _url = $(this).data('url');
+                $.pjax({
+                    type: 'get',
+                    url: _url,
+                    container: '#contentAdmin',
+                    timeout: 9000000,
+                })
+            })
+        })
+    </script>
+
     <!-- plugins:js -->
     <script src="{{asset('admin_asset/vendors/js/vendor.bundle.base.js')}}"></script>
     <!-- endinject -->
@@ -51,6 +65,7 @@
     <script src="{{asset('admin_asset/js/dashboard.js')}}"></script>
     <script src="{{asset('admin_asset/js/Chart.roundedBarCharts.js')}}"></script>
     <!-- End custom js for this page-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js" integrity="sha512-7G7ueVi8m7Ldo2APeWMCoGjs4EjXDhJ20DrPglDQqy8fnxsFQZeJNtuQlTT0xoBQJzWRFp4+ikyMdzDOcW36kQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>
