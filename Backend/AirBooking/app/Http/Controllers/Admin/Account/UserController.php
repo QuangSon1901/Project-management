@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Account;
 
 use App\Http\Controllers\Controller;
+use App\Models\Paginate;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -12,9 +13,18 @@ class UserController extends Controller
     {
         $userList = User::all();
 
-        $
+        $Paginate = new Paginate;
 
-        $userList = $this->paginate($userList);
+        $userList = $Paginate->paginate($userList);
+        return view('admin_page.account.user', compact('userList'));
+    }
+
+    public function search(Request $request)
+    {
+        $userList = User::where('name', 'like', '%' . $request->search . '%')->orWhere('phone', 'like', '%' . $request->search . '%')->orWhere('email', 'like', '%' . $request->search . '%')->get();
+        $Paginate = new Paginate;
+
+        $userList = $Paginate->paginate($userList);
         return view('admin_page.account.user', compact('userList'));
     }
 

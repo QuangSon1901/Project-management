@@ -22,5 +22,6 @@ Route::middleware('auth:admin')->group(function (){
         Route::get('/change-status-user', [UserController::class, 'change_status_user']);
         Route::get('/reset-pass', [UserController::class, 'reset_pass']);
         Route::get('/del-user', [UserController::class, 'del_user']);
+        Route::get('/search', [UserController::class, 'search']);
     });
 });

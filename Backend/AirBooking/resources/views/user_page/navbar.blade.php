@@ -50,7 +50,11 @@
                     @auth
                     <li class="navbar__category-item navbar__category-info">
                         <div class="navbar__category-link navbar__category-info-link">
-                            <img src="{{URL::to('upload/'.auth()->user()->avatar)}}" class="navbar__category-info-img" alt="">
+                            @isset(auth()->user()->avatar)
+                            <img src="{{URL::to('upload/'.auth()->user()->avatar)}}" class="navbar__category-info-img">
+                            @else
+                            <img src="{{Avatar::create(auth()->user()->name)->toBase64()}}" class="navbar__category-info-img"/>
+                            @endisset
                             {{ auth()->user()->name }}
                         </div>
                         <div class="navbar__category-info-dropdown" style="min-width: 200px;">

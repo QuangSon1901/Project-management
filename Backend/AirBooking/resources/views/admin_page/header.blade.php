@@ -23,11 +23,11 @@
     <link rel="shortcut icon" href="{{asset('admin_asset/images/logo-icon.png')}}" />
 
     <link rel="stylesheet" href="{{asset('user_asset/assets/js/sweetalert/sweetalert.css')}}">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.15/dist/sweetalert2.all.min.js"></script>
-    
+
     <script src="{{asset('user_asset/assets/js/sweetalert/sweetalert.min.js')}}"></script>
 
 
@@ -49,5 +49,14 @@
         .hidden {
             display: none !important;
         }
+
+        /* Paginate */
+        .paginate_class {
+            width: 100%;
+            height: 40px;
+            display: flex;
+            justify-content: end;
+            padding: 10px 0 10px 10px;
+        } 
     </style>
 </head>

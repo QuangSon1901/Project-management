@@ -6,13 +6,10 @@
             <div class="card-body">
                 <h4 class="card-title">Danh sách tài khoản người dùng</h4>
                 <div class="form-inline" style="justify-content: end;">
-                    <div class="input-group ml-2">
+                    <div class="input-group ml-2" id="searchUserForm">
+                        <input type="text" class="form-control" style="height: 40px;" name="search" id="searchUserInput" placeholder="Tìm kiếm mọi thứ">
                         <div class="input-group-append">
-                            <button class="btn btn-sm btn-primary" type="button"><i class="ti-plus"></i></button>
-                        </div>
-                        <input type="text" class="form-control" style="height: 40px;" id="inlineFormInputGroupUsername2" placeholder="Username">
-                        <div class="input-group-append">
-                            <button class="btn btn-sm btn-primary" type="button"><i class="ti-search"></i></button>
+                            <button class="btn btn-sm btn-primary" id="searchUserBtn" type="buttom"><i class="ti-search"></i></button>
                         </div>
                     </div>
                 </div>
@@ -41,7 +38,11 @@
                             @foreach($userList as $item)
                             <tr>
                                 <td class="py-1" style="text-align: center;">
+                                    @isset($item->avatar)
                                     <img src="{{URL::to('/upload/'.$item->avatar)}}" />
+                                    @else
+                                    <img src="{{Avatar::create($item->name)->toBase64()}}" />
+                                    @endisset
                                 </td>
                                 <td>
                                     {{$item->name}}
@@ -58,10 +59,6 @@
                                         <i class="ti-reload btn-icon-prepend"></i>
                                         Reset Pass
                                     </button>
-                                    <button type="button" class="btn-sm btn-dark btn-icon-text">
-                                        <i class="ti-file btn-icon-append"></i>
-                                        Review
-                                    </button>
                                     <button type="button" class="btn-sm btn-danger btn-icon-text del_user" data-id="{{$item->id}}">
                                         <i class="ti-trash btn-icon-prepend"></i>
                                         Delete
@@ -71,17 +68,31 @@
                             @endforeach
                         </tbody>
                     </table>
-                    <div class="col-sm-7 text-right text-center-xs">
-                        <ul class="pagination pagination-sm m-t-none m-b-none">
-                            {!! $userList->links() !!}
-                        </ul>
-                    </div>
+                </div>
+                <div class="paginate_class">
+                    {!! $userList->links() !!}
                 </div>
             </div>
         </div>
     </div>
 </div>
 <script>
+    // Paginate
+    $('.pagination a').unbind('click').on('click', function(e) {
+        e.preventDefault();
+        let page = $(this).attr('href').split('page=')[1];
+        getPosts(page);
+    });
+
+    function getPosts(page) {
+        $.pjax({
+            type: 'get',
+            url: 'user?page=' + page,
+            container: '#contentAdmin',
+            timeout: 9000000,
+        })
+    }
+
     // Change status
     $(document).ready(function() {
         $('.statusUser').click(function() {
@@ -150,7 +161,7 @@
         });
     });
 
-    // Del pass
+    // Del
     $(document).ready(function() {
         $('.del_user').click(function() {
             var row = this;
@@ -186,6 +197,21 @@
                         }
                     });
                 }
+            })
+        });
+    });
+
+    // Search
+    $(document).ready(function() {
+        $('#searchUserBtn').click(function() {
+            $.pjax({
+                type: 'get',
+                url: '/admin/user/search',
+                data: {
+                    search: $('#searchUserInput').val(),
+                },
+                container: '#contentAdmin',
+                timeout: 9000000,
             })
         });
     });

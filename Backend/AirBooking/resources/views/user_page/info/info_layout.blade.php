@@ -14,7 +14,11 @@
                     <div class="grid__row">
                         <div class="grid__column-2 navbar_info">
                             <div class="navbar_info-group navbar_info-header ">
-                                <img src="{{URL::to('upload/'.auth()->user()->avatar)}}" class="navbar_info-avatar" alt="">
+                                @isset(auth()->user()->avatar)
+                                <img src="{{URL::to('upload/'.auth()->user()->avatar)}}" class="navbar_info-avatar">
+                                @else
+                                <img src="{{Avatar::create(auth()->user()->name)->toBase64()}}" class="navbar_info-avatar" />
+                                @endisset
                                 <div>
                                     <h3 class="navbar_info-name">{{auth()->user()->name}}</h3>
                                     @isset(auth()->user()->phone)

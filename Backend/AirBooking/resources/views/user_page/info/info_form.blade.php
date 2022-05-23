@@ -55,7 +55,11 @@
             </div>
             <div class="grid__column-4">
                 <div class="content_info-avt">
+                    @isset(auth()->user()->avatar)
                     <img src="{{URL::to('upload/'.auth()->user()->avatar)}}" id="imagePreview" class="content_info-avatar">
+                    @else
+                    <img src="{{Avatar::create(auth()->user()->name)->toBase64()}}" id="imagePreview" class="content_info-avatar" />
+                    @endisset
                     <input accept="image/*" name="avatar" type="file" id="inputFile">
                     <button id="btnFile" type="button" class="btn btn--hollow">Chọn ảnh</button>
                     <div class="content_info-desc">
