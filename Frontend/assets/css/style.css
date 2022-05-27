@@ -1934,6 +1934,13 @@ form .txt_field {
     width: 10%;
 }
 /* contact */
+.contact_body{
+    
+    background: #fff;
+    padding: 0 10px;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.14);
+}
 .textarea_input{
     display: flex;
     align-items: center;
@@ -1951,16 +1958,16 @@ form .txt_field {
     width: 100%;
 }
 .contact_info{
-    padding: 30px 20px;
+    padding: 10px 0;
 }
 .contact_info > li{
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 500;
-    padding: 3px 0;
+    padding: 15px 0;
 }
 .contact_info-ul{
     padding: 5px 5px;
-    font-size: 1.4  rem;
+    font-size: 1.2rem;
     font-weight: 400;
 }
 .contact_info-ul > li{
