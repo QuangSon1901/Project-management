@@ -21,8 +21,7 @@
 
                                 <br>
 
-                                Chúng tôi đã xác nhận yêu cầu lấy lại mật khẩu cho bạn, vui lòng thay đổi
-                                mật khẩu mới sau khi đăng nhập thành công!
+                                Chúng tôi đã xác nhận yêu cầu đặt vé của bạn!
                                 <p>&nbsp;</p>
                                 <p align=center>
                                     <a href="http://127.0.0.1:8000/checkout/checkout-detail/{{$id}}" style="padding: 8px 10px; background: #FF3366;color: #FFF; text-decoration: none; font-size: 15px;font-weight: bold;">
