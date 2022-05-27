@@ -1,0 +1,1 @@
+<div class="slider"></div><?php /**PATH C:\Users\Son\Desktop\Project-management\Backend\AirBooking\resources\views/user_page/slider.blade.php ENDPATH**/ ?>
