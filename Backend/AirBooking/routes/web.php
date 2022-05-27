@@ -4,6 +4,7 @@ use App\Http\Controllers\User\Auth\ForgotPasswordController;
 use App\Http\Controllers\User\Auth\LoginController;
 use App\Http\Controllers\User\Auth\RegisterController;
 use App\Http\Controllers\User\Checkout\CheckoutController;
+use App\Http\Controllers\User\Contact\ContactController;
 use App\Http\Controllers\User\Info\InfoController;
 use App\Http\Controllers\User\Info\OrderController;
 use App\Http\Controllers\User\Search\SearchController;
@@ -55,10 +56,19 @@ Route::middleware('preventBackHistory')->group(function () {
         });
     });
 
+    Route::get('/checkout/checkout-detail/{id}', [CheckoutController::class, 'checkout_detail']);
+
     Route::get('/forgot-password/{email}', [ForgotPasswordController::class, 'forgot_password']);
 
     Route::group(['prefix' => '/search'], function () {
         Route::get('/', [SearchController::class, 'search'])->name('searchFlight');
         Route::get('/filter', [SearchController::class, 'filter'])->name('filterFlight');
     });
+
+    Route::match(['get', 'post'], '/contact', [ContactController::class, 'contact']);
+});
+
+
+Route::get('/test', function() {
+    return View('user_page.checkout.send_mail_success');
 });

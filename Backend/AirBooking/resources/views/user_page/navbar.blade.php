@@ -15,19 +15,19 @@
                         </a>
                     </li>
                     <li class="navbar__category-item">
-                        <a href="#" class="navbar__category-link">
+                        <a class="navbar__category-link">
                             <i class="navbar__category-icon fas fa-subway"></i>
                             Tàu hỏa
                         </a>
                     </li>
                     <li class="navbar__category-item">
-                        <a href="#" class="navbar__category-link">
+                        <a class="navbar__category-link">
                             <i class="navbar__category-icon fas fa-bus-alt"></i>
                             Xe khách
                         </a>
                     </li>
                     <li class="navbar__category-item ">
-                        <a href="#" class="navbar__category-link">
+                        <a class="navbar__category-link">
                             <i class="navbar__category-icon fas fa-hotel"></i>
                             Khách sạn
                         </a>
@@ -36,13 +36,13 @@
 
                 <ul class="navbar__category">
                     <li class="navbar__category-item">
-                        <a href="#" class="navbar__category-link">
+                        <a class="navbar__category-link">
                             <i class="navbar__category-icon fab fa-buffer"></i>
                             Dịch vụ
                         </a>
                     </li>
                     <li class="navbar__category-item">
-                        <a href="#" class="navbar__category-link">
+                        <a href="/contact" class="navbar__category-link">
                             <i class="navbar__category-icon fas fa-headset"></i>
                             Liên hệ
                         </a>

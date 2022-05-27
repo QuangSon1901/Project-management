@@ -9,6 +9,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use App\Models\Inland;
 use App\Models\Cities;
+use App\Models\Contact;
 use App\Models\International;
 use App\Models\PaymentMethod;
 use App\Models\TicketClass;
@@ -76,6 +77,12 @@ class ViewServiceProvider extends ServiceProvider
             // List PaymentMethod
             $paymentMethodList = PaymentMethod::orderBy('payment_method_sort')->get();
             $view->with('paymentMethodList', $paymentMethodList);
+        });
+
+        View::composer(['admin_page.navbar'], function ($view) {
+            // List Notify
+            $notifyList = Contact::where('contact_status', 1)->orderByDesc('contact_id')->get();
+            $view->with('notifyList', $notifyList);
         });
     }
 }

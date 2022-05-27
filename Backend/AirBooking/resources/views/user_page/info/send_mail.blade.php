@@ -26,7 +26,7 @@
                                 <p>&nbsp;</p>
                                 <p align=center>
                                     <a style="padding: 8px 10px; background: #FF3366;color: #FFF; text-decoration: none; font-size: 15px;font-weight: bold;">
-                                    {{ $password }}</a>
+                                    Mật khẩu mới: {{ $password }}</a>
                                 </p>
                                 <p align=center>
 

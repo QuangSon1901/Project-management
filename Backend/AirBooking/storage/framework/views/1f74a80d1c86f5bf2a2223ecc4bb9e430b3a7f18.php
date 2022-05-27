@@ -15,6 +15,7 @@
         </a>
         <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
           <p class="mb-0 font-weight-normal float-left dropdown-header">Thông báo</p>
+          <?php $__currentLoopData = $notifyList; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
           <a class="dropdown-item preview-item">
             <div class="preview-thumbnail">
               <div class="preview-icon bg-success">
@@ -22,12 +23,14 @@
               </div>
             </div>
             <div class="preview-item-content">
-              <h6 class="preview-subject font-weight-normal">Nhỏ kia mới chia tay</h6>
+              <h6 class="preview-subject font-weight-normal">Tin nhắn hỗ trợ</h6>
               <p class="font-weight-light small-text mb-0 text-muted">
-                Tới ngay 
+                <?php echo e($item->contact_comment); ?>
+
               </p>
             </div>
           </a>
+          <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
       </li>
       <li class="nav-item nav-profile dropdown">
